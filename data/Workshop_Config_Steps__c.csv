@@ -1,0 +1,55 @@
+﻿Id,OwnerId,IsDeleted,Name,CreatedDate,CreatedById,LastModifiedDate,LastModifiedById,SystemModstamp,LastActivityDate,LastViewedDate,LastReferencedDate,Config_Type__c,Describe_Action__c,Name_value__c,Salesforce_ID__c
+a0Mao000000tB7hEAE,005ao000002a7LCAAY,,TDX-00009,2024-06-18T17:58:01.000+0000,005ao000002a7LCAAY,2024-06-18T17:58:01.000+0000,005ao000002a7LCAAY,2024-06-18T17:58:01.000+0000,,,,Modified Page Layout,PersonAccount Page layout added related list contact roles,Person Account Layout  : Related list Contact roles added,Not Applicable
+a0Mao000000tB7iEAE,005ao000002a7LCAAY,,TDX-00010,2024-06-18T17:58:01.000+0000,005ao000002a7LCAAY,2024-06-18T17:58:01.000+0000,005ao000002a7LCAAY,2024-06-18T17:58:01.000+0000,,,,Modified Page Layout,Account Page layout added related list Contact Roles and Account Related accounts,"Account Layout  : Related list 
+Contact roles added
+ Related accounts added",Not Applicable
+a0Mao000000tB7jEAE,005ao000002a7LKAAY,,TDX-00017,2024-06-18T17:58:01.000+0000,005ao000002a7LKAAY,2024-06-18T17:58:01.000+0000,005ao000002a7LKAAY,2024-06-18T17:58:01.000+0000,,,,Field Added,"Added ""Account Past Due (days)"" field to Account Object","Account:Account Past Due (days) field: 0,30,60,90",Not Applicable
+a0Mao000000tB7kEAE,005ao000002a7LFAAY,,TDX-00019,2024-06-18T17:58:01.000+0000,005ao000002a7LFAAY,2024-06-18T17:58:01.000+0000,005ao000002a7LFAAY,2024-06-18T17:58:01.000+0000,,,,Configuration setting modification,"Created new theme with logo for workhop
+Name:  Springfield Nuclear Power Yellow",Theme Update,Not Applicable
+a0Mao000000tB7lEAE,005ao000002a7LKAAY,,TDX-00018,2024-06-18T17:58:01.000+0000,005ao000002a7LKAAY,2024-06-18T17:58:01.000+0000,005ao000002a7LKAAY,2024-06-18T17:58:01.000+0000,,,,Field Added,"Added ""KW usage per  100 sq. ft."" to Account object","Account:KW usage per  100 sq. ft.: Low,Medium,High",Not Applicable
+a0Mao000000tB7mEAE,005ao000002a7LKAAY,,TDX-00021,2024-06-18T17:58:01.000+0000,005ao000002a7LKAAY,2024-06-18T17:58:01.000+0000,005ao000002a7LKAAY,2024-06-18T17:58:01.000+0000,,,,Field Added,"Added ""Product Recommendation"" field to Account which is a lookup field to ""Product""",Account: Product Recommendation: Lookup(Product),Not Applicable
+a0Mao000000tB7nEAE,005ao000002a7LKAAY,,TDX-00022,2024-06-18T17:58:01.000+0000,005ao000002a7LKAAY,2024-06-18T17:58:01.000+0000,005ao000002a7LKAAY,2024-06-18T17:58:01.000+0000,,,,Field Added,"Added ""Current Balance Due"" currency field to Account object.",Account: Current Balance Due,Not Applicable
+a0Mao000000tB7oEAE,005ao000002a7LIAAY,,TDX-00024,2024-06-18T17:58:01.000+0000,005ao000002a7LIAAY,2024-06-18T17:58:01.000+0000,005ao000002a7LIAAY,2024-06-18T17:58:01.000+0000,,,,Field Added,Module 2: Added a long text field to store the output from the field prompt template added to case page layout,AI Analysis,Not Applicable
+a0Mao000000tB7pEAE,005ao000002a7LIAAY,,TDX-00025,2024-06-18T17:58:01.000+0000,005ao000002a7LIAAY,2024-06-18T17:58:01.000+0000,005ao000002a7LIAAY,2024-06-18T17:58:01.000+0000,,,,Flow Added,Module 2: To ground the prompt template with the data from the external systems like invoice and weather,High Bill Ground Information,Not Applicable
+a0Mao000000tB7qEAE,005ao000002a7LIAAY,,TDX-00026,2024-06-18T17:58:01.000+0000,005ao000002a7LIAAY,2024-06-18T17:58:01.000+0000,005ao000002a7LIAAY,2024-06-18T17:58:01.000+0000,,,,External Services,Module 2: Added new External service to fetch weather data hosted on the heroku,ExternalWeatherData,Not Applicable
+a0Mao000000tB7rEAE,005ao000002a7LIAAY,,TDX-00027,2024-06-18T17:58:01.000+0000,005ao000002a7LIAAY,2024-06-18T17:58:01.000+0000,005ao000002a7LIAAY,2024-06-18T17:58:01.000+0000,,,,Flow Added,Module 2: This flow is to initiate the generative insight on the case record page ( flow calling prompt template),High Bill Screen Flow,Not Applicable
+a0Mao000000tB7sEAE,005ao000002a7LFAAY,,TDX-00023,2024-06-18T17:58:01.000+0000,005ao000002a7LFAAY,2024-06-18T17:58:01.000+0000,005ao000002a7LFAAY,2024-06-18T17:58:01.000+0000,,,,Configuration setting modification,Updated Theme Logo and changed name to Sprungfield Nuclear Power from Springfield,Theme Logo change name to Sprungfield,Not Applicable
+a0Mao000000tB7tEAE,005ao000002a7LFAAY,,TDX-00020,2024-06-18T17:58:01.000+0000,005ao000002a7LFAAY,2024-06-18T17:58:01.000+0000,005ao000002a7LFAAY,2024-06-18T17:58:01.000+0000,,,,Configuration setting modification,"Object:  Contact
+New Fields:  Picture__c & Picture_URL__c
+
+Added both fields to Contact & Person Account Page Layouts
+Created Person Account Compact Page Layout and added Picture__c to display picture in header",Added Person Accounts Picture capability,Not Applicable
+a0Mao000000tB7uEAE,005ao000002a7LFAAY,,TDX-00014,2024-06-18T17:58:01.000+0000,005ao000002a7LFAAY,2024-06-18T17:58:01.000+0000,005ao000002a7LFAAY,2024-06-18T17:58:01.000+0000,,,,Configuration setting modification,"New Permission Set:  TDX Demo Build Permissions
+Description:  Permset for us to add needed permissions for building this TDX demo",New Permission Set:  TDX Demo Build Permissions,Not Applicable
+a0Mao000000tB7vEAE,005ao000002a7LFAAY,,TDX-00015,2024-06-18T17:58:01.000+0000,005ao000002a7LFAAY,2024-06-18T17:58:01.000+0000,005ao000002a7LFAAY,2024-06-18T17:58:01.000+0000,,,,Modified Page Layout,"Object:  Person Account
+Layout:  Person Account Layout
+Change:  Added Email field to Account Information section so it can be edited
+
+https://d1q000001eofjuaa.lightning.force.com/lightning/setup/ObjectManager/PersonAccount/PageLayouts/00h1Q0000061yckQAA/view",Added Email field to Account Information section so it can be edited,Not Applicable
+a0Mao000000tB7wEAE,005ao000002a7LCAAY,,TDX-00011,2024-06-18T17:58:01.000+0000,005ao000002a7LCAAY,2024-06-18T17:58:01.000+0000,005ao000002a7LCAAY,2024-06-18T17:58:01.000+0000,,,,Modified Page Layout,Contact page layoue added related account related list,Contact: contact layout  Related Account Related list added,Not Applicable
+a0Mao000000tB7xEAE,005ao000002a7LCAAY,,TDX-00008,2024-06-18T17:58:01.000+0000,005ao000002a7LCAAY,2024-06-18T17:58:01.000+0000,005ao000002a7LCAAY,2024-06-18T17:58:01.000+0000,,,,Configuration setting modification,Account Settings --> Allow users to relate a contact to multiple accounts ---> ON,Allow users to relate a contact to multiple accounts : ON,Not Applicable
+a0Mao000000tB7yEAE,005ao000002a7LCAAY,,TDX-00001,2024-06-18T17:58:01.000+0000,005ao000002a7LCAAY,2024-06-18T17:58:01.000+0000,005ao000002a7LCAAY,2024-06-18T17:58:01.000+0000,,,,RecordType Added,To enable person account Added first Record type to Account,Business,012ao000001TPiQAAW
+a0Mao000000tB7zEAE,005ao000002a7LCAAY,,TDX-00002,2024-06-18T17:58:01.000+0000,005ao000002a7LCAAY,2024-06-18T17:58:01.000+0000,005ao000002a7LCAAY,2024-06-18T17:58:01.000+0000,,,,Configuration setting modification,Enabled Person Accounts,N/A,Not Applicable
+a0Mao000000tB80EAE,005ao000002a7LCAAY,,TDX-00003,2024-06-18T17:58:01.000+0000,005ao000002a7LCAAY,2024-06-18T17:58:01.000+0000,005ao000002a7LCAAY,2024-06-18T17:58:01.000+0000,,,,Modify Record Type,"Changed default ""PersonAccount""
+to ""Person""",Person,012ao000001TPiPAAW
+a0Mao000000tB81EAE,005ao000002a7LCAAY,,TDX-00004,2024-06-18T17:58:01.000+0000,005ao000002a7LCAAY,2024-06-18T17:58:01.000+0000,005ao000002a7LCAAY,2024-06-18T17:58:01.000+0000,,,,Configuration setting modification,Adde intelligence List view button,N/A,Not Applicable
+a0Mao000000tB82EAE,005ao000002a7LCAAY,,TDX-00005,2024-06-18T17:58:01.000+0000,005ao000002a7LCAAY,2024-06-18T17:58:01.000+0000,005ao000002a7LCAAY,2024-06-18T17:58:01.000+0000,,,,Modify profile,Admin Profile Added Customer record type to Available Record types for profile,,Not Applicable
+a0Mao000000tB83EAE,005ao000002a7LCAAY,,TDX-00006,2024-06-18T17:58:01.000+0000,005ao000002a7LCAAY,2024-06-18T17:58:01.000+0000,005ao000002a7LCAAY,2024-06-18T17:58:01.000+0000,,,,Modify profile,"Person accounts default page layout modified. 
+Removed 
+Industry , Webpage, Employees",Person Account : Page Layout : Person Account Layout,Not Applicable
+a0Mao000000tB84EAE,005ao000002a7LFAAY,,TDX-00007,2024-06-18T17:58:01.000+0000,005ao000002a7LFAAY,2024-06-18T17:58:01.000+0000,005ao000002a7LFAAY,2024-06-18T17:58:01.000+0000,,,,Configuration setting modification,"Assigned ""Einstein Sales Emails"" to all Workshop builder user accounts",Permission Set Assignment Modified,Not Applicable
+a0Mao000000tB85EAE,005ao000002a7LIAAY,,TDX-00028,2024-06-18T17:58:01.000+0000,005ao000002a7LIAAY,2024-06-18T17:58:01.000+0000,005ao000002a7LIAAY,2024-06-18T17:58:01.000+0000,,,,Prompt Added,Module 2: Field type template to generate root cause of the High Bill,High Bill Prompt Template,Not Applicable
+a0Mao000000tB86EAE,005ao000002a7LFAAY,,TDX-00029,2024-06-18T17:58:01.000+0000,005ao000002a7LFAAY,2024-06-18T17:58:01.000+0000,005ao000002a7LFAAY,2024-06-18T17:58:01.000+0000,,,,Configuration setting modification,"Deleted Case Troubleshooter Copilot Action
+
+Reason:  Attendees create this case in Copilot Module 2 - Step 4 and the existing action generates an Upsert Error preventing saving of the new Copilot Action
+
+Solution:  Delete existing Action to remove it from pre-built metadata in the Trialforce snapshot",Copilot Action Deleted = Case Troubleshooter,Not Applicable
+a0Mao000000tB88EAE,005ao000002a7LCAAY,,TDX-00012,2024-06-18T17:58:01.000+0000,005ao000002a7LCAAY,2024-06-18T17:58:01.000+0000,005ao000002a7LCAAY,2024-06-18T17:58:01.000+0000,,,,Modify Object,"Account contact relationship  multi select picklist Roles added values 
+Employee
+Family Member
+Owner","Account Contact relationship : roles 
+Added 
+Employee
+Family Member
+Owner",Not Applicable
+a0Mao000000tB89EAE,005ao000002a7LCAAY,,TDX-00013,2024-06-18T17:58:01.000+0000,005ao000002a7LCAAY,2024-06-18T17:58:01.000+0000,005ao000002a7LCAAY,2024-06-18T17:58:01.000+0000,,,,Modify Object,Account Record type added Family as record type,Account:recordType :family,Not Applicable

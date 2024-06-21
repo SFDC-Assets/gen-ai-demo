@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>Execute the prompt to retrieve the sentiment from the latest committee meeting.</description>
+        <name>Retrieve_Sentiment</name>
+        <label>Retrieve Sentiment</label>
+        <locationX>182</locationX>
+        <locationY>350</locationY>
+        <actionName>Monty_Berns_Committee_Sentiment_V1</actionName>
+        <actionType>generatePromptResponse</actionType>
+        <connector>
+            <targetReference>Negative_Sentiment</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>Input:Contact</name>
+            <value>
+                <elementReference>Get_Mr_Berns</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Monty_Berns_Committee_Sentiment_V1</nameSegment>
+        <outputParameters>
+            <assignToReference>vSentimentResult</assignToReference>
+            <name>promptResponse</name>
+        </outputParameters>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>60.0</apiVersion>
+    <assignments>
+        <description>Update the variable to tell the user that the committee has a negative outlook on him/her.</description>
+        <name>Set_Negative_Message</name>
+        <label>Set Negative Message</label>
+        <locationX>50</locationX>
+        <locationY>566</locationY>
+        <assignmentItems>
+            <assignToReference>vScreenMessage</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>It appears that the committee does not appreciate everything you’ve done for the town of Sprungfield. It is time to start your ‘Positive Outlook’ campaign.</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Town_Sentiment_Results</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <description>Was negative sentiment found in the meeting notes?</description>
+        <name>Negative_Sentiment</name>
+        <label>Negative Sentiment?</label>
+        <locationX>182</locationX>
+        <locationY>458</locationY>
+        <defaultConnector>
+            <targetReference>Town_Sentiment_Results</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>vSentimentResult</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Negative_Message</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>Screen flow that leverages the Monty Berns Committee Sentiment prompt and displays the results.</description>
+    <environments>Default</environments>
+    <interviewLabel>* Screen Flow for Town Sentiment {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>* Screen Flow for Town Sentiment</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordLookups>
+        <description>Retrieve Mr. Bern&apos;s record</description>
+        <name>Get_Mr_Berns</name>
+        <label>Get Mr. Berns</label>
+        <locationX>182</locationX>
+        <locationY>242</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Retrieve_Sentiment</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>LastName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Berns</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Contact</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <screens>
+        <description>Initial screen for testing town sentiment.</description>
+        <name>Get_Town_Sentiment</name>
+        <label>Get Town Sentiment</label>
+        <locationX>182</locationX>
+        <locationY>134</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Get_Mr_Berns</targetReference>
+        </connector>
+        <fields>
+            <name>lblInstructions</name>
+            <fieldText>&lt;p&gt;The current town sentiment towards you is &apos;&lt;strong&gt;Unknown&lt;/strong&gt;&apos;.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Click the &lt;strong&gt;Next&lt;/strong&gt; button to update.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <description>Screen to display the prompt results</description>
+        <name>Town_Sentiment_Results</name>
+        <label>Town Sentiment Results</label>
+        <locationX>182</locationX>
+        <locationY>758</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>lblResults</name>
+            <fieldText>&lt;p&gt;{!vScreenMessage}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Town_Sentiment</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Variable to hold the message shown on the last screen.</description>
+        <name>vScreenMessage</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>Nothing derogatory was found in the committee notes. You are liked.</stringValue>
+        </value>
+    </variables>
+    <variables>
+        <description>Variable to hold the sentiment result from the Prompt</description>
+        <name>vSentimentResult</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

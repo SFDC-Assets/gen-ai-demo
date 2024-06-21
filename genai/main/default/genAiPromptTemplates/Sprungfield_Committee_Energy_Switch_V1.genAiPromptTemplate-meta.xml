@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersion>2</activeVersion>
+    <description>Prompt to determine committee sentiment for switching to renewable energy</description>
+    <developerName>Sprungfield_Committee_Energy_Switch_V1</developerName>
+    <masterLabel>* Sprungfield Committee Energy Switch</masterLabel>
+    <templateVersions>
+        <content></content>
+        <inputs>
+            <apiName>Term</apiName>
+            <definition>SOBJECT://Prompt_Search_Term_v1__c</definition>
+            <masterLabel>Term</masterLabel>
+            <referenceName>Input:Term</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT35Turbo</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>flow://Get_Committee_Minutes_V1</definition>
+            <parameters>
+                <definition>SOBJECT://Prompt_Search_Term_v1__c</definition>
+                <isRequired>true</isRequired>
+                <parameterName>Term</parameterName>
+                <valueExpression>{!$Input:Term}</valueExpression>
+            </parameters>
+            <referenceName>Flow:Get_Committee_Minutes_V1</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>flow://Retrieve_Prompt_Search_Terms_v1</definition>
+            <parameters>
+                <definition>SOBJECT://Prompt_Search_Term_v1__c</definition>
+                <isRequired>true</isRequired>
+                <parameterName>Term</parameterName>
+                <valueExpression>{!$Input:Term}</valueExpression>
+            </parameters>
+            <referenceName>Flow:Retrieve_Prompt_Search_Terms_v1</referenceName>
+        </templateDataProviders>
+        <versionNumber>2</versionNumber>
+    </templateVersions>
+    <templateVersions>
+        <content></content>
+        <inputs>
+            <apiName>Term</apiName>
+            <definition>SOBJECT://Prompt_Search_Term_v1__c</definition>
+            <masterLabel>Term</masterLabel>
+            <referenceName>Input:Term</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT35Turbo</primaryModel>
+        <status>Published</status>
+        <versionNumber>1</versionNumber>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

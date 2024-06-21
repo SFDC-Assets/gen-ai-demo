@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Config_Type__c</fullName>
+    <label>Config Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Added Page Layout</fullName>
+                <default>false</default>
+                <label>Added Page Layout</label>
+            </value>
+            <value>
+                <fullName>Apex Added</fullName>
+                <default>false</default>
+                <label>Apex Added</label>
+            </value>
+            <value>
+                <fullName>Configuration setting modification</fullName>
+                <default>false</default>
+                <label>Configuration setting modification</label>
+            </value>
+            <value>
+                <fullName>Feature Enablement</fullName>
+                <default>false</default>
+                <label>Feature Enablement</label>
+            </value>
+            <value>
+                <fullName>Field Added</fullName>
+                <default>false</default>
+                <label>Field Added</label>
+            </value>
+            <value>
+                <fullName>Flow Added</fullName>
+                <default>false</default>
+                <label>Flow Added</label>
+            </value>
+            <value>
+                <fullName>LWC added</fullName>
+                <default>false</default>
+                <label>LWC added</label>
+            </value>
+            <value>
+                <fullName>Modified Page Layout</fullName>
+                <default>false</default>
+                <label>Modified Page Layout</label>
+            </value>
+            <value>
+                <fullName>Modify Apex</fullName>
+                <default>false</default>
+                <label>Modify Apex</label>
+            </value>
+            <value>
+                <fullName>Modify Flow</fullName>
+                <default>false</default>
+                <label>Modify Flow</label>
+            </value>
+            <value>
+                <fullName>Modify LWC</fullName>
+                <default>false</default>
+                <label>Modify LWC</label>
+            </value>
+            <value>
+                <fullName>Modify Object</fullName>
+                <default>false</default>
+                <label>Modify Object</label>
+            </value>
+            <value>
+                <fullName>Modify Permission set</fullName>
+                <default>false</default>
+                <label>Modify Permission set</label>
+            </value>
+            <value>
+                <fullName>Modify profile</fullName>
+                <default>false</default>
+                <label>Modify profile</label>
+            </value>
+            <value>
+                <fullName>Modify prompts</fullName>
+                <default>false</default>
+                <label>Modify prompts</label>
+            </value>
+            <value>
+                <fullName>Modify Record Type</fullName>
+                <default>false</default>
+                <label>Modify Record Type</label>
+            </value>
+            <value>
+                <fullName>Object Added</fullName>
+                <default>false</default>
+                <label>Object Added</label>
+            </value>
+            <value>
+                <fullName>Permission set added</fullName>
+                <default>false</default>
+                <label>Permission set added</label>
+            </value>
+            <value>
+                <fullName>Profile Added</fullName>
+                <default>false</default>
+                <label>Profile Added</label>
+            </value>
+            <value>
+                <fullName>Prompt Added</fullName>
+                <default>false</default>
+                <label>Prompt Added</label>
+            </value>
+            <value>
+                <fullName>RecordType Added</fullName>
+                <default>false</default>
+                <label>RecordType Added</label>
+            </value>
+            <value>
+                <fullName>External Services</fullName>
+                <default>false</default>
+                <label>External Services</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

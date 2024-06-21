@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LeadType__c</fullName>
+    <externalId>false</externalId>
+    <label>Lead Type</label>
+    <required>true</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Business</fullName>
+                <default>true</default>
+                <label>Business</label>
+            </value>
+            <value>
+                <fullName>Consumer Retail</fullName>
+                <default>false</default>
+                <label>Consumer Retail</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

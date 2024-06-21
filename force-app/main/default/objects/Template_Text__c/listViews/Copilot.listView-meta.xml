@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Copilot</fullName>
+    <columns>NAME</columns>
+    <columns>Order__c</columns>
+    <columns>Module__c</columns>
+    <columns>Action_Instruction__c</columns>
+    <columns>Prompt_Text__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Template_Type__c</field>
+        <operation>equals</operation>
+        <value>Copilot Action</value>
+    </filters>
+    <label>Copilot</label>
+</ListView>

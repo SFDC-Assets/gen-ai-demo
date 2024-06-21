@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Template_Type__c</fullName>
+    <label>Template Type</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Copilot Action</fullName>
+                <default>false</default>
+                <label>Copilot Action</label>
+            </value>
+            <value>
+                <fullName>Prompt</fullName>
+                <default>false</default>
+                <label>Prompt</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

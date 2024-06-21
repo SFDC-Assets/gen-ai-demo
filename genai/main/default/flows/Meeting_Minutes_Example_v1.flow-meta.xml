@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Get_New_Meeting_Minutes</name>
+        <label>Get New Meeting Minutes</label>
+        <locationX>176</locationX>
+        <locationY>134</locationY>
+        <actionName>GetMeetingMinutes.Get Meeting Minutes</actionName>
+        <actionType>externalService</actionType>
+        <connector>
+            <targetReference>Attendee_List</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <nameSegment>GetMeetingMinutes.Get Meeting Minutes</nameSegment>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>60.0</apiVersion>
+    <description>Example flow pulling the meeting minutes from the External Service displaying results on a screen.</description>
+    <environments>Default</environments>
+    <interviewLabel>* Meeting Minutes Example {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>* Meeting Minutes Example</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <screens>
+        <name>Attendee_List</name>
+        <label>Attendee List</label>
+        <locationX>176</locationX>
+        <locationY>242</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>Title</name>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;{!Get_New_Meeting_Minutes.2XX.meeting.title}&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;{!Get_New_Meeting_Minutes.2XX.meeting.z0date}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Consensus&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!Get_New_Meeting_Minutes.2XX.meeting.consensus}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Attendee_List_Section1</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>Attendee_List_Section1_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>DetailText</name>
+                    <fieldText>&lt;p&gt;&lt;strong&gt;Attendees:&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!Get_New_Meeting_Minutes.2XX.meeting.attendees}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Agenda:&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!Get_New_Meeting_Minutes.2XX.meeting.agenda}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Minutes:&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!Get_New_Meeting_Minutes.2XX.meeting.notes}&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>12</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_New_Meeting_Minutes</targetReference>
+        </connector>
+    </start>
+    <status>Draft</status>
+</Flow>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Get_Meeting_Minutes</name>
+        <label>Get Meeting Minutes</label>
+        <locationX>176</locationX>
+        <locationY>134</locationY>
+        <actionName>GetMeetingMinutes.Get Meeting Minutes</actionName>
+        <actionType>externalService</actionType>
+        <connector>
+            <targetReference>Return_Meeting_Minutes</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <nameSegment>GetMeetingMinutes.Get Meeting Minutes</nameSegment>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>61.0</apiVersion>
+    <assignments>
+        <description>Build the prompt for the meeting minutes.</description>
+        <name>Return_Meeting_Minutes</name>
+        <elementSubtype>AddPromptInstructions</elementSubtype>
+        <label>Return Meeting Minutes</label>
+        <locationX>176</locationX>
+        <locationY>242</locationY>
+        <assignmentItems>
+            <assignToReference>$Output.Prompt</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>{!Get_Meeting_Minutes.2XX.meeting.agenda}
+{!Get_Meeting_Minutes.2XX.meeting.consensus}
+{!Get_Meeting_Minutes.2XX.meeting.notes}
+</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <environments>Default</environments>
+    <interviewLabel>Get Commitee Notes {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Get Commitee Notes</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>PromptFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <capabilityTypes>
+            <name>FlexTemplate://Monty_Berns_Committee_Sentiment</name>
+            <capabilityName>FlexTemplate://Monty_Berns_Committee_Sentiment</capabilityName>
+            <inputs>
+                <name>Contact</name>
+                <capabilityInputName>Contact</capabilityInputName>
+                <dataType>SOBJECT://Contact</dataType>
+                <isCollection>false</isCollection>
+            </inputs>
+        </capabilityTypes>
+        <connector>
+            <targetReference>Get_Meeting_Minutes</targetReference>
+        </connector>
+        <triggerType>Capability</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>
