@@ -11,6 +11,8 @@ sfdx force:user:permset:assign -n EinsteinGPTPromptTemplateUser
 sfdx force:user:permset:assign -n Heroku_Endpoint_Access
 sfdx force:user:permset:assign -n TDX_Demo_Build_Permissions
 
+sfdx force:source:deploy -p flow-app
+
 sfdx automig:load -d data
 
 sfdx shane:user:password:set -p salesforce1 -g User -l User
