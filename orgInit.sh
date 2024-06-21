@@ -1,6 +1,10 @@
+#!/usr/bin/env bash
+
 # https://hosted-scratch.herokuapp.com/launch?template=https://github.com/SFDC-Assets/gen-ai-demo/tree/main
 # sfdx force:source:retrieve -m GenAiPromptTemplate,GenAiPromptTemplateActv,GenAiFunction,GenAiPlanner
 sfdx shane:org:create -f config/partner-scratch-def.json -d 30 -s --wait 60 --userprefix einstein -o gpt.demo
+
+npm install
 
 node run.js
 
