@@ -21,6 +21,6 @@ sfdx force:user:permset:assign -n TDX_Demo_Build_Permissions
 
 sfdx automig:load -d data
 
-# sfdx force:source:deploy -p flow-app
+sfdx force:source:deploy -p flow-app
 
 sfdx force:org:open
