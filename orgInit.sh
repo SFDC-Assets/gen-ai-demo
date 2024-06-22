@@ -8,7 +8,7 @@ npm install
 
 node run.js
 
-sleep 60
+sleep 120
 
 sfdx shane:user:password:set -p salesforce1 -g User -l User
 
