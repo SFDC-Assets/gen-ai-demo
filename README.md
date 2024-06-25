@@ -1,5 +1,5 @@
-# Data Cloud Workshop Environment
+# Gen AI Workshop Environment
 
-Data cloud environment for building out workshops
+Prompt Builder and Copilot environment for building out workshops
 
 This is meant to be used within platformdemos.com
