@@ -7,7 +7,7 @@ sfdx shane:org:create -f config/partner-scratch-def.json -d 30 -s --wait 60 --us
 
 # npm install
 node run.js
-sleep 90
+sleep 120
 
 sfdx shane:user:password:set -p salesforce1 -g User -l User
 
