@@ -25,6 +25,6 @@ sfdx automig:load -d data
 
 # sleep 600
 
-# sfdx force:source:deploy -p flow-app
+sfdx force:source:deploy -p flow-app
 
 sfdx force:org:open
