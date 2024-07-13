@@ -1,70 +1,33 @@
-﻿Id,OwnerId,IsDeleted,Name,CreatedDate,CreatedById,LastModifiedDate,LastModifiedById,SystemModstamp,LastViewedDate,LastReferencedDate,Label__c,API_Name__c,Prompt_Text__c,Action_Instruction__c,ActionInput1__c,ActionInput2__c,ActionOutput1__c,ActionOutput2__c,Template_Type__c,Module__c,Order__c
-a0Sao000000Z0unEAC,005ao000002a7LGAAY,,Prompt:- High_Invoice_Prompt_Template,2024-06-18T17:58:01.000+0000,005ao000002a7LGAAY,2024-06-18T17:58:01.000+0000,005ao000002a7LGAAY,2024-06-18T17:58:01.000+0000,,,High Invoice Prompt Template,High_Invoice_Prompt_Template,"You are an expert focusing on helping with a customer's billing issue. This customer has reached out to their electricity company with an issue and you should use the subject and description to determine the issue, then use the data provided to explain and troubleshoot the issue. Please deeply analyze the provided data and prioritize correlations in the data sets to the customer's issue. If there is a recommended product in the data, please make that recommendation to the customer. Do not give specifics related to billing data; only give high-level comments and recommendations. Focus on giving recommendations specific to the data you have and not on generalized recommendations. If weather data is provided, focus heavily on the weather data correlation. If the customer mentions outages, specifically list any outages they experienced (designated by ""outage_reason"" in the data) and the reasons why. Your response should be in the form of a cordial and brief (3 paragraphs or less) response from the electricity company to the customer. Please suggest any recommendations on insulation, LED lights program, Energy efficient appliance referrals, alternate rate program, etc if applicable
-
-If the Customer bill is normal but just more expensive than they would like then recommend other services that the Springfield nuclear power plant can offer (solar power, RTG or RITEG (made with genuine Springfield nuclear waste), district heating service)
-
-Case Subject: {!$Input:Case.Subject}
-
-Description: {!$Input:Case.Description}
-
-Internal comments: {!$Input:Case.Comments}
-
-Customer name: {!$Input:Case.Contact.FirstName} {!$Input:Case.Contact.LastName}
-
-Name of the agent sending response: {!$User.FirstName} {!$User.LastName}
-
-<data>
-{!$Flow:Prompt_High_Invoice_Ground_Information.Prompt}
-</data>",,,,,,Prompt,2,3
-a0Sao000000Z0uoEAC,005ao000002a7LCAAY,,Copilot Action:- Prompt 1Accounts,2024-06-18T17:58:01.000+0000,005ao000002a7LCAAY,2024-06-18T17:58:01.000+0000,005ao000002a7LCAAY,2024-06-18T17:58:01.000+0000,,,Prompt #1: Accounts,Prompt 1Accounts,Show me my accounts where IsPersonAccount is false,,,,,,Copilot Action,1,0
-a0Sao000000Z0upEAC,005ao000002a7LCAAY,,Copilot Action:- Module2Prompt1,2024-06-18T17:58:01.000+0000,005ao000002a7LCAAY,2024-06-18T17:58:01.000+0000,005ao000002a7LCAAY,2024-06-18T17:58:01.000+0000,,,Module 2 Prompt1 What are Abe Sampson’s open cases,Module2Prompt1,What are Abe Sampson’s open cases,,,,,,Copilot Action,2,6
-a0Sao000000Z0uqEAC,005ao000002a7LCAAY,,Copilot Action:- Module2Prompt1,2024-06-18T17:58:01.000+0000,005ao000002a7LCAAY,2024-06-18T17:58:01.000+0000,005ao000002a7LCAAY,2024-06-18T17:58:01.000+0000,,,Module 2 Prompt 1 Alternate !!! Clear Einstein Chat Window First,Module2Prompt1,Search for the contact Abe sampson and show his open cases,,,,,,Copilot Action,2,7
-a0Sao000000Z0urEAC,005ao000002a7JZAAY,,Copilot Action:- ActionInstructions,2024-06-18T17:58:01.000+0000,005ao000002a7JZAAY,2024-06-18T17:58:01.000+0000,005ao000002a7LCAAY,2024-06-18T17:58:01.000+0000,,,Action Instructions,ActionInstructions,Troubleshoots a single Salesforce CRM Case record. Requires a single Case record ID as input for Case_Troubleshooter. You MUST return promptResponse to the user. Do not use this to summarize a record. This should ONLY be used when a user specifically asks for troubleshooting a case.,,,,,,Copilot Action,2,1
-a0Sao000000Z0usEAC,005ao000002a7JZAAY,,Copilot Action:- recordIdInstructions,2024-06-18T17:58:01.000+0000,005ao000002a7JZAAY,2024-06-18T17:58:01.000+0000,005ao000002a7LCAAY,2024-06-18T17:58:01.000+0000,,,recordId Instructions,recordIdInstructions,"Case record Id to be used for troubleshooting. Example: caseId, record Id, recordId",,,,,,Copilot Action,2,2
-a0Sao000000Z0utEAC,005ao000002a7JZAAY,,Copilot Action:- promptResponseInstructions,2024-06-18T17:58:01.000+0000,005ao000002a7JZAAY,2024-06-18T17:58:01.000+0000,005ao000002a7LCAAY,2024-06-18T17:58:01.000+0000,,,promptResponse Instructions,promptResponseInstructions,Prompt response that must be returned to the user,,,,,,Copilot Action,2,3
-a0Sao000000Z0uuEAC,005ao000002a7JZAAY,,Copilot Action:- TroubleshootCasePromptText,2024-06-18T17:58:01.000+0000,005ao000002a7JZAAY,2024-06-18T17:58:01.000+0000,005ao000002a7LCAAY,2024-06-18T17:58:01.000+0000,,,Troubleshoot Case Prompt Text,TroubleshootCasePromptText,"You are an expert focusing on troubleshooting a billing issue for a utility company. Please deeply analyze the provided data and prioritize correlations in the data sets to the customer's issue. If weather data is provided, focus heavily on the weather data correlation. If outages are mentioned, specifically list any outages experienced in a separate table (designated by ""outage_reason"" in the data) with the month it occurred and the reason why. Respond in a with a bulleted list. BE BRIEF. BE CONCISE. Do not make recommendations. All dollar figures should be formatted to 2 decimal places.
-
-Case Subject: {!$Input:Case.Subject}
-
-Description: {!$Input:Case.Description}
-
-<data>
-{!$Flow:Case_Troubleshooter_Grounding.Prompt}
-</data>",,,,,,Copilot Action,2,0
-a0Sao000000Z0uvEAC,005ao000002a7LKAAY,,Prompt:- Sales_Check_In,2024-06-18T17:58:01.000+0000,005ao000002a7LKAAY,2024-06-18T17:58:01.000+0000,005ao000002a7LKAAY,2024-06-18T17:58:01.000+0000,,,Sales Check In,Sales_Check_In,"You are a {!$Input:Sender.Title} working at {!$Input:Sender.CompanyName}
-Write an email to your customer {!$Input:Recipient.Name} checking in with them and informing them of their current account balance {!$Input:Account.Current_Balance_Due__c} and inform them of 3 possible ways to pay their balance
-
-Use the following directions in generating the email:
-Length Limit = Less than 300 words
-Format = Multi Paragraph
-Tone = Business Casual
-Begin by expressing thanks to {!$Input:Recipient.Name} for being a customer of {!$Input:Sender.CompanyName}
-Payment Options shall be displayed in a prioritized number bulleted list
-Let the customer know you are available and happy to help if they have questions
-Provide your contact information in the closing of the email {!$Input:Recipient.Name} {!$Input:Sender.Title} {!$Input:Sender.CompanyName} {!$Input:Sender.Email} {!$Input:Sender.Phone}",,,,,,Prompt,1,1
-a0Sao000000Z0uwEAC,005ao000002a7LCAAY,,Prompt:- Sprungfield_Committee_Energy_Switch_V1,2024-06-18T17:58:01.000+0000,005ao000002a7LCAAY,2024-06-18T17:58:01.000+0000,005ao000002a7LGAAY,2024-06-18T17:58:01.000+0000,,,Sprungfield Committee Energy Switch,Sprungfield_Committee_Energy_Switch_V1,<p>Taking the following notes posted to social media &#39;{!$Flow:Get_Committee_Minutes_V1.Prompt}&#39; and analyze for keywords.</p><p>:This prompt should return True if any of the following &#39;{!$Flow:Retrieve_Prompt_Search_Terms_v1.Prompt}&#39; are found</p><p>:This prompt should return False if none of the keywords were found</p><p>:This prompt should return no other text other than True or False</p><p>:This prompt should return boolean values</p>,,,,,,Prompt,,
-a0Sao000000Z0uxEAC,005ao000002a7LCAAY,,Prompt:- Monty_Berns_Committee_Sentiment_Prompt,2024-06-18T17:58:01.000+0000,005ao000002a7LCAAY,2024-06-18T17:58:01.000+0000,005ao000002a7LKAAY,2024-06-18T17:58:01.000+0000,,,Monty Berns Committee Sentiment Prompt,Monty_Berns_Committee_Sentiment_Prompt,"Taking the following description of Mr Berns posted to social media '<Flow Goes Here>' and analyze for general sentiment.
-:This prompt should return True if the sentiment or description of Mr Berns is negative or ambiguous leaning negative
-:This prompt should return True if the description says anything that indicates he is a poor employer or manager
-:This prompt should return False if the sentiment is ambiguous, neutral, or positive
-:This prompt should return no other text other than True or False
-:This prompt should return a boolean value",,,,,,Prompt,3,1
-a0Sao000000Z0uyEAC,005ao000002a7LCAAY,,Prompt:- Sales_Monthly_Check_In_Lab_version,2024-06-18T17:58:01.000+0000,005ao000002a7LCAAY,2024-06-18T17:58:01.000+0000,005ao000002a7LCAAY,2024-06-18T17:58:01.000+0000,,,Sales Monthly Check In Lab version,Sales_Monthly_Check_In_Lab_version,"You are a <Title> working at <Company>
-Write an email to your customer <Name> checking in with them and informing them of their current account balance <Outstanding Balance> and inform them of 3 possible ways to pay their balance
-
-Use the following directions in generating the email:
-Length Limit = Less than 300 words
-Format = Multi Paragraph
-Tone = Business Casual
-Begin by expressing thanks to <Name> for being a customer of <Company>
-Payment Options shall be displayed in a prioritized number bulleted list
-Let the customer know you are available and happy to help if they have questions
-Provide your contact information in the closing of the email <Name> <Title> <Company> <Email> <Phone>",,,,,,Prompt,1,0
-a0Sao000000Z0v9EAC,005ao000002a7LCAAY,,Copilot Action:- Prompt2_AccountsAndOpportunities,2024-06-18T17:58:01.000+0000,005ao000002a7LCAAY,2024-06-18T17:58:01.000+0000,005ao000002a7LCAAY,2024-06-18T17:58:01.000+0000,,,Prompt #2: Accounts & Opportunities,Prompt2_AccountsAndOpportunities,Show me all my accounts with open opportunities,,,,,,Copilot Action,1,1
-a0Sao000000Z0vAEAS,005ao000002a7LCAAY,,Copilot Action:- Prompt3_RefinedPrompt,2024-06-18T17:58:01.000+0000,005ao000002a7LCAAY,2024-06-18T17:58:01.000+0000,005ao000002a7LCAAY,2024-06-18T17:58:01.000+0000,,,Prompt #3: Refined Prompt,Prompt3_RefinedPrompt,"Summarize the second account on the list and format the output to make it easy to read, separate it into relevant sections based on the data returned",,,,,,Copilot Action,1,2
-a0Sao000000Z0vBEAS,005ao000002a7LGAAY,,Prompt:- BeautifyInvoiceData,2024-06-18T17:58:01.000+0000,005ao000002a7LGAAY,2024-06-18T17:58:01.000+0000,005ao000002a7LGAAY,2024-06-18T17:58:01.000+0000,,,BeautifyInvoiceData,BeautifyInvoiceData,"SUBSTITUTE(SUBSTITUTE({!Get_Invoice_Data.body}, ',', ', '),':', ' : ')",,,,,,Prompt,2,1
-a0Sao000000Z0vCEAS,005ao000002a7LGAAY,,Prompt:- Dynamic_Ground_Information,2024-06-18T17:58:01.000+0000,005ao000002a7LGAAY,2024-06-18T17:58:01.000+0000,005ao000002a7LGAAY,2024-06-18T17:58:01.000+0000,,,Dynamic Ground Information,Dynamic_Ground_Information,"<weatherdata>{!Get_Weather_Data.2XX}
-</weatherdata>
-<invoicedata>
-{!BeautifyInvoiceData}
-</invoicedata>",,,,,,Prompt,2,2
+﻿Id,OwnerId,IsDeleted,Name,CreatedDate,CreatedById,LastModifiedDate,LastModifiedById,SystemModstamp,LastViewedDate,LastReferencedDate,Template_Type__c
+a03Nq00000MXhCWIA1,005Nq00000AU6ztIAD,,Prompt:- High_Invoice_Prompt_Template,2024-07-11T22:14:40.000+0000,005Nq00000AU6ztIAD,2024-07-11T22:14:40.000+0000,005Nq00000AU6ztIAD,2024-07-11T22:14:40.000+0000,2024-07-11T22:14:40.000+0000,2024-07-11T22:14:40.000+0000,Prompt
+a03Nq00000MXhCXIA1,005Nq00000AU6ztIAD,,Copilot Action:- Prompt 1Accounts,2024-07-11T22:14:40.000+0000,005Nq00000AU6ztIAD,2024-07-11T22:14:40.000+0000,005Nq00000AU6ztIAD,2024-07-11T22:14:40.000+0000,2024-07-11T22:14:40.000+0000,2024-07-11T22:14:40.000+0000,Copilot Action
+a03Nq00000MXhCYIA1,005Nq00000AU6ztIAD,,Copilot Action:- Module2Prompt1,2024-07-11T22:14:40.000+0000,005Nq00000AU6ztIAD,2024-07-11T22:14:40.000+0000,005Nq00000AU6ztIAD,2024-07-11T22:14:40.000+0000,2024-07-11T22:14:40.000+0000,2024-07-11T22:14:40.000+0000,Copilot Action
+a03Nq00000MXhCZIA1,005Nq00000AU6ztIAD,,Copilot Action:- Module2Prompt1,2024-07-11T22:14:40.000+0000,005Nq00000AU6ztIAD,2024-07-11T22:14:40.000+0000,005Nq00000AU6ztIAD,2024-07-11T22:14:40.000+0000,2024-07-11T22:14:40.000+0000,2024-07-11T22:14:40.000+0000,Copilot Action
+a03Nq00000MXhCaIAL,005Nq00000AU6ztIAD,,Copilot Action:- ActionInstructions,2024-07-11T22:14:40.000+0000,005Nq00000AU6ztIAD,2024-07-11T22:14:40.000+0000,005Nq00000AU6ztIAD,2024-07-11T22:14:40.000+0000,2024-07-11T22:14:40.000+0000,2024-07-11T22:14:40.000+0000,Copilot Action
+a03Nq00000MXhCbIAL,005Nq00000AU6ztIAD,,Copilot Action:- recordIdInstructions,2024-07-11T22:14:40.000+0000,005Nq00000AU6ztIAD,2024-07-11T22:14:40.000+0000,005Nq00000AU6ztIAD,2024-07-11T22:14:40.000+0000,2024-07-11T22:14:40.000+0000,2024-07-11T22:14:40.000+0000,Copilot Action
+a03Nq00000MXhCcIAL,005Nq00000AU6ztIAD,,Copilot Action:- promptResponseInstructions,2024-07-11T22:14:40.000+0000,005Nq00000AU6ztIAD,2024-07-11T22:14:40.000+0000,005Nq00000AU6ztIAD,2024-07-11T22:14:40.000+0000,2024-07-11T22:14:40.000+0000,2024-07-11T22:14:40.000+0000,Copilot Action
+a03Nq00000MXhCdIAL,005Nq00000AU6ztIAD,,Copilot Action:- TroubleshootCasePromptText,2024-07-11T22:14:40.000+0000,005Nq00000AU6ztIAD,2024-07-11T22:14:40.000+0000,005Nq00000AU6ztIAD,2024-07-11T22:14:40.000+0000,2024-07-11T22:14:40.000+0000,2024-07-11T22:14:40.000+0000,Copilot Action
+a03Nq00000MXhCeIAL,005Nq00000AU6ztIAD,,Prompt:- Sales_Check_In,2024-07-11T22:14:40.000+0000,005Nq00000AU6ztIAD,2024-07-11T22:14:40.000+0000,005Nq00000AU6ztIAD,2024-07-11T22:14:40.000+0000,2024-07-11T22:14:40.000+0000,2024-07-11T22:14:40.000+0000,Prompt
+a03Nq00000MXhCfIAL,005Nq00000AU6ztIAD,,Prompt:- Sprungfield_Committee_Energy_Switch_V1,2024-07-11T22:14:40.000+0000,005Nq00000AU6ztIAD,2024-07-11T22:14:40.000+0000,005Nq00000AU6ztIAD,2024-07-11T22:14:40.000+0000,2024-07-11T22:14:40.000+0000,2024-07-11T22:14:40.000+0000,Prompt
+a03Nq00000MXhCgIAL,005Nq00000AU6ztIAD,,Prompt:- Monty_Berns_Committee_Sentiment_Prompt,2024-07-11T22:14:40.000+0000,005Nq00000AU6ztIAD,2024-07-11T22:14:40.000+0000,005Nq00000AU6ztIAD,2024-07-11T22:14:40.000+0000,2024-07-11T22:14:40.000+0000,2024-07-11T22:14:40.000+0000,Prompt
+a03Nq00000MXhChIAL,005Nq00000AU6ztIAD,,Prompt:- Sales_Monthly_Check_In_Lab_version,2024-07-11T22:14:40.000+0000,005Nq00000AU6ztIAD,2024-07-11T22:14:40.000+0000,005Nq00000AU6ztIAD,2024-07-11T22:14:40.000+0000,2024-07-11T22:14:40.000+0000,2024-07-11T22:14:40.000+0000,Prompt
+a03Nq00000MXhCiIAL,005Nq00000AU6ztIAD,,Copilot Action:- Prompt2_AccountsAndOpportunities,2024-07-11T22:14:40.000+0000,005Nq00000AU6ztIAD,2024-07-11T22:14:40.000+0000,005Nq00000AU6ztIAD,2024-07-11T22:14:40.000+0000,2024-07-11T22:14:40.000+0000,2024-07-11T22:14:40.000+0000,Copilot Action
+a03Nq00000MXhCjIAL,005Nq00000AU6ztIAD,,Copilot Action:- Prompt3_RefinedPrompt,2024-07-11T22:14:40.000+0000,005Nq00000AU6ztIAD,2024-07-11T22:14:40.000+0000,005Nq00000AU6ztIAD,2024-07-11T22:14:40.000+0000,2024-07-11T22:14:40.000+0000,2024-07-11T22:14:40.000+0000,Copilot Action
+a03Nq00000MXhCkIAL,005Nq00000AU6ztIAD,,Prompt:- BeautifyInvoiceData,2024-07-11T22:14:40.000+0000,005Nq00000AU6ztIAD,2024-07-11T22:14:40.000+0000,005Nq00000AU6ztIAD,2024-07-11T22:14:40.000+0000,2024-07-11T22:14:40.000+0000,2024-07-11T22:14:40.000+0000,Prompt
+a03Nq00000MXhClIAL,005Nq00000AU6ztIAD,,Prompt:- Dynamic_Ground_Information,2024-07-11T22:14:40.000+0000,005Nq00000AU6ztIAD,2024-07-11T22:14:40.000+0000,005Nq00000AU6ztIAD,2024-07-11T22:14:40.000+0000,2024-07-11T22:14:40.000+0000,2024-07-11T22:14:40.000+0000,Prompt
+a03Nq00000MXlxxIAD,005Nq00000AU6ztIAD,,Prompt:- High_Invoice_Prompt_Template,2024-07-11T21:22:06.000+0000,005Nq00000AU6ztIAD,2024-07-11T21:22:06.000+0000,005Nq00000AU6ztIAD,2024-07-11T21:22:06.000+0000,2024-07-11T21:22:06.000+0000,2024-07-11T21:22:06.000+0000,Prompt
+a03Nq00000MXlxyIAD,005Nq00000AU6ztIAD,,Copilot Action:- Prompt 1Accounts,2024-07-11T21:22:06.000+0000,005Nq00000AU6ztIAD,2024-07-11T21:22:06.000+0000,005Nq00000AU6ztIAD,2024-07-11T21:22:06.000+0000,2024-07-11T21:22:06.000+0000,2024-07-11T21:22:06.000+0000,Copilot Action
+a03Nq00000MXlxzIAD,005Nq00000AU6ztIAD,,Copilot Action:- Module2Prompt1,2024-07-11T21:22:06.000+0000,005Nq00000AU6ztIAD,2024-07-11T21:22:06.000+0000,005Nq00000AU6ztIAD,2024-07-11T21:22:06.000+0000,2024-07-11T21:22:06.000+0000,2024-07-11T21:22:06.000+0000,Copilot Action
+a03Nq00000MXly0IAD,005Nq00000AU6ztIAD,,Copilot Action:- Module2Prompt1,2024-07-11T21:22:06.000+0000,005Nq00000AU6ztIAD,2024-07-11T21:22:06.000+0000,005Nq00000AU6ztIAD,2024-07-11T21:22:06.000+0000,2024-07-11T21:22:06.000+0000,2024-07-11T21:22:06.000+0000,Copilot Action
+a03Nq00000MXly1IAD,005Nq00000AU6ztIAD,,Copilot Action:- ActionInstructions,2024-07-11T21:22:06.000+0000,005Nq00000AU6ztIAD,2024-07-11T21:22:06.000+0000,005Nq00000AU6ztIAD,2024-07-11T21:22:06.000+0000,2024-07-11T21:22:06.000+0000,2024-07-11T21:22:06.000+0000,Copilot Action
+a03Nq00000MXly2IAD,005Nq00000AU6ztIAD,,Copilot Action:- recordIdInstructions,2024-07-11T21:22:06.000+0000,005Nq00000AU6ztIAD,2024-07-11T21:22:06.000+0000,005Nq00000AU6ztIAD,2024-07-11T21:22:06.000+0000,2024-07-11T21:22:06.000+0000,2024-07-11T21:22:06.000+0000,Copilot Action
+a03Nq00000MXly3IAD,005Nq00000AU6ztIAD,,Copilot Action:- promptResponseInstructions,2024-07-11T21:22:06.000+0000,005Nq00000AU6ztIAD,2024-07-11T21:22:06.000+0000,005Nq00000AU6ztIAD,2024-07-11T21:22:06.000+0000,2024-07-11T21:22:06.000+0000,2024-07-11T21:22:06.000+0000,Copilot Action
+a03Nq00000MXly4IAD,005Nq00000AU6ztIAD,,Copilot Action:- TroubleshootCasePromptText,2024-07-11T21:22:06.000+0000,005Nq00000AU6ztIAD,2024-07-11T21:22:06.000+0000,005Nq00000AU6ztIAD,2024-07-11T21:22:06.000+0000,2024-07-11T21:22:06.000+0000,2024-07-11T21:22:06.000+0000,Copilot Action
+a03Nq00000MXly5IAD,005Nq00000AU6ztIAD,,Prompt:- Sales_Check_In,2024-07-11T21:22:06.000+0000,005Nq00000AU6ztIAD,2024-07-11T21:22:06.000+0000,005Nq00000AU6ztIAD,2024-07-11T21:22:06.000+0000,2024-07-11T21:22:06.000+0000,2024-07-11T21:22:06.000+0000,Prompt
+a03Nq00000MXly6IAD,005Nq00000AU6ztIAD,,Prompt:- Sprungfield_Committee_Energy_Switch_V1,2024-07-11T21:22:06.000+0000,005Nq00000AU6ztIAD,2024-07-11T21:22:06.000+0000,005Nq00000AU6ztIAD,2024-07-11T21:22:06.000+0000,2024-07-11T21:22:06.000+0000,2024-07-11T21:22:06.000+0000,Prompt
+a03Nq00000MXly7IAD,005Nq00000AU6ztIAD,,Prompt:- Monty_Berns_Committee_Sentiment_Prompt,2024-07-11T21:22:06.000+0000,005Nq00000AU6ztIAD,2024-07-11T21:22:06.000+0000,005Nq00000AU6ztIAD,2024-07-11T21:22:06.000+0000,2024-07-11T21:22:06.000+0000,2024-07-11T21:22:06.000+0000,Prompt
+a03Nq00000MXly8IAD,005Nq00000AU6ztIAD,,Prompt:- Sales_Monthly_Check_In_Lab_version,2024-07-11T21:22:06.000+0000,005Nq00000AU6ztIAD,2024-07-11T21:22:06.000+0000,005Nq00000AU6ztIAD,2024-07-11T21:22:06.000+0000,2024-07-11T21:22:06.000+0000,2024-07-11T21:22:06.000+0000,Prompt
+a03Nq00000MXly9IAD,005Nq00000AU6ztIAD,,Copilot Action:- Prompt2_AccountsAndOpportunities,2024-07-11T21:22:06.000+0000,005Nq00000AU6ztIAD,2024-07-11T21:22:06.000+0000,005Nq00000AU6ztIAD,2024-07-11T21:22:06.000+0000,2024-07-11T21:22:06.000+0000,2024-07-11T21:22:06.000+0000,Copilot Action
+a03Nq00000MXlyAIAT,005Nq00000AU6ztIAD,,Copilot Action:- Prompt3_RefinedPrompt,2024-07-11T21:22:06.000+0000,005Nq00000AU6ztIAD,2024-07-11T21:22:06.000+0000,005Nq00000AU6ztIAD,2024-07-11T21:22:06.000+0000,2024-07-11T21:22:06.000+0000,2024-07-11T21:22:06.000+0000,Copilot Action
+a03Nq00000MXlyBIAT,005Nq00000AU6ztIAD,,Prompt:- BeautifyInvoiceData,2024-07-11T21:22:06.000+0000,005Nq00000AU6ztIAD,2024-07-11T21:22:06.000+0000,005Nq00000AU6ztIAD,2024-07-11T21:22:06.000+0000,2024-07-11T21:22:06.000+0000,2024-07-11T21:22:06.000+0000,Prompt
+a03Nq00000MXlyCIAT,005Nq00000AU6ztIAD,,Prompt:- Dynamic_Ground_Information,2024-07-11T21:22:06.000+0000,005Nq00000AU6ztIAD,2024-07-11T21:22:06.000+0000,005Nq00000AU6ztIAD,2024-07-11T21:22:06.000+0000,2024-07-11T21:22:06.000+0000,2024-07-11T21:22:06.000+0000,Prompt

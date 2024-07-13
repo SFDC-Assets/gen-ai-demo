@@ -1,10 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
-    <description>Prompt to determine committee sentiment for Montgomery Berns.</description>
+    <description
+  >Prompt to determine committee sentiment for Montgomery Berns.</description>
     <developerName>Monty_Berns_Committee_Sentiment</developerName>
     <masterLabel>Monty Berns Committee Sentiment</masterLabel>
     <templateVersions>
-        <content>Taking the following description of Mr Berns posted to social media &apos;&lt;Flow Goes Here&gt;&apos; and analyze for general sentiment.
+        <content
+    >Taking the following description of Mr Berns posted to social media &apos;&lt;Flow Goes Here&gt;&apos; and analyze for general sentiment.
 :This prompt should return True if the sentiment or description of Mr Berns is negative or ambiguous leaning negative
 :This prompt should return True if the description says anything that indicates he is a poor employer or manager
 :This prompt should return False if the sentiment is ambiguous, neutral, or positive
@@ -20,7 +22,7 @@
             <referenceName>Input:Contact</referenceName>
             <required>true</required>
         </inputs>
-        <primaryModel>sfdc_ai__DefaultOpenAIGPT35Turbo</primaryModel>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4_32k</primaryModel>
         <status>Draft</status>
         <versionNumber>1</versionNumber>
     </templateVersions>
