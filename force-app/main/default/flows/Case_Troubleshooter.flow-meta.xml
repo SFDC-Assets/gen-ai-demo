@@ -21,7 +21,7 @@
         </outputParameters>
         <versionSegment>1</versionSegment>
     </actionCalls>
-    <apiVersion>60.0</apiVersion>
+    <apiVersion>61.0</apiVersion>
     <environments>Default</environments>
     <interviewLabel
   >Case Troubleshooter {!$Flow.CurrentDateTime}</interviewLabel>
