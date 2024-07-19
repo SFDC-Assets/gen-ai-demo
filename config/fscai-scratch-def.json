@@ -1,0 +1,32 @@
+{
+  "orgName": "Einstein GPT Workshop",
+  "edition": "Partner Developer",
+  "features": [
+    "EnableSetPasswordInApi",
+    "EINSTEIN1AIPLATFORM",
+    "CUSTOMERDATAPLATFORM",
+    "DataComDnbAccounts",
+    "DATACOMDNBACCOUNTSENTERPRISE",
+    "ADDDATACOMCRMRECORDCREDIT:30",
+    "WavePlatform",
+    "EinsteinAnalyticsPlus",
+    "AnalyticsAdminPerms",
+    "AnalyticsAppEmbedded",
+    "DevelopmentWave",
+    "EinsteinAnalyticsPlus"
+  ],
+  "settings": {
+    "lightningExperienceSettings": {
+      "enableS1DesktopEnabled": true
+    },
+    "mobileSettings": {
+      "enableS1EncryptedStoragePref2": false
+    },
+    "communitiesSettings": {
+      "enableNetworksEnabled": true
+    },
+    "emailAdministrationSettings": {
+      "enableEnhancedEmailEnabled": true
+    }
+  }
+}
