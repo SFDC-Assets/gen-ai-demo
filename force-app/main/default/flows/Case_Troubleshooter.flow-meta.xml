@@ -1,26 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
-    <actionCalls>
-        <name>Troubleshoot_the_Case</name>
-        <label>Troubleshoot the Case</label>
-        <locationX>176</locationX>
-        <locationY>242</locationY>
-        <actionName>Troubleshoot_Case_Prompt</actionName>
-        <actionType>generatePromptResponse</actionType>
-        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
-        <inputParameters>
-            <name>Input:Case</name>
-            <value>
-                <elementReference>Get_Case</elementReference>
-            </value>
-        </inputParameters>
-        <nameSegment>Troubleshoot_Case_Prompt</nameSegment>
-        <outputParameters>
-            <assignToReference>promptResponse</assignToReference>
-            <name>promptResponse</name>
-        </outputParameters>
-        <versionSegment>1</versionSegment>
-    </actionCalls>
     <apiVersion>61.0</apiVersion>
     <environments>Default</environments>
     <interviewLabel
@@ -52,9 +31,6 @@
         <locationY>134</locationY>
         <assignNullValuesIfNoRecordsFound
     >false</assignNullValuesIfNoRecordsFound>
-        <connector>
-            <targetReference>Troubleshoot_the_Case</targetReference>
-        </connector>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
@@ -74,7 +50,7 @@
             <targetReference>Get_Case</targetReference>
         </connector>
     </start>
-    <status>Active</status>
+    <status>Draft</status>
     <variables>
         <name>promptResponse</name>
         <dataType>String</dataType>
