@@ -13,6 +13,7 @@ sfdx shane:user:password:set -p salesforce1 -g User -l User
 
 sfdx force:user:permset:assign -n EinsteinGPTPromptTemplateManager
 sfdx force:user:permset:assign -n EinsteinGPTPromptTemplateUser
+sfdx shane:user:permset:assign -l User -g User -n CDPAdmin
 
 sfdx force:source:push
 
