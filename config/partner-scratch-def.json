@@ -1,16 +1,7 @@
 {
   "orgName": "Einstein GPT Workshop",
   "edition": "Partner Developer",
-  "features": [
-    "EnableSetPasswordInApi",
-    "EINSTEIN1AIPLATFORM",
-    "Communities",
-    "PersonAccounts",
-    "ContactsToMultipleAccounts",
-    "FinancialServicesUser:2",
-    "FinancialServicesCommunityUser:1",
-    "FinancialServicesInsuranceUser"
-  ],
+  "features": ["EnableSetPasswordInApi", "EINSTEIN1AIPLATFORM"],
   "settings": {
     "lightningExperienceSettings": {
       "enableS1DesktopEnabled": true
