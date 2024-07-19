@@ -7,7 +7,7 @@ sfdx shane:org:create -f config/partner-scratch-def.json -d 30 -s --wait 60 --us
 
 npm install
 node run.js
-sleep 120
+sleep 60
 
 sfdx shane:user:password:set -p salesforce1 -g User -l User
 
@@ -24,4 +24,4 @@ sfdx automig:load -d data
 sfdx force:org:open
 
 # sleep 120
-sfdx force:source:deploy -p flow-app
+# sfdx force:source:deploy -p flow-app

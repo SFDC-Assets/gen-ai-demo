@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Get_Invoice_Data</name>
+        <label>Get Invoice Data</label>
+        <locationX>176</locationX>
+        <locationY>134</locationY>
+        <actionName>GetHerokuData</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Get_Weather_Data</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>endpoint</name>
+            <value>
+                <stringValue>invoices</stringValue>
+            </value>
+        </inputParameters>
+        <nameSegment>GetHerokuData</nameSegment>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>Get_Weather_Data</name>
+        <label>Get Weather Data</label>
+        <locationX>176</locationX>
+        <locationY>242</locationY>
+        <actionName>ExternalWeatherData.Get Weather Data</actionName>
+        <actionType>externalService</actionType>
+        <connector>
+            <targetReference>Dynamic_Prompt_Grounding</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <nameSegment>ExternalWeatherData.Get Weather Data</nameSegment>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>61.0</apiVersion>
+    <assignments>
+        <name>Dynamic_Prompt_Grounding</name>
+        <elementSubtype>AddPromptInstructions</elementSubtype>
+        <label>Dynamic Prompt Grounding</label>
+        <locationX>176</locationX>
+        <locationY>350</locationY>
+        <assignmentItems>
+            <assignToReference>$Output.Prompt</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>&lt;weatherdata&gt;
+{!Get_Weather_Data.2XX}
+&lt;/weatherdata&gt;
+&lt;invoicedata&gt;
+{!BeautifyInvoiceData}
+&lt;/invoicedata&gt;
+</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <environments>Default</environments>
+    <interviewLabel
+  >Case Troubleshooter Grounding {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Case Troubleshooter Grounding</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>PromptFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <capabilityTypes>
+            <name>FlexTemplate://Troubleshoot_Case_Prompt</name>
+            <capabilityName
+      >FlexTemplate://Troubleshoot_Case_Prompt</capabilityName>
+            <inputs>
+                <name>Case</name>
+                <capabilityInputName>Case</capabilityInputName>
+                <dataType>SOBJECT://Case</dataType>
+                <isCollection>false</isCollection>
+            </inputs>
+        </capabilityTypes>
+        <connector>
+            <targetReference>Get_Invoice_Data</targetReference>
+        </connector>
+        <triggerType>Capability</triggerType>
+    </start>
+    <status>Obsolete</status>
+</Flow>
