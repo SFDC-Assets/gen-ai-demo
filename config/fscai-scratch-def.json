@@ -4,16 +4,20 @@
   "features": [
     "EnableSetPasswordInApi",
     "EINSTEIN1AIPLATFORM",
-    "CUSTOMERDATAPLATFORM",
-    "DataComDnbAccounts",
-    "DATACOMDNBACCOUNTSENTERPRISE",
-    "ADDDATACOMCRMRECORDCREDIT:30",
-    "WavePlatform",
-    "EinsteinAnalyticsPlus",
-    "AnalyticsAdminPerms",
-    "AnalyticsAppEmbedded",
-    "DevelopmentWave",
-    "EinsteinAnalyticsPlus"
+    "AuthorApex",
+    "DebugApex",
+    "OmniStudioDesigner",
+    "InsuranceCalculationUser",
+    "DocGen",
+    "DocGenDesigner",
+    "DocGenInd",
+    "ServiceCloud",
+    "Communities",
+    "PersonAccounts",
+    "ContactsToMultipleAccounts",
+    "FinancialServicesUser:2",
+    "FinancialServicesCommunityUser:1",
+    "FinancialServicesInsuranceUser"
   ],
   "settings": {
     "lightningExperienceSettings": {

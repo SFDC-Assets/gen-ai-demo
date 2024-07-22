@@ -1,0 +1,77 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "Case",
+        "referenceId": "CaseRef1"
+      },
+      "CaseNumber": "00001007",
+      "ContactId": "@ContactRef1",
+      "AccountId": "@AccountRef1",
+      "Status": "Closed - Resolved",
+      "Origin": "Phone",
+      "Subject": "Lost Card Reported",
+      "Priority": "High",
+      "Description": "Card is missing, customer requested to put the card on hold. Agent has resolved the issue. The missing card was put on hold and a new card was issued to the customer.",
+      "IsClosed": false,
+      "IsEscalated": false,
+      "ContactPhone": "4165557410",
+      "ContactMobile": "6471203214",
+      "ContactEmail": "kiran.singh@example.com",
+      "FinServ__Household__c": "@AccountRef43"
+    },
+    {
+      "attributes": {
+        "type": "Case",
+        "referenceId": "CaseRef2"
+      },
+      "CaseNumber": "00001006",
+      "AccountId": "@AccountRef1",
+      "Status": "Submitted",
+      "Subject": "Unauthorized Transactions",
+      "Priority": "Medium",
+      "Description": "Client noticed a transaction on their credit card that was not authorized by them",
+      "IsClosed": false,
+      "IsEscalated": false
+    },
+    {
+      "attributes": {
+        "type": "Case",
+        "referenceId": "CaseRef3"
+      },
+      "CaseNumber": "00001005",
+      "ContactId": "@ContactRef1",
+      "AccountId": "@AccountRef1",
+      "Status": "New",
+      "Origin": "Email",
+      "Subject": "Revise Premiums for Home & Auto policy renewal",
+      "Priority": "Medium",
+      "Description": "Client has asked for us to re-evaluate home policy premium",
+      "IsClosed": false,
+      "IsEscalated": false,
+      "ContactPhone": "4165557410",
+      "ContactMobile": "6471203214",
+      "ContactEmail": "kiran.singh@example.com",
+      "FinServ__Household__c": "@AccountRef43"
+    },
+    {
+      "attributes": {
+        "type": "Case",
+        "referenceId": "CaseRef4"
+      },
+      "CaseNumber": "00001004",
+      "ContactId": "@ContactRef1",
+      "AccountId": "@AccountRef1",
+      "Status": "New",
+      "Subject": "Add new beneficiary to auto policy",
+      "Priority": "Medium",
+      "Description": "Need to add daughter to auto policy",
+      "IsClosed": false,
+      "IsEscalated": false,
+      "ContactPhone": "4165557410",
+      "ContactMobile": "6471203214",
+      "ContactEmail": "kiran.singh@example.com",
+      "FinServ__Household__c": "@AccountRef43"
+    }
+  ]
+}

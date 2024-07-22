@@ -1,0 +1,1 @@
+SELECT Id,LastName,FirstName,Salutation,Name,Company,Phone,Email,Status,FinServ__ConversionDateTime__c,FinServ__CreatedFromLead__c FROM FinServ__RelatedLeads__r

@@ -1,0 +1,14 @@
+[
+  {
+    "sobject": "Account",
+    "saveRefs": true,
+    "resolveRefs": false,
+    "files": ["Account.json"]
+  },
+  {
+    "sobject": "Case",
+    "saveRefs": false,
+    "resolveRefs": true,
+    "files": ["Case.json"]
+  }
+]

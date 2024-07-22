@@ -1,0 +1,1350 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "Account",
+        "referenceId": "AccountRef1"
+      },
+      "Name": "Kiran Singh",
+      "PersonEmail": "kiran.singh@example.com",
+      "Phone": "4165557410",
+      "PersonBirthdate": "1996-05-16",
+      "Type": "Customer",
+      "Credit_Score__c": 500,
+      "Recommended_Product__c": "Cumulus Prime Fixed",
+      "Assets_Under_Management__c": 415263,
+      "BillingAddress": {
+        "city": "Toronto",
+        "country": "Canada",
+        "geocodeAccuracy": null,
+        "latitude": null,
+        "longitude": null,
+        "postalCode": "M5J 2S3",
+        "state": "ON",
+        "street": "10 Bay Street"
+      },
+      "PersonMobilePhone": "6471203214",
+      "PersonTitle": "Small Business Owner",
+      "Industry": "Other",
+      "FinServ__LastInteraction__c": "2023-05-08",
+      "FinServ__NextInteraction__c": "2024-07-17",
+      "ShippingAddress": {
+        "city": "Toronto",
+        "country": "Canada",
+        "geocodeAccuracy": null,
+        "latitude": null,
+        "longitude": null,
+        "postalCode": "M5J 1C4",
+        "state": "ON",
+        "street": "22 Front Street West"
+      },
+      "PersonContactId": "@ContactRef1",
+      "IsPersonAccount": true
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "referenceId": "AccountRef2"
+      },
+      "Name": "Heath Axworth",
+      "PersonEmail": "haxworth@example.com",
+      "Phone": "(415) 876-5544",
+      "PersonBirthdate": "1986-12-28",
+      "Type": "Customer",
+      "Assets_Under_Management__c": 159753,
+      "BillingAddress": {
+        "city": "San Francisco",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": 37.78772,
+        "longitude": -122.45276,
+        "postalCode": "94118",
+        "state": "CA",
+        "street": "3640 Sacramento St"
+      },
+      "ShippingAddress": {
+        "city": "San Francisco",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": null,
+        "longitude": null,
+        "postalCode": "94118",
+        "state": "CA",
+        "street": "3640 Sacramento St"
+      },
+      "PersonContactId": "@ContactRef2",
+      "IsPersonAccount": true
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "referenceId": "AccountRef3"
+      },
+      "Name": "Robert Janzen",
+      "PersonEmail": "rjanzen@example.com",
+      "Phone": "(858) 555-0100",
+      "PersonBirthdate": "1958-05-26",
+      "Type": "Customer",
+      "Assets_Under_Management__c": 913731,
+      "BillingAddress": {
+        "city": "La Jolla",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": 32.88132,
+        "longitude": -117.24487,
+        "postalCode": "92037",
+        "state": "CA",
+        "street": "3136 Almahurst Row"
+      },
+      "ShippingAddress": {
+        "city": "La Jolla",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": null,
+        "longitude": null,
+        "postalCode": "92037",
+        "state": "CA",
+        "street": "3136 Almahurst Row"
+      },
+      "PersonContactId": "@ContactRef3",
+      "IsPersonAccount": true
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "referenceId": "AccountRef4"
+      },
+      "Name": "Duncan Macintosh",
+      "PersonEmail": "dmacintosh@example.com",
+      "Phone": "(415) 777-8888",
+      "PersonBirthdate": "1969-08-21",
+      "Type": "Customer",
+      "Assets_Under_Management__c": 526321,
+      "BillingAddress": {
+        "city": "San Francisco",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": 37.79755,
+        "longitude": -122.43086,
+        "postalCode": "94123",
+        "state": "CA",
+        "street": "1909 Union St"
+      },
+      "ShippingAddress": {
+        "city": "San Francisco",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": null,
+        "longitude": null,
+        "postalCode": "94123",
+        "state": "CA",
+        "street": "1909 Union St"
+      },
+      "PersonContactId": "@ContactRef4",
+      "IsPersonAccount": true
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "referenceId": "AccountRef5"
+      },
+      "Name": "Lance Gonzales",
+      "PersonEmail": "lgonzales@example.com",
+      "Phone": "(925) 555-8844",
+      "PersonBirthdate": "1979-03-10",
+      "Type": "Prospect",
+      "Assets_Under_Management__c": 635241,
+      "BillingAddress": {
+        "city": "Walnut Creek",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": 37.9014,
+        "longitude": -122.06023,
+        "postalCode": "94596",
+        "state": "CA",
+        "street": "1644 N. Broadway"
+      },
+      "ShippingAddress": {
+        "city": "Walnut Creek",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": null,
+        "longitude": null,
+        "postalCode": "94596",
+        "state": "CA",
+        "street": "1644 N. Broadway"
+      },
+      "PersonContactId": "@ContactRef5",
+      "IsPersonAccount": true
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "referenceId": "AccountRef6"
+      },
+      "Name": "Mark Smith",
+      "PersonEmail": "msmith@example.com",
+      "Phone": "(650) 555-6652",
+      "PersonBirthdate": "1964-07-06",
+      "Type": "Prospect",
+      "Assets_Under_Management__c": 379197,
+      "BillingAddress": {
+        "city": "Mountain View",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": 37.39039,
+        "longitude": -122.08362,
+        "postalCode": "94041",
+        "state": "CA",
+        "street": "585 Franklin St"
+      },
+      "ShippingAddress": {
+        "city": "Mountain View",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": null,
+        "longitude": null,
+        "postalCode": "94041",
+        "state": "CA",
+        "street": "585 Franklin St"
+      },
+      "PersonContactId": "@ContactRef6",
+      "IsPersonAccount": true
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "referenceId": "AccountRef7"
+      },
+      "Name": "Gabe Hoskins",
+      "PersonEmail": "ghoskins@example.com",
+      "Phone": "(925) 855-6666",
+      "PersonBirthdate": "1974-08-30",
+      "Type": "Customer",
+      "Assets_Under_Management__c": 951753,
+      "BillingAddress": {
+        "city": "Pleasant Hill",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": 37.93384,
+        "longitude": -122.06958,
+        "postalCode": "94523",
+        "state": "CA",
+        "street": "1750 Oak Park Blvd."
+      },
+      "ShippingAddress": {
+        "city": "Pleasant Hill",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": null,
+        "longitude": null,
+        "postalCode": "94523",
+        "state": "CA",
+        "street": "1750 Oak Park Blvd."
+      },
+      "PersonContactId": "@ContactRef7",
+      "IsPersonAccount": true
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "referenceId": "AccountRef8"
+      },
+      "Name": "Robert Simpson",
+      "PersonEmail": "rsimpson@example.com",
+      "Phone": "(530) 755-8425",
+      "PersonBirthdate": "1961-11-27",
+      "Type": "Other",
+      "Assets_Under_Management__c": 264157,
+      "BillingAddress": {
+        "city": "Woodland",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": 38.6791274,
+        "longitude": -121.7732739,
+        "postalCode": "95695",
+        "state": "CA",
+        "street": "250 1st St"
+      },
+      "ShippingAddress": {
+        "city": "Woodland",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": null,
+        "longitude": null,
+        "postalCode": "95695",
+        "state": "CA",
+        "street": "250 1st St"
+      },
+      "PersonContactId": "@ContactRef8",
+      "IsPersonAccount": true
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "referenceId": "AccountRef9"
+      },
+      "Name": "Mike Garcia",
+      "PersonEmail": "mgarcia@example.com",
+      "Phone": "(415) 555-1212",
+      "PersonBirthdate": "1965-11-09",
+      "Type": "Prospect",
+      "Assets_Under_Management__c": 367158,
+      "BillingAddress": {
+        "city": "San Francisco",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": 37.7885,
+        "longitude": -122.39668,
+        "postalCode": "94105",
+        "state": "CA",
+        "street": "500 Howard St"
+      },
+      "ShippingAddress": {
+        "city": "San Francisco",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": null,
+        "longitude": null,
+        "postalCode": "94105",
+        "state": "CA",
+        "street": "500 Howard St"
+      },
+      "PersonContactId": "@ContactRef9",
+      "IsPersonAccount": true
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "referenceId": "AccountRef10"
+      },
+      "Name": "Robert Weiss",
+      "PersonEmail": "rweiss@example.com",
+      "Phone": "(203) 555-2503",
+      "PersonBirthdate": "2075-05-02",
+      "Type": "Customer",
+      "Assets_Under_Management__c": 462153,
+      "BillingAddress": {
+        "city": "Cambridge",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": 42.37173,
+        "longitude": -71.12087,
+        "postalCode": "2141",
+        "state": "MA",
+        "street": "2228 Kennedy Court"
+      },
+      "ShippingAddress": {
+        "city": "Cambridge",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": null,
+        "longitude": null,
+        "postalCode": "2141",
+        "state": "MA",
+        "street": "2228 Kennedy Court"
+      },
+      "PersonContactId": "@ContactRef10",
+      "IsPersonAccount": true
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "referenceId": "AccountRef11"
+      },
+      "Name": "Peter Houston",
+      "PersonEmail": "phouston@example.com",
+      "Phone": "(415) 555-4707",
+      "PersonBirthdate": "1957-07-04",
+      "Type": "Other",
+      "Assets_Under_Management__c": 624852,
+      "BillingAddress": {
+        "city": "Cook",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": 41.78157,
+        "longitude": -87.66282,
+        "postalCode": "60636",
+        "state": "IL",
+        "street": "1520 W 62nd St"
+      },
+      "ShippingAddress": {
+        "city": "Cook",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": null,
+        "longitude": null,
+        "postalCode": "60636",
+        "state": "IL",
+        "street": "1520 W 62nd St"
+      },
+      "PersonContactId": "@ContactRef11",
+      "IsPersonAccount": true
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "referenceId": "AccountRef12"
+      },
+      "Name": "Troy Bullock",
+      "PersonEmail": "tbullock@example.com",
+      "Phone": "(704) 555-7526",
+      "PersonBirthdate": "1964-09-24",
+      "Type": "Other",
+      "Assets_Under_Management__c": 415635,
+      "BillingAddress": {
+        "city": "Charlotte",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": 35.1801751,
+        "longitude": -80.8305344,
+        "postalCode": "28207",
+        "state": "NC",
+        "street": "2708 Chilton Pl"
+      },
+      "ShippingAddress": {
+        "city": "Charlotte",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": null,
+        "longitude": null,
+        "postalCode": "28207",
+        "state": "NC",
+        "street": "2708 Chilton Pl"
+      },
+      "PersonContactId": "@ContactRef12",
+      "IsPersonAccount": true
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "referenceId": "AccountRef13"
+      },
+      "Name": "Larry Baxter",
+      "PersonEmail": "lbaxter@example.com",
+      "Phone": "+13105550100",
+      "PersonBirthdate": "1989-11-09",
+      "Type": "Other",
+      "Assets_Under_Management__c": 264153,
+      "BillingAddress": {
+        "city": "Santa Monica",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": 34.01365,
+        "longitude": -118.49912,
+        "postalCode": "90401",
+        "state": "CA",
+        "street": "1351 Palisades Beach Road"
+      },
+      "ShippingAddress": {
+        "city": "Santa Monica",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": null,
+        "longitude": null,
+        "postalCode": "90401",
+        "state": "CA",
+        "street": "1351 Palisades Beach Road"
+      },
+      "PersonContactId": "@ContactRef13",
+      "IsPersonAccount": true
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "referenceId": "AccountRef14"
+      },
+      "Name": "Mike Malmin",
+      "PersonEmail": "mmalmin@example.com",
+      "Phone": "(317) 555-6312",
+      "PersonBirthdate": "1968-09-14",
+      "Type": "Other",
+      "Assets_Under_Management__c": 367952,
+      "BillingAddress": {
+        "city": "Indianapolis",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": 39.87433,
+        "longitude": -86.0738,
+        "postalCode": "46220",
+        "state": "IN",
+        "street": "6452 Knyghton Rd"
+      },
+      "ShippingAddress": {
+        "city": "Indianapolis",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": null,
+        "longitude": null,
+        "postalCode": "46220",
+        "state": "IN",
+        "street": "6452 Knyghton Rd"
+      },
+      "PersonContactId": "@ContactRef14",
+      "IsPersonAccount": true
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "referenceId": "AccountRef15"
+      },
+      "Name": "Kari Rende",
+      "PersonEmail": "krende@example.com",
+      "Phone": "(630) 555-4403",
+      "PersonBirthdate": "1982-06-13",
+      "Type": "Other",
+      "Assets_Under_Management__c": 582963,
+      "BillingAddress": {
+        "city": "Elmhurst",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": 41.89274,
+        "longitude": -87.94689,
+        "postalCode": "60126",
+        "state": "IL",
+        "street": "245 W Winthrop Ave"
+      },
+      "ShippingAddress": {
+        "city": "Elmhurst",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": null,
+        "longitude": null,
+        "postalCode": "60126",
+        "state": "IL",
+        "street": "245 W Winthrop Ave"
+      },
+      "PersonContactId": "@ContactRef15",
+      "IsPersonAccount": true
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "referenceId": "AccountRef16"
+      },
+      "Name": "Jon Allegri",
+      "PersonEmail": "jallegri@example.com",
+      "Phone": "(813) 555-5220",
+      "PersonBirthdate": "1976-04-16",
+      "Type": "Customer",
+      "Assets_Under_Management__c": 369852,
+      "BillingAddress": {
+        "city": "Tampa",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": 27.88345,
+        "longitude": -82.52851,
+        "postalCode": "33616",
+        "state": "FL",
+        "street": "5823 Bowen Daniel Dr"
+      },
+      "ShippingAddress": {
+        "city": "Tampa",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": null,
+        "longitude": null,
+        "postalCode": "33616",
+        "state": "FL",
+        "street": "5823 Bowen Daniel Dr"
+      },
+      "PersonContactId": "@ContactRef16",
+      "IsPersonAccount": true
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "referenceId": "AccountRef17"
+      },
+      "Name": "Niki Sullivan",
+      "PersonEmail": "nsullivan@example.com",
+      "Phone": "(702) 555-3769",
+      "PersonBirthdate": "1973-02-13",
+      "Type": "Prospect",
+      "Assets_Under_Management__c": 461346,
+      "BillingAddress": {
+        "city": "Las Vegas",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": 36.1707591,
+        "longitude": -115.2375049,
+        "postalCode": "89107",
+        "state": "NV",
+        "street": "216 Lindy Dr"
+      },
+      "ShippingAddress": {
+        "city": "Las Vegas",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": null,
+        "longitude": null,
+        "postalCode": "89107",
+        "state": "NV",
+        "street": "216 Lindy Dr"
+      },
+      "PersonContactId": "@ContactRef17",
+      "IsPersonAccount": true
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "referenceId": "AccountRef18"
+      },
+      "Name": "Chip Colli",
+      "PersonEmail": "ccolli@example.com",
+      "Phone": "(206) 555-7855",
+      "PersonBirthdate": "1974-07-07",
+      "Type": "Prospect",
+      "Assets_Under_Management__c": 432101,
+      "BillingAddress": {
+        "city": "Seattle",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": 47.63773,
+        "longitude": -122.35862,
+        "postalCode": "98119",
+        "state": "WA",
+        "street": "2115 1st Ave W."
+      },
+      "ShippingAddress": {
+        "city": "Seattle",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": null,
+        "longitude": null,
+        "postalCode": "98119",
+        "state": "WA",
+        "street": "2115 1st Ave W."
+      },
+      "PersonContactId": "@ContactRef18",
+      "IsPersonAccount": true
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "referenceId": "AccountRef19"
+      },
+      "Name": "Bob Warkentine",
+      "PersonEmail": "bwarkentine@example.com",
+      "Phone": "(646) 555-2296",
+      "PersonBirthdate": "1960-03-02",
+      "Type": "Customer",
+      "Assets_Under_Management__c": 234567,
+      "BillingAddress": {
+        "city": "New York",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": 40.76349,
+        "longitude": -73.98174,
+        "postalCode": "10019",
+        "state": "NY",
+        "street": "828 7th Ave # 11F"
+      },
+      "ShippingAddress": {
+        "city": "New York",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": null,
+        "longitude": null,
+        "postalCode": "10019",
+        "state": "NY",
+        "street": "828 7th Ave # 11F"
+      },
+      "PersonContactId": "@ContactRef19",
+      "IsPersonAccount": true
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "referenceId": "AccountRef20"
+      },
+      "Name": "Steve Sutherland",
+      "PersonEmail": "ssutherland@example.com",
+      "Phone": "(608) 555-3399",
+      "PersonBirthdate": "1986-08-05",
+      "Type": "Customer",
+      "Assets_Under_Management__c": 623153,
+      "BillingAddress": {
+        "city": "Madison",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": 43.07854,
+        "longitude": -89.3688,
+        "postalCode": "53703",
+        "state": "WI",
+        "street": "851 Jenifer St"
+      },
+      "ShippingAddress": {
+        "city": "Madison",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": null,
+        "longitude": null,
+        "postalCode": "53703",
+        "state": "WI",
+        "street": "851 Jenifer St"
+      },
+      "PersonContactId": "@ContactRef20",
+      "IsPersonAccount": true
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "referenceId": "AccountRef21"
+      },
+      "Name": "Benjamin Young",
+      "PersonEmail": "byoung@example.com",
+      "Phone": "(713) 555-2977",
+      "PersonBirthdate": "1962-05-22",
+      "Type": "Other",
+      "Assets_Under_Management__c": 123456,
+      "BillingAddress": {
+        "city": "Houston",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": 29.75287,
+        "longitude": -95.631,
+        "postalCode": "77077",
+        "state": "TX",
+        "street": "13715 Lakeshore Way Cv"
+      },
+      "ShippingAddress": {
+        "city": "Houston",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": null,
+        "longitude": null,
+        "postalCode": "77077",
+        "state": "TX",
+        "street": "13715 Lakeshore Way Cv"
+      },
+      "PersonContactId": "@ContactRef21",
+      "IsPersonAccount": true
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "referenceId": "AccountRef22"
+      },
+      "Name": "Nicole Grace",
+      "PersonEmail": "ngrace@example.com",
+      "Phone": "(203) 555-2801",
+      "PersonBirthdate": "1976-06-12",
+      "Type": "Prospect",
+      "Assets_Under_Management__c": 167437,
+      "BillingAddress": {
+        "city": "Fairfield",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": 41.14015,
+        "longitude": -73.2425,
+        "postalCode": "6824",
+        "state": "CT",
+        "street": "1839 Faifield Beach Rd"
+      },
+      "ShippingAddress": {
+        "city": "Fairfield",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": null,
+        "longitude": null,
+        "postalCode": "6824",
+        "state": "CT",
+        "street": "1839 Faifield Beach Rd"
+      },
+      "PersonContactId": "@ContactRef22",
+      "IsPersonAccount": true
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "referenceId": "AccountRef23"
+      },
+      "Name": "Tammy Baxter",
+      "PersonEmail": "tbaxter@example.com",
+      "Phone": "(415) 555-3930",
+      "PersonBirthdate": "1970-03-11",
+      "Type": "Prospect",
+      "Assets_Under_Management__c": 85274,
+      "BillingAddress": {
+        "city": "San Francisco",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": 37.80311,
+        "longitude": -122.41623,
+        "postalCode": "94113",
+        "state": "CA",
+        "street": "2350 Jones St."
+      },
+      "ShippingAddress": {
+        "city": "San Francisco",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": null,
+        "longitude": null,
+        "postalCode": "94113",
+        "state": "CA",
+        "street": "2350 Jones St."
+      },
+      "PersonContactId": "@ContactRef23",
+      "IsPersonAccount": true
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "referenceId": "AccountRef24"
+      },
+      "Name": "Russell Hartman",
+      "PersonEmail": "whardin@example.com",
+      "Phone": "(510) 555-5500",
+      "PersonBirthdate": "1981-12-21",
+      "Type": "Prospect",
+      "Assets_Under_Management__c": 852963,
+      "BillingAddress": {
+        "city": "Oakland",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": 37.84627,
+        "longitude": -122.25216,
+        "postalCode": "94618",
+        "state": "CA",
+        "street": "5801 College Ave"
+      },
+      "ShippingAddress": {
+        "city": "Oakland",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": null,
+        "longitude": null,
+        "postalCode": "94618",
+        "state": "CA",
+        "street": "5801 College Ave"
+      },
+      "PersonContactId": "@ContactRef24",
+      "IsPersonAccount": true
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "referenceId": "AccountRef25"
+      },
+      "Name": "Mike Welch",
+      "PersonEmail": "mwelch@example.com",
+      "Phone": "(510) 555-0058",
+      "PersonBirthdate": "1967-07-24",
+      "Type": "Prospect",
+      "Assets_Under_Management__c": 379579,
+      "BillingAddress": {
+        "city": "Oakland",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": 37.81405,
+        "longitude": -122.26844,
+        "postalCode": "94612",
+        "state": "CA",
+        "street": "807 Telegraph Ave"
+      },
+      "ShippingAddress": {
+        "city": "Oakland",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": null,
+        "longitude": null,
+        "postalCode": "94612",
+        "state": "CA",
+        "street": "807 Telegraph Ave"
+      },
+      "PersonContactId": "@ContactRef25",
+      "IsPersonAccount": true
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "referenceId": "AccountRef26"
+      },
+      "Name": "Karen Wells",
+      "PersonEmail": "kwells@example.com",
+      "Phone": "(650) 846-4455",
+      "PersonBirthdate": "1974-03-06",
+      "Type": "Prospect",
+      "Assets_Under_Management__c": 489657,
+      "BillingAddress": {
+        "city": "East Palo Alto",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": 37.4606639,
+        "longitude": -122.1383587,
+        "postalCode": "94303",
+        "state": "CA",
+        "street": "1700 E Bayshore Rd"
+      },
+      "ShippingAddress": {
+        "city": "East Palo Alto",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": null,
+        "longitude": null,
+        "postalCode": "94303",
+        "state": "CA",
+        "street": "1700 E Bayshore Rd"
+      },
+      "PersonContactId": "@ContactRef26",
+      "IsPersonAccount": true
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "referenceId": "AccountRef27"
+      },
+      "Name": "Mina Passini",
+      "PersonEmail": "mpassini@example.com",
+      "Phone": "(415) 555-1414",
+      "PersonBirthdate": "1989-07-17",
+      "Type": "Other",
+      "Assets_Under_Management__c": 491784,
+      "BillingAddress": {
+        "city": "San Francisco",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": 37.77215,
+        "longitude": -122.43197,
+        "postalCode": "94117",
+        "state": "CA",
+        "street": "598 Haight St"
+      },
+      "ShippingAddress": {
+        "city": "San Francisco",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": null,
+        "longitude": null,
+        "postalCode": "94117",
+        "state": "CA",
+        "street": "598 Haight St"
+      },
+      "PersonContactId": "@ContactRef27",
+      "IsPersonAccount": true
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "referenceId": "AccountRef28"
+      },
+      "Name": "Stacy McNeil",
+      "PersonEmail": "smcneil@example.com",
+      "Phone": "(530) 555-8870",
+      "PersonBirthdate": "1990-07-10",
+      "Type": "Other",
+      "Assets_Under_Management__c": 183297,
+      "BillingAddress": {
+        "city": "Davis",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": 38.55645,
+        "longitude": -121.74693,
+        "postalCode": "95616",
+        "state": "CA",
+        "street": "315 E. 14th St."
+      },
+      "ShippingAddress": {
+        "city": "Davis",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": null,
+        "longitude": null,
+        "postalCode": "95616",
+        "state": "CA",
+        "street": "315 E. 14th Street"
+      },
+      "PersonContactId": "@ContactRef28",
+      "IsPersonAccount": true
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "referenceId": "AccountRef29"
+      },
+      "Name": "Deanna Collins",
+      "PersonEmail": "dcollins@example.com",
+      "Phone": "(266) 555-2339",
+      "PersonBirthdate": "1983-03-02",
+      "Type": "Other",
+      "Assets_Under_Management__c": 213321,
+      "BillingAddress": {
+        "city": "San Francisco",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": 37.75986,
+        "longitude": -122.41881,
+        "postalCode": "94110",
+        "state": "CA",
+        "street": "2323 Mission St"
+      },
+      "PersonContactId": "@ContactRef29",
+      "IsPersonAccount": true
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "referenceId": "AccountRef30"
+      },
+      "Name": "Andy Peterson",
+      "PersonEmail": "apeterson@example.com",
+      "Phone": "(310) 555-3983",
+      "PersonBirthdate": "1960-10-03",
+      "Type": "Prospect",
+      "Assets_Under_Management__c": 953201,
+      "BillingAddress": {
+        "city": "San Francisco",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": 37.77934,
+        "longitude": -122.41586,
+        "postalCode": "94102",
+        "state": "CA",
+        "street": "100 Larkin Street"
+      },
+      "ShippingAddress": {
+        "city": "San Francisco",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": null,
+        "longitude": null,
+        "postalCode": "94102",
+        "state": "CA",
+        "street": "100 Larkin Street"
+      },
+      "PersonContactId": "@ContactRef30",
+      "IsPersonAccount": true
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "referenceId": "AccountRef31"
+      },
+      "Name": "Anne Frost",
+      "PersonEmail": "afrost@example.com",
+      "Phone": "(415) 555-2110",
+      "PersonBirthdate": "1981-01-17",
+      "Type": "Other",
+      "Assets_Under_Management__c": 741852,
+      "BillingAddress": {
+        "city": "San Francisco",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": 37.7926,
+        "longitude": -122.40044,
+        "postalCode": "94105",
+        "state": "CA",
+        "street": "345 California St"
+      },
+      "PersonContactId": "@ContactRef31",
+      "IsPersonAccount": true
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "referenceId": "AccountRef32"
+      },
+      "Name": "Richard Bennett",
+      "PersonEmail": "rbennett@example.com",
+      "Phone": "6103797322",
+      "PersonBirthdate": "1979-09-21",
+      "Type": "Client",
+      "Assets_Under_Management__c": 75410,
+      "BillingAddress": {
+        "city": "San Francisco",
+        "country": "US",
+        "geocodeAccuracy": null,
+        "latitude": 33.69201,
+        "longitude": -117.77733,
+        "postalCode": "94016",
+        "state": "CA",
+        "street": "490 Geary St."
+      },
+      "PersonMobilePhone": "6103797322",
+      "PersonTitle": "Mortgage Client",
+      "PersonContactId": "@ContactRef32",
+      "IsPersonAccount": true
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "referenceId": "AccountRef33"
+      },
+      "Name": "Charlie Ellis",
+      "PersonEmail": "cellis@example.com",
+      "Phone": "3846592109",
+      "PersonBirthdate": "1992-12-02",
+      "Type": "Client",
+      "Assets_Under_Management__c": 321654,
+      "BillingAddress": {
+        "city": "San Francisco",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": 46.76258,
+        "longitude": -97.55601,
+        "postalCode": "94105",
+        "state": "CA",
+        "street": "15 Market Street"
+      },
+      "PersonMobilePhone": "3846592109",
+      "PersonTitle": "Banking Client",
+      "ShippingAddress": {
+        "city": "San Francisco",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": null,
+        "longitude": null,
+        "postalCode": "94105",
+        "state": "CA",
+        "street": "15 Market Street"
+      },
+      "PersonContactId": "@ContactRef33",
+      "IsPersonAccount": true
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "referenceId": "AccountRef34"
+      },
+      "Name": "Jack Morris",
+      "PersonEmail": "jackmorris99@gmail.com",
+      "Phone": "4748599209",
+      "PersonBirthdate": "2004-04-12",
+      "Type": "Prospect",
+      "Assets_Under_Management__c": 357951,
+      "PersonMobilePhone": "4748599209",
+      "PersonContactId": "@ContactRef34",
+      "IsPersonAccount": true
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "referenceId": "AccountRef35"
+      },
+      "Name": "Rohit Singh",
+      "PersonEmail": "nigel.morris@gmail.com",
+      "Phone": "6476543210",
+      "PersonBirthdate": "1969-01-08",
+      "Type": "Prospect",
+      "Assets_Under_Management__c": 236145,
+      "BillingAddress": {
+        "city": "Toronto",
+        "country": "Canada",
+        "geocodeAccuracy": null,
+        "latitude": 37.78489,
+        "longitude": -122.40409,
+        "postalCode": "M5J 2S3",
+        "state": "ON",
+        "street": "10 Bay Street"
+      },
+      "PersonMobilePhone": "9124064324",
+      "PersonTitle": "CEO",
+      "ShippingAddress": {
+        "city": "Toronto",
+        "country": "Canada",
+        "geocodeAccuracy": null,
+        "latitude": null,
+        "longitude": null,
+        "postalCode": "M5J 2S3",
+        "state": "ON",
+        "street": "10 Bay Street"
+      },
+      "PersonContactId": "@ContactRef35",
+      "IsPersonAccount": true
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "referenceId": "AccountRef36"
+      },
+      "Name": "Harry Gray",
+      "PersonEmail": "harry.gray@cumulusfsc.com",
+      "Phone": "8446493505",
+      "Type": "Other",
+      "Assets_Under_Management__c": 654123,
+      "PersonMobilePhone": "8446493505",
+      "PersonTitle": "Cardiac Surgeon",
+      "Industry": "Construction",
+      "PersonContactId": "@ContactRef36",
+      "IsPersonAccount": true
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "referenceId": "AccountRef37"
+      },
+      "Name": "Will Johnson",
+      "PersonEmail": "will.johnson@cumulusfsc.com",
+      "Phone": "1190919703",
+      "PersonBirthdate": "1997-10-25",
+      "Type": "Prospect",
+      "Assets_Under_Management__c": 146346,
+      "BillingAddress": {
+        "city": "West Ivyville",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": 45.31785,
+        "longitude": -109.4341,
+        "postalCode": "52167",
+        "state": "MT",
+        "street": "7280 Luther Camp"
+      },
+      "PersonMobilePhone": "1190919703",
+      "ShippingAddress": {
+        "city": "Torpfurt",
+        "country": "USA",
+        "geocodeAccuracy": null,
+        "latitude": null,
+        "longitude": null,
+        "postalCode": "61333",
+        "state": "CT",
+        "street": "227 Mikayla Pike"
+      },
+      "PersonContactId": "@ContactRef37",
+      "IsPersonAccount": true
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "referenceId": "AccountRef38"
+      },
+      "Name": "Jen Hartley",
+      "PersonEmail": "jen@example.com",
+      "Phone": "604-004-0213",
+      "PersonBirthdate": "1975-10-12",
+      "Type": "Customer",
+      "Assets_Under_Management__c": 654987,
+      "BillingAddress": {
+        "city": "Scarsdale",
+        "country": "United States",
+        "geocodeAccuracy": null,
+        "latitude": 40.97876,
+        "longitude": -73.80595,
+        "postalCode": "10583",
+        "state": "NY",
+        "street": "109 Montgomery Avenue"
+      },
+      "PersonMobilePhone": "604-004-0213",
+      "PersonTitle": "Senior Wealth Advisor",
+      "PersonContactId": "@ContactRef38",
+      "IsPersonAccount": true
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "referenceId": "AccountRef39"
+      },
+      "Name": "Karan Johar",
+      "PersonEmail": "karan.johar@example.com",
+      "Phone": "416.555.9876",
+      "PersonBirthdate": "1973-04-18",
+      "Type": "Client",
+      "Assets_Under_Management__c": 963852,
+      "BillingAddress": {
+        "city": "Toronto",
+        "country": "Canada",
+        "geocodeAccuracy": null,
+        "latitude": 37.66584,
+        "longitude": -122.39458,
+        "postalCode": "M5J 2S3",
+        "state": "ON",
+        "street": "10 Bay Street"
+      },
+      "PersonMobilePhone": "8635841901",
+      "PersonTitle": "Commercial Banking Client, Wealth Client, Board Member",
+      "PersonContactId": "@ContactRef39",
+      "IsPersonAccount": true
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "referenceId": "AccountRef40"
+      },
+      "Name": "Virat Singh",
+      "PersonEmail": "virat.singh@sample.com",
+      "Phone": "6477895632",
+      "PersonBirthdate": "1968-06-17",
+      "Type": "Customer",
+      "Assets_Under_Management__c": 753951,
+      "BillingAddress": {
+        "city": "Toronto",
+        "country": "Canada",
+        "geocodeAccuracy": null,
+        "latitude": 37.7869125,
+        "longitude": -122.4129151,
+        "postalCode": "M5J",
+        "state": "ON",
+        "street": "161 Front Street West"
+      },
+      "PersonMobilePhone": "8051298905",
+      "PersonTitle": "Banking Client",
+      "FinServ__LastInteraction__c": "2023-09-20",
+      "FinServ__NextInteraction__c": "2024-09-17",
+      "ShippingAddress": {
+        "city": "San Francisco",
+        "country": "US",
+        "geocodeAccuracy": null,
+        "latitude": null,
+        "longitude": null,
+        "postalCode": "94105",
+        "state": "CA",
+        "street": "1 Market Street"
+      },
+      "Description": "JamesTest",
+      "PersonContactId": "@ContactRef40",
+      "IsPersonAccount": true
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "referenceId": "AccountRef41"
+      },
+      "Name": "Vishal Singh",
+      "PersonEmail": "vishal.singh@example.com",
+      "Phone": "6477847412",
+      "PersonBirthdate": "1993-10-29",
+      "PersonMobilePhone": "4165554123",
+      "FinServ__NextInteraction__c": "2024-11-28",
+      "PersonContactId": "@ContactRef41",
+      "IsPersonAccount": true
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "referenceId": "AccountRef42"
+      },
+      "Name": "Saira Singh",
+      "PersonEmail": "saira@example.com",
+      "Phone": "9085241230",
+      "PersonContactId": "@ContactRef42",
+      "IsPersonAccount": true
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "referenceId": "AccountRef43"
+      },
+      "Name": "Singh Household",
+      "IsPersonAccount": false
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "referenceId": "AccountRef44"
+      },
+      "Name": "Burns & Wilcox, Esq",
+      "Type": "Other",
+      "IsPersonAccount": false
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "referenceId": "AccountRef45"
+      },
+      "Name": "Bank of Canada",
+      "IsPersonAccount": false
+    }
+  ]
+}
