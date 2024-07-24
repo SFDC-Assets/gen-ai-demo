@@ -6,14 +6,12 @@
     <masterLabel>Monty Berns Committee Sentiment</masterLabel>
     <templateVersions>
         <content
-    >Taking the following description of Mr Berns posted to social media &apos;&lt;Flow Goes Here&gt;&apos; and analyze for general sentiment.
+    >Taking the following description of Mr. Bern's posted to social media '[Flow Goes Here]' and analyze for general sentiment.
 :This prompt should return True if the sentiment or description of Mr Berns is negative or ambiguous leaning negative
 :This prompt should return True if the description says anything that indicates he is a poor employer or manager
 :This prompt should return False if the sentiment is ambiguous, neutral, or positive
 :This prompt should return no other text other than True or False
 :This prompt should return a boolean value
-
-
 </content>
         <inputs>
             <apiName>Contact</apiName>
