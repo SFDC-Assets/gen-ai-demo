@@ -1,66 +1,77 @@
 <template>
-    <lightning-card>
-        <div class="slds-text-align_center">
-            <img class="header-image" src={einsteinHeaderUrl} alt="Einstein Header" />
-        </div>
-    <template if:false={workshopType}>
-        <div class="slds-text-heading_large slds-text-align_center">
-            Which workshop are you working on?
-        </div>
-        <div class="slds-m-vertical_x-large slds-text-align_center">
-            <button class="slds-button slds-button_brand slds-m-horizontal_large workshop-button"
-                onclick={handlePromptBuilderClick}>Prompt Builder</button>
-            <button class="slds-button slds-button_brand slds-m-horizontal_large workshop-button"
-                onclick={handleCopilotClick}>Copilot</button>
-        </div>
-    </template>
-    <template if:true={workshopType}>
-        
-        <div>
-            <lightning-button class="prepare-data-button" label="Prepare Data" variant="brand"
-                disabled={isButtonDisabled} onclick={handlePrepareDataClick}></lightning-button>
-            <template if:true={isButtonDisabled}>
-                <lightning-spinner alternative-text="Loading" size="small"></lightning-spinner>
-            </template>
-        </div>
-        <div class="toggle-position">
-            <lightning-input type="toggle" label="Show Text" checked={isToggleOn} onchange={handleToggleChange}
-                message-toggle-active="" message-toggle-inactive=""></lightning-input>
-        </div>
-        <template if:true={workshopModules}>
-            <div class="slds-text-heading_large slds-text-align_center slds-m-bottom_x-small">
-                {welcomeMessage}
-            </div>
-            <div class="slds-text-heading_small slds-text-align_center slds-m-bottom_large">
-                Click a button below to copy text to the clipboard
-            </div>
-            <div class="slds-section slds-is-open">
-                <lightning-accordion>
-                    <template for:each={workshopModules} for:item="module">
-                        <lightning-accordion-section key={module.key} name={module.key} label={module.label}>
-                            <div>
-                                <template for:each={module.records} for:item="record">
-                                    <div key={record.Id}
-                                        class="slds-grid slds-align_absolute-center slds-m-vertical_medium">
-                                        <div class={buttonWrapperClasses}>
-                                            <lightning-button label={record.Label__c}
-                                                data-prompt-text={record.Prompt_Text__c} onclick={handleButtonClick}
-                                                variant="brand"></lightning-button>
-                                        </div>
-                                        <template if:true={isToggleOn}>
-                                            <div class="slds-col slds-size_1-of-2">
-                                                <lightning-textarea label={record.Label__c}
-                                                    value={record.Prompt_Text__c} readonly></lightning-textarea>
-                                            </div>
-                                        </template>
-                                    </div>
-                                </template>
-                            </div>
-                        </lightning-accordion-section>
+  <lightning-card>
+    <div class="slds-text-align_center">
+      <img class="header-image" src={einsteinHeaderUrl} alt="Einstein Header" />
+    </div>
+    <div>
+      <lightning-button
+        class="prepare-data-button"
+        label="Prepare Data"
+        variant="brand"
+        disabled={isButtonDisabled}
+        onclick={handlePrepareDataClick}
+      ></lightning-button>
+      <template if:true={isButtonDisabled}>
+        <lightning-spinner
+          alternative-text="Loading"
+          size="small"
+        ></lightning-spinner>
+      </template>
+    </div>
+    <div class="toggle-position">
+      <lightning-input
+        type="toggle"
+        label="Show Text"
+        checked={isToggleOn}
+        onchange={handleToggleChange}
+        message-toggle-active=""
+        message-toggle-inactive=""
+      ></lightning-input>
+    </div>
+    <template if:true={workshopModules}>
+      <div
+        class="slds-text-heading_small slds-text-align_center slds-m-bottom_large"
+      >
+        Click a button below to copy text to the clipboard
+      </div>
+      <div class="slds-section slds-is-open">
+        <lightning-accordion>
+          <template for:each={workshopModules} for:item="module">
+            <lightning-accordion-section
+              key={module.key}
+              name={module.key}
+              label={module.label}
+            >
+              <div>
+                <template for:each={module.records} for:item="record">
+                  <div
+                    key={record.Id}
+                    class="slds-grid slds-align_absolute-center slds-m-vertical_medium"
+                  >
+                    <div class={buttonWrapperClasses}>
+                      <lightning-button
+                        label={record.Label__c}
+                        data-prompt-text={record.Prompt_Text__c}
+                        onclick={handleButtonClick}
+                        variant="brand"
+                      ></lightning-button>
+                    </div>
+                    <template if:true={isToggleOn}>
+                      <div class="slds-col slds-size_1-of-2">
+                        <lightning-textarea
+                          label={record.Label__c}
+                          value={record.Prompt_Text__c}
+                          readonly
+                        ></lightning-textarea>
+                      </div>
                     </template>
-                </lightning-accordion>
-            </div>
-        </template>
-        </template>
-    </lightning-card>
+                  </div>
+                </template>
+              </div>
+            </lightning-accordion-section>
+          </template>
+        </lightning-accordion>
+      </div>
+    </template>
+  </lightning-card>
 </template>
