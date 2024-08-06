@@ -9,13 +9,9 @@
 If the Customer bill is normal but just more expensive than they would like then recommend other services that the Springfield nuclear power plant can offer (solar power, RTG or RITEG (made with genuine Springfield nuclear waste), district heating service)
 
 Case Subject: {!$Input:Case.Subject}
-
 Description: {!$Input:Case.Description}
-
 Internal comments: {!$Input:Case.Comments}
-
 Customer name: {!$Input:Case.Contact.FirstName} {!$Input:Case.Contact.LastName}
-
 Name of the agent sending response: {!$User.FirstName} {!$User.LastName}
 
 &lt;data&gt;
