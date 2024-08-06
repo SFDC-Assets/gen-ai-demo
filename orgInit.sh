@@ -19,7 +19,7 @@ sfdx force:source:push
 sfdx force:user:permset:assign -n Heroku_Endpoint_Access
 sfdx force:user:permset:assign -n TDX_Demo_Build_Permissions
 
-sfdx force:source:deploy -p flow-app
+sf project deploy start -d flow-app
 sfdx automig:load -d data
 
 sfdx force:org:open
