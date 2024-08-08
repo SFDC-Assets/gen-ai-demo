@@ -36,7 +36,7 @@ export default class Home_WorkshopHome extends LightningElement {
       if (!groupedRecords[record.Module__c]) {
         groupedRecords[record.Module__c] = {
           key: record.Module__c,
-          label: "Module " + record.Module__c,
+          label: "Build #" + record.Module__c,
           records: []
         };
       }
