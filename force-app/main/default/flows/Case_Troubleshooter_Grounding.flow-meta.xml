@@ -99,5 +99,5 @@
         </connector>
         <triggerType>Capability</triggerType>
     </start>
-    <status>Obsolete</status>
+    <status>Draft</status>
 </Flow>
