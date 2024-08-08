@@ -24,7 +24,7 @@ sfdx force:user:permset:assign -n TDX_Demo_Build_Permissions
 
 sfdx automig:load -d data
 
-sleep 120
-sf project deploy start -d flow-app
+# sleep 120
+# sf project deploy start -d flow-app
 
 sfdx force:org:open
