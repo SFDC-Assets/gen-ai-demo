@@ -14,17 +14,17 @@ sleep 120
 
 sfdx shane:user:password:set -p salesforce1 -g User -l User
 
-sfdx force:user:permset:assign -n EinsteinGPTPromptTemplateManager
-sfdx force:user:permset:assign -n EinsteinGPTPromptTemplateUser
+sf org assign permset -n EinsteinGPTPromptTemplateManager
+sf org assign permset -n EinsteinGPTPromptTemplateUser
 
-sfdx force:source:push
+sf project deploy start
 
-sfdx force:user:permset:assign -n Heroku_Endpoint_Access
-sfdx force:user:permset:assign -n TDX_Demo_Build_Permissions
+sf org assign permset -n Heroku_Endpoint_Access
+sf org assign permset -n TDX_Demo_Build_Permissions
 
-sfdx automig:load -d data
+sf automig load -d data
 
 # sleep 120
 # sf project deploy start -d flow-app
 
-sfdx force:org:open
+sf org open
