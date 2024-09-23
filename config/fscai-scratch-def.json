@@ -1,6 +1,7 @@
 {
   "orgName": "FSC GPT Workshop",
   "edition": "Partner Developer",
+  "release": "preview",
   "features": [
     "EnableSetPasswordInApi",
     "EINSTEIN1AIPLATFORM",
