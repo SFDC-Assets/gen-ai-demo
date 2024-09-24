@@ -1,7 +1,15 @@
 {
   "orgName": "Generative AI Demo",
   "edition": "Developer",
-  "features": ["EnableSetPasswordInApi", "EINSTEINGPT", "EINSTEINGPTPLATFORM", "EINSTEINGPTPROMPTBUILDER", "EINSTEINGENERATIVESERVICES", "EINSTEINLLMREQUESTSHOURLY"],
+  "release": "preview",
+  "features": [
+    "EnableSetPasswordInApi",
+    "EINSTEINGPT",
+    "EINSTEINGPTPLATFORM",
+    "EINSTEINGPTPROMPTBUILDER",
+    "EINSTEINGENERATIVESERVICES",
+    "EINSTEINLLMREQUESTSHOURLY"
+  ],
   "settings": {
     "lightningExperienceSettings": {
       "enableS1DesktopEnabled": true
@@ -9,8 +17,8 @@
     "mobileSettings": {
       "enableS1EncryptedStoragePref2": false
     },
-    "EinsteinGptSettings" : {
-      "enableEinsteinGptPlatform" : true 
+    "EinsteinGptSettings": {
+      "enableEinsteinGptPlatform": true
     }
   }
 }

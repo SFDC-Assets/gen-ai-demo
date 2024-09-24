@@ -1,5 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
+    <applicationVisibilities>
+        <application>standard__LightningSales</application>
+        <default>false</default>
+        <visible>true</visible>
+    </applicationVisibilities>
     <classAccesses>
         <apexClass>BurnsTest</apexClass>
         <enabled>true</enabled>
@@ -361,10 +366,6 @@
         <tab>standard-Account</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
-    <tabVisibilities>
-        <tab>standard-home</tab>
-        <visibility>DefaultOn</visibility>
-    </tabVisibilities>
     <userLicense>Salesforce</userLicense>
     <userPermissions>
         <enabled>true</enabled>
@@ -596,6 +597,18 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
+        <name>ExternalClientAppAdmin</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ExternalClientAppDeveloper</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ExternalClientAppViewer</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
         <name>FreezeUsers</name>
     </userPermissions>
     <userPermissions>
@@ -677,10 +690,6 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>ManageContentTypes</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageCustomDomains</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -989,6 +998,10 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>ViewAllUsers</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ViewClientSecret</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>

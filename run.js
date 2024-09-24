@@ -45,8 +45,41 @@ const utils = require("./utils");
   await utils.sleep(5000);
 
   // await page.waitFor(10000);
-  //go to /lightning/setup/OmniStudioSettings/home
-  var targetOSSettings = `https://${parsedFqdn[0]}.scratch.lightning.force.com/lightning/setup/EinsteinGPTSetup/home`;
+  //go to /lightning/setup/EinsteinGPTSetup/home
+  // var targetOSSettings = `https://${parsedFqdn[0]}.scratch.lightning.force.com/lightning/setup/EinsteinGPTSetup/home`;
+  // console.log(targetOSSettings);
+
+  // await Promise.all([
+  //   page.waitForNavigation({ timeout: timeout, waitUntil: "load" }),
+  //   page.waitForNavigation({ timeout: timeout, waitUntil: "networkidle2" }),
+  //   page.goto(targetOSSettings)
+  // ]);
+
+  // await page.setViewport({ width: 654, height: 813 });
+  // await utils.sleep(5000);
+
+  // try {
+  //   {
+  //     const targetPage = page;
+  //     await puppeteer.Locator.race([
+  //       targetPage.locator("span.slds-checkbox_faux")
+  //     ])
+  //       .setTimeout(timeout)
+  //       .click({
+  //         offset: {
+  //           x: 22,
+  //           y: 9
+  //         }
+  //       });
+  //   }
+  // } catch (error) {
+  //   console.log(error);
+  // }
+
+  // await utils.sleep(5000);
+
+  //go to /lightning/setup/EinsteinGPTSetup/home
+  var targetOSSettings = `https://${parsedFqdn[0]}.scratch.lightning.force.com/lightning/setup/EinsteinCopilot/home`;
   console.log(targetOSSettings);
 
   await Promise.all([
@@ -58,12 +91,7 @@ const utils = require("./utils");
   await page.setViewport({ width: 654, height: 813 });
   await utils.sleep(5000);
 
-  //OmniStudio Runtime
   try {
-    // await page.evaluateHandle(
-    //     () => document.querySelectorAll('runtime_omnistudio-pref-toggle')[0].shadowRoot.querySelector('lightning-input').shadowRoot.querySelector('input').click()
-    // );
-
     {
       const targetPage = page;
       await puppeteer.Locator.race([
@@ -72,8 +100,8 @@ const utils = require("./utils");
         .setTimeout(timeout)
         .click({
           offset: {
-            x: 22,
-            y: 9
+            x: 23,
+            y: 11.5
           }
         });
     }

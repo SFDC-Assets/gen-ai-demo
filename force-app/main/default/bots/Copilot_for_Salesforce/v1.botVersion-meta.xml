@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<BotVersion xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>v1</fullName>
+    <articleAnswersGPTEnabled>false</articleAnswersGPTEnabled>
+    <botDialogs>
+        <botSteps>
+            <botMessages>
+                <message
+        >Hi! I&apos;m Einstein, an AI assistant. I can do things like search for information, summarize records, and draft and revise emails. What can I help you with?</message>
+                <messageIdentifier
+        >bfae8ff9-f045-4f3a-8109-bbfd5defc60c</messageIdentifier>
+            </botMessages>
+            <stepIdentifier
+      >8ac4ec68-1dc7-4128-8d71-9d58275f1701</stepIdentifier>
+            <type>Message</type>
+        </botSteps>
+        <botSteps>
+            <stepIdentifier
+      >7df75988-13d8-486b-a247-8b02ba192ea8</stepIdentifier>
+            <type>Wait</type>
+        </botSteps>
+        <developerName>Welcome</developerName>
+        <isPlaceholderDialog>false</isPlaceholderDialog>
+        <label>Welcome</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+    <botDialogs>
+        <botSteps>
+            <botMessages>
+                <message>Something went wrong. Try again.</message>
+                <messageIdentifier
+        >a62676c8-fbbf-47ae-8f39-23d6b3b7d4f5</messageIdentifier>
+            </botMessages>
+            <stepIdentifier
+      >9aee1a52-77f4-4cd4-8542-50fbe29c279d</stepIdentifier>
+            <type>Message</type>
+        </botSteps>
+        <botSteps>
+            <stepIdentifier
+      >6bcf84ef-41ad-4b3a-81c8-3f837e3224fb</stepIdentifier>
+            <type>Wait</type>
+        </botSteps>
+        <developerName>Rich_Content_Error_Handling</developerName>
+        <isPlaceholderDialog>false</isPlaceholderDialog>
+        <label>Error Handler</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+    <citationsEnabled>false</citationsEnabled>
+    <conversationDefinitionPlanners>
+        <genAiPlannerName>EmployeeCopilotPlanner</genAiPlannerName>
+    </conversationDefinitionPlanners>
+    <conversationSystemDialogs>
+        <dialog>Rich_Content_Error_Handling</dialog>
+        <type>ErrorHandling</type>
+    </conversationSystemDialogs>
+    <entryDialog>Welcome</entryDialog>
+    <intentDisambiguationEnabled>false</intentDisambiguationEnabled>
+    <intentV3Enabled>false</intentV3Enabled>
+    <knowledgeActionEnabled>false</knowledgeActionEnabled>
+    <knowledgeFallbackEnabled>false</knowledgeFallbackEnabled>
+    <smallTalkEnabled>false</smallTalkEnabled>
+</BotVersion>

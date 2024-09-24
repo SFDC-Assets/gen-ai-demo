@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<GenAiPlugin
+  xmlns="http://soap.sforce.com/2006/04/metadata"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+>
+    <description
+  >Support underwriters in calculating the risk for insurance products</description>
+    <developerName>Underwriting</developerName>
+    <genAiFunctions>
+        <functionName>EmployeeCopilot__GetRecordDetails</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>EmployeeCopilot__IdentifyObjectByName</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>EmployeeCopilot__IdentifyRecordByName</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>EmployeeCopilot__QueryRecords</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>EmployeeCopilot__SummarizeRecord</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>Always ask for the quote number</description>
+        <developerName>Alwaysask0</developerName>
+        <language xsi:nil="true" />
+        <masterLabel>Always ask</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Underwriting</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is only to calculate insurance premiums risk</scope>
+</GenAiPlugin>

@@ -11,7 +11,19 @@
     "EINSTEINKNOWLEDGECREATION",
     "EMPLOYEESERVICEAGENT",
     "EINSTEINAIAPPLICATIONLIMIT",
-    "EINSTEINSERVICEUSER"
+    "EINSTEINSERVICEUSER",
+    "ContactsToMultipleAccounts",
+    "EnableSetPasswordInApi",
+    "CUSTOMERDATAPLATFORM",
+    "DataComDnbAccounts",
+    "DATACOMDNBACCOUNTSENTERPRISE",
+    "ADDDATACOMCRMRECORDCREDIT:30",
+    "WavePlatform",
+    "EinsteinAnalyticsPlus",
+    "AnalyticsAdminPerms",
+    "AnalyticsAppEmbedded",
+    "DevelopmentWave",
+    "EinsteinAnalyticsPlus"
   ],
   "settings": {
     "lightningExperienceSettings": {
@@ -19,6 +31,9 @@
     },
     "mobileSettings": {
       "enableS1EncryptedStoragePref2": false
+    },
+    "customerDataPlatformSettings": {
+      "enableCustomerDataPlatform": true
     }
   }
 }
