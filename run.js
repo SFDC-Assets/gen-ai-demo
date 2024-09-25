@@ -83,5 +83,37 @@ const utils = require("./utils");
 
   await utils.sleep(5000);
 
+  var targetOSSettings = `https://${parsedFqdn[0]}.scratch.lightning.force.com/lightning/setup/EinsteinCopilot/home`;
+  console.log(targetOSSettings);
+
+  await Promise.all([
+    page.waitForNavigation({ timeout: timeout, waitUntil: "load" }),
+    page.waitForNavigation({ timeout: timeout, waitUntil: "networkidle2" }),
+    page.goto(targetOSSettings)
+  ]);
+
+  await page.setViewport({ width: 654, height: 813 });
+  await utils.sleep(5000);
+
+  try {
+    {
+      const targetPage = page;
+      await puppeteer.Locator.race([
+        targetPage.locator("span.slds-checkbox_faux")
+      ])
+        .setTimeout(timeout)
+        .click({
+          offset: {
+            x: 23,
+            y: 11.5
+          }
+        });
+    }
+  } catch (error) {
+    console.log(error);
+  }
+
+  await utils.sleep(5000);
+
   await browser.close();
 })();

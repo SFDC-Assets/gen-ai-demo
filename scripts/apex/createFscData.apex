@@ -1,0 +1,53 @@
+List<Account> personAccounts = new List<Account>();
+
+for (Integer i = 0; i < 40; i++) {
+    Account personAccount = new Account();
+    personAccount.Name = 'Test Person Account ' i;
+    personAccount.Type = 'PersonAccount';
+    personAccount.BillingStreet = 'Test Street';
+    personAccount.BillingCity = 'Test City';
+    personAccount.BillingState = 'Test State';
+    personAccount.BillingPostalCode = 'Test Postal Code';
+    personAccount.BillingCountry = 'Test Country';
+    personAccount.Phone = 'Test Phone';
+    personAccount.Fax = 'Test Fax';
+    personAccount.AccountNumber = 'Test Account Number';
+    personAccount.Description = 'Test Description';
+    personAccount.Rating = 'Test Rating';
+    personAccount.Site = 'Test Site';
+    personAccount.Ownership = 'Test Ownership';
+    personAccount.NumberOfEmployees = 0;
+    personAccount.AnnualRevenue = 0.0;
+    personAccount.Industry = 'Test Industry';
+    personAccount.Sic = 'Test Sic';
+    personAccount.SicDesc = 'Test Sic Desc';
+    personAccount.YearStarted = 'Test Year Started';
+    personAccount.DunsNumber = 'Test Duns Number';
+    personAccount.Tradestyle = 'Test Tradestyle';
+    personAccount.DandbCompanyId = 'Test Dandb Company Id';
+    personAccount.NaicsCode = 'Test Naics Code';
+    personAccount.NaicsDesc = 'Test Naics Desc';
+    personAccount.BillingLatitude = 0.0;
+    personAccount.BillingLongitude = 0.0;
+    personAccount.ShippingStreet = 'Test Shipping Street';
+    personAccount.ShippingCity = 'Test Shipping City';
+    personAccount.ShippingState = 'Test Shipping State';
+    personAccount.ShippingPostalCode = 'Test Shipping Postal Code';
+    personAccount.ShippingCountry = 'Test Shipping Country';
+    personAccount.ShippingLatitude = 0.0;
+    personAccount.ShippingLongitude = 0.0;
+    personAccount.PhotoUrl = 'Test Photo Url';
+    personAccount.Website = 'Test Website';
+    personAccount.ParentId = 'Test Parent Id';
+    personAccount.OperatingHoursId = 'Test Operating Hours Id';
+    personAccount.Jigsaw = 'Test Jigsaw';
+    personAccount.JigsawCompanyId = 'Test Jigsaw Company Id';
+    personAccount.CleanStatus = 'Test Clean Status';
+    personAccount.AccountSource = 'Test Account Source';
+    personAccount.BillingGeocodeAccuracy = 'Test Billing Geocode Accuracy';
+    personAccount.ShippingGeocodeAccuracy = 'Test Shipping Geocode Accuracy';
+    personAccount.Type = 'PersonAccount';
+    personAccounts.add(personAccount);
+}
+
+insert personAccounts;

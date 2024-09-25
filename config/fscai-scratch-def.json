@@ -5,6 +5,13 @@
   "features": [
     "EnableSetPasswordInApi",
     "EINSTEIN1AIPLATFORM",
+    "AIAPPLICATIONLIMITOVERRIDE",
+    "CASECLASSIFICATION",
+    "CWUAIAPPLIMIT",
+    "EINSTEINKNOWLEDGECREATION",
+    "EMPLOYEESERVICEAGENT",
+    "EINSTEINAIAPPLICATIONLIMIT",
+    "EINSTEINSERVICEUSER",
     "AuthorApex",
     "DebugApex",
     "OmniStudioDesigner",
@@ -18,7 +25,17 @@
     "ContactsToMultipleAccounts",
     "FinancialServicesUser:2",
     "FinancialServicesCommunityUser:1",
-    "FinancialServicesInsuranceUser"
+    "FinancialServicesInsuranceUser",
+    "CUSTOMERDATAPLATFORM",
+    "DataComDnbAccounts",
+    "DATACOMDNBACCOUNTSENTERPRISE",
+    "ADDDATACOMCRMRECORDCREDIT:30",
+    "WavePlatform",
+    "EinsteinAnalyticsPlus",
+    "AnalyticsAdminPerms",
+    "AnalyticsAppEmbedded",
+    "DevelopmentWave",
+    "EinsteinAnalyticsPlus"
   ],
   "settings": {
     "lightningExperienceSettings": {
@@ -32,6 +49,9 @@
     },
     "emailAdministrationSettings": {
       "enableEnhancedEmailEnabled": true
+    },
+    "customerDataPlatformSettings": {
+      "enableCustomerDataPlatform": true
     }
   }
 }

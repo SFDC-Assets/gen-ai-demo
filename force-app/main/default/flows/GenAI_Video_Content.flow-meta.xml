@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <environments>Default</environments>
+    <interviewLabel
+  >GenAI Video Content {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>GenAI Video Content</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <screens>
+        <name>Show_Text</name>
+        <label>Show Text</label>
+        <locationX>176</locationX>
+        <locationY>134</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>content</name>
+            <fieldText
+      >&lt;p&gt;&lt;strong style=&quot;font-family: tahoma; font-size: 22px; color: rgb(7, 55, 99);&quot;&gt;GenAI for FINS Videos&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://sfdc.co/ClientSummary-for-Wealth-Advisors&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;font-family: tahoma; font-size: 18px;&quot;&gt;Meeting Prep for Wealth Advisors&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Learn how Prompt Builder can save time &amp;amp; help Wealth Advisors prepare for meetings&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://salesforce.vidyard.com/watch/7E1FW6MhQNt2DYbH9NxtAn&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;font-family: tahoma; font-size: 18px;&quot;&gt;Automating GenAI in your Workflows&lt;/a&gt;&lt;/p&gt;&lt;p&gt;See how you easily you can embed GenAI responses in your existing workflows to increase productivity&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>false</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Show_Text</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+</Flow>

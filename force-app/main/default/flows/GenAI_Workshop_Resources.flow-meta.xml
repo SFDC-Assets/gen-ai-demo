@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <environments>Default</environments>
+    <interviewLabel
+  >GenAI Workshop Resources {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>GenAI Workshop Resources</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <screens>
+        <name>show_stuff</name>
+        <label>show stuff</label>
+        <locationX>176</locationX>
+        <locationY>134</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>Content</name>
+            <fieldText
+      >&lt;p&gt;&lt;strong style=&quot;font-family: tahoma; color: rgb(7, 55, 99); font-size: 24px;&quot;&gt;Workshop Resources&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: tahoma; font-size: 16px; color: rgb(7, 55, 99); background-color: transparent;&quot;&gt;https://sfdc.co/GenAI4FINSWorkbook&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Click on the above link to get access to your workbook guide that you&apos;ll be using during this workshop.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;font-family: tahoma;&quot;&gt;Pro Tip - Open on your mobile!&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>false</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>show_stuff</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+</Flow>
