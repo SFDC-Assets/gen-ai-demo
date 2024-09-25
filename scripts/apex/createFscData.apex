@@ -1,53 +1,29 @@
+Id personAccountRecordTypeId =  Schema.SObjectType.Account.getRecordTypeInfosByDeveloperName().get('PersonAccount').getRecordTypeId();
+
+Id HouseholdRecordTypeId =  Schema.SObjectType.Account.getRecordTypeInfosByDeveloperName().get('IndustriesHousehold').getRecordTypeId();
+
 List<Account> personAccounts = new List<Account>();
 
-for (Integer i = 0; i < 40; i++) {
-    Account personAccount = new Account();
-    personAccount.Name = 'Test Person Account ' i;
-    personAccount.Type = 'PersonAccount';
-    personAccount.BillingStreet = 'Test Street';
-    personAccount.BillingCity = 'Test City';
-    personAccount.BillingState = 'Test State';
-    personAccount.BillingPostalCode = 'Test Postal Code';
-    personAccount.BillingCountry = 'Test Country';
-    personAccount.Phone = 'Test Phone';
-    personAccount.Fax = 'Test Fax';
-    personAccount.AccountNumber = 'Test Account Number';
-    personAccount.Description = 'Test Description';
-    personAccount.Rating = 'Test Rating';
-    personAccount.Site = 'Test Site';
-    personAccount.Ownership = 'Test Ownership';
-    personAccount.NumberOfEmployees = 0;
-    personAccount.AnnualRevenue = 0.0;
-    personAccount.Industry = 'Test Industry';
-    personAccount.Sic = 'Test Sic';
-    personAccount.SicDesc = 'Test Sic Desc';
-    personAccount.YearStarted = 'Test Year Started';
-    personAccount.DunsNumber = 'Test Duns Number';
-    personAccount.Tradestyle = 'Test Tradestyle';
-    personAccount.DandbCompanyId = 'Test Dandb Company Id';
-    personAccount.NaicsCode = 'Test Naics Code';
-    personAccount.NaicsDesc = 'Test Naics Desc';
-    personAccount.BillingLatitude = 0.0;
-    personAccount.BillingLongitude = 0.0;
-    personAccount.ShippingStreet = 'Test Shipping Street';
-    personAccount.ShippingCity = 'Test Shipping City';
-    personAccount.ShippingState = 'Test Shipping State';
-    personAccount.ShippingPostalCode = 'Test Shipping Postal Code';
-    personAccount.ShippingCountry = 'Test Shipping Country';
-    personAccount.ShippingLatitude = 0.0;
-    personAccount.ShippingLongitude = 0.0;
-    personAccount.PhotoUrl = 'Test Photo Url';
-    personAccount.Website = 'Test Website';
-    personAccount.ParentId = 'Test Parent Id';
-    personAccount.OperatingHoursId = 'Test Operating Hours Id';
-    personAccount.Jigsaw = 'Test Jigsaw';
-    personAccount.JigsawCompanyId = 'Test Jigsaw Company Id';
-    personAccount.CleanStatus = 'Test Clean Status';
-    personAccount.AccountSource = 'Test Account Source';
-    personAccount.BillingGeocodeAccuracy = 'Test Billing Geocode Accuracy';
-    personAccount.ShippingGeocodeAccuracy = 'Test Shipping Geocode Accuracy';
-    personAccount.Type = 'PersonAccount';
-    personAccounts.add(personAccount);
-}
+personAccounts.add(new Account(FirstName='Kiran',LastName='Singh',RecordTypeId=personAccountRecordTypeId,BillingStreet='10 Bay Street',BillingCity='Toronto',BillingState='ON',BillingPostalCode='M5J 2S3',BillingCountry='Canada',ShippingStreet='10 Bay Street',ShippingCity='Toronto',ShippingState='ON',ShippingPostalCode='M5J 2S3',ShippingCountry='Canada',Phone='(416) 555-7410',PersonMobilePhone='6471203214',PersonTitle='Small Business Owner',PersonBirthdate=date.parse('4/17/1990'),PersonEmail='kiran.singh@example.com',Type='Customer - Direct',Industry='Other',FinServ__LastInteraction__c=date.parse('4/17/2023'),FinServ__NextInteraction__c=date.parse('10/17/2024')));
+
+personAccounts.add(new Account(FirstName='Saira',LastName='Singh',RecordTypeId=personAccountRecordTypeId,BillingStreet='10 Bay Street',BillingCity='Toronto',BillingState='ON',BillingPostalCode='M5J 2S3',BillingCountry='Canada',ShippingStreet='10 Bay Street',ShippingCity='Toronto',ShippingState='ON',ShippingPostalCode='M5J 2S3',ShippingCountry='Canada',Phone='(416) 555-7410',PersonMobilePhone='3495854349',PersonTitle='Small Business Owner',PersonBirthdate=date.parse('4/17/2010'),PersonEmail='saira.singh@example.com',Type='Customer - Direct',Industry='Other',FinServ__LastInteraction__c=date.parse('4/17/2023'),FinServ__NextInteraction__c=date.parse('10/17/2024')));
+
+personAccounts.add(new Account(FirstName='Vishal',LastName='Singh',RecordTypeId=personAccountRecordTypeId,BillingStreet='10 Bay Street',BillingCity='Toronto',BillingState='ON',BillingPostalCode='M5J 2S3',BillingCountry='Canada',ShippingStreet='10 Bay Street',ShippingCity='Toronto',ShippingState='ON',ShippingPostalCode='M5J 2S3',ShippingCountry='Canada',Phone='(416) 555-7410',PersonMobilePhone='3495854349',PersonTitle='Small Business Owner',PersonBirthdate=date.parse('4/17/2012'),PersonEmail='vishal.singh@example.com',Type='Customer - Direct',Industry='Other',FinServ__LastInteraction__c=date.parse('4/17/2023'),FinServ__NextInteraction__c=date.parse('10/17/2024')));
+
+personAccounts.add(new Account(FirstName='Virat',LastName='Singh',RecordTypeId=personAccountRecordTypeId,BillingStreet='10 Bay Street',BillingCity='Toronto',BillingState='ON',BillingPostalCode='M5J 2S3',BillingCountry='Canada',ShippingStreet='10 Bay Street',ShippingCity='Toronto',ShippingState='ON',ShippingPostalCode='M5J 2S3',ShippingCountry='Canada',Phone='(416) 555-7410',PersonMobilePhone='3495854349',PersonTitle='Small Business Owner',PersonBirthdate=date.parse('4/17/2000'),PersonEmail='virat.singh@example.com',Type='Customer - Direct',Industry='Other',FinServ__LastInteraction__c=date.parse('4/17/2023'),FinServ__NextInteraction__c=date.parse('10/17/2024')));
+
+personAccounts.add(new Account(Name='Singh Household',RecordTypeId=HouseholdRecordTypeId));
 
 insert personAccounts;
+
+List<FinServ__AccountAccountRelation__c> acctRelationships = new List<FinServ__AccountAccountRelation__c>();
+List<Account> singhs = [SELECT Id,Name FROM Account WHERE Name IN ('Kiran Singh','Saira Singh','Vishal Singh','Virat Singh')];
+
+String householdId = [SELECT Id FROM Account WHERE Name='Singh Household' LIMIT 1].Id;
+String roleId = [SELECT Id FROM FinServ__ReciprocalRole__c WHERE Name='Proprietor' LIMIT 1].Id;
+
+for (Account acct : singhs) {
+    acctRelationships.add(new FinServ__AccountAccountRelation__c(FinServ__Account__c=acct.Id,FinServ__Active__c=true,FinServ__RelatedAccount__c=householdId,FinServ__Role__c=roleId));
+}
+
+insert acctRelationships;

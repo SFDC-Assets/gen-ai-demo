@@ -15,12 +15,16 @@ sfdx force:package:install --package=04tHn000001dvY4 --wait 30
 sfdx force:package:install --package=04t1E000001Iql5 --wait 2
 sfdx force:user:permset:assign -n FinancialServicesCloudStandard
 sfdx force:user:permset:assign -n FinancialServicesCloudExtension
+sfdx force:user:permset:assign -n EinsteinGPTPromptTemplateManager
+sf org assign permset -n CopilotSalesforceAdminPSG
+
 
 sfdx force:source:push
 
+
 sfdx force:user:permset:assign -n TDX_Demo_Build_Permissions
 
-sfdx automig:load -d data
+# sfdx automig:load -d data
 
 sfdx force:org:open
 
