@@ -18,8 +18,7 @@ sfdx force:user:permset:assign -n FinancialServicesCloudExtension
 sfdx force:user:permset:assign -n EinsteinGPTPromptTemplateManager
 sf org assign permset -n CopilotSalesforceAdminPSG
 
-
-sfdx force:source:push
+sfdx force:source:push -f
 
 
 sfdx force:user:permset:assign -n TDX_Demo_Build_Permissions
