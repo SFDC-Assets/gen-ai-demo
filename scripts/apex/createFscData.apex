@@ -1,13 +1,7 @@
-//Account Record Types
+//Create Account Data
 Id personAccountRecordTypeId =  Schema.SObjectType.Account.getRecordTypeInfosByDeveloperName().get('PersonAccount').getRecordTypeId();
 
 Id HouseholdRecordTypeId =  Schema.SObjectType.Account.getRecordTypeInfosByDeveloperName().get('IndustriesHousehold').getRecordTypeId();
-
-//Financial Account Record Types
-Id bankAccountRecordTypeId =  Schema.SObjectType.FinServ__FinancialAccount__c.getRecordTypeInfosByDeveloperName().get('Bank Account').getRecordTypeId();
-
-Id investmentAccountRecordTypeId =  Schema.SObjectType.FinServ__FinancialAccount__c.getRecordTypeInfosByDeveloperName().get('Investment Account').getRecordTypeId();
-
 
 
 List<Account> personAccounts = new List<Account>();
@@ -24,6 +18,7 @@ personAccounts.add(new Account(Name='Singh Household',RecordTypeId=HouseholdReco
 
 insert personAccounts;
 
+//Create Account Relationship Data
 List<FinServ__AccountAccountRelation__c> acctRelationships = new List<FinServ__AccountAccountRelation__c>();
 List<Account> singhs = [SELECT Id,Name FROM Account WHERE Name IN ('Kiran Singh','Saira Singh','Vishal Singh','Virat Singh')];
 
@@ -37,7 +32,7 @@ for (Account acct : singhs) {
 insert acctRelationships;
 
 
-//Creating Financial Accounts
+//Creating Financial Accounts Data
 
 Id bankAccountRecordTypeId =  Schema.SObjectType.FinServ__FinancialAccount__c.getRecordTypeInfosByDeveloperName().get('BankingAccount').getRecordTypeId();
 
@@ -86,7 +81,7 @@ financialAccounts.add(new FinServ__FinancialAccount__c(Name ='RESP - Saira',Reco
 insert financialAccounts;
 
 
-//Creating Financial Assets & Liabilities
+//Creating Financial Assets & Liabilities Data
 
 Id assetRecordTypeId =  Schema.SObjectType.FinServ__AssetsAndLiabilities__c.getRecordTypeInfosByDeveloperName().get('NonfinancialAsset').getRecordTypeId();
 
@@ -113,7 +108,7 @@ financialAssetsAndLiabilities.add(new FinServ__AssetsAndLiabilities__c(Name ='Pr
                      
 insert financialAssetsAndLiabilities;
 
-//Creating Opportunities
+//Creating Opportunities Data
 Id opportunityWalletShareRecordTypeId =  Schema.SObjectType.Opportunity.getRecordTypeInfosByDeveloperName().get('WalletShareOpportunity').getRecordTypeId();
 
 Id opportunityRetirementPlanningRecordTypeId =  Schema.SObjectType.Opportunity.getRecordTypeInfosByDeveloperName().get('RetirementPlanning').getRecordTypeId();
