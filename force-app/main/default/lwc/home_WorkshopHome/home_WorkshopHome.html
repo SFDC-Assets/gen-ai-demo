@@ -3,21 +3,6 @@
     <div class="slds-text-align_center">
       <img class="header-image" src={einsteinHeaderUrl} alt="Einstein Header" />
     </div>
-    <div>
-      <lightning-button
-        class="prepare-data-button"
-        label="Prepare Data"
-        variant="brand"
-        disabled={isButtonDisabled}
-        onclick={handlePrepareDataClick}
-      ></lightning-button>
-      <template if:true={isButtonDisabled}>
-        <lightning-spinner
-          alternative-text="Loading"
-          size="small"
-        ></lightning-spinner>
-      </template>
-    </div>
     <div class="toggle-position">
       <lightning-input
         type="toggle"

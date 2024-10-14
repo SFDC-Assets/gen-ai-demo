@@ -27,3 +27,41 @@ for (Account acct : singhs) {
 }
 
 insert acctRelationships;
+
+//Create Financial Accounts
+Id bankAccountRecordTypeId =  Schema.SObjectType.FinServ__FinancialAccount__c.getRecordTypeInfosByDeveloperName().get('BankingAccount').getRecordTypeId();
+Id investmentAccountRecordTypeId =  Schema.SObjectType.FinServ__FinancialAccount__c.getRecordTypeInfosByDeveloperName().get('InvestmentAccount').getRecordTypeId();
+String jointOwnerId = [SELECT Id FROM Account WHERE Name='Virat Singh' LIMIT 1].Id;
+String primaryOwnerId = [SELECT Id FROM Account WHERE Name='Kiran Singh' LIMIT 1].Id;
+List<FinServ__FinancialAccount__c> financialAccounts = new List<FinServ__FinancialAccount__c>();
+financialAccounts.add(new FinServ__FinancialAccount__c(Name ='Joint Checking',RecordTypeId=bankAccountRecordTypeId,
+                                                       FinServ__Balance__c=103245,FinServ__FinancialAccountNumber__c='5999912345',
+                                                       FinServ__FinancialAccountType__c='Checking',FinServ__JointOwner__c=jointOwnerId,
+                                                       FinServ__Household__c=householdId,FinServ__OwnerType__c=primaryOwnerId,
+                                                       FinServ__Ownership__c='Joint',FinServ__PrimaryOwner__c=primaryOwnerId,
+                                                       FinServ__Status__c='Open',FinServ__AccrualFrequency__c='Daily'));
+financialAccounts.add(new FinServ__FinancialAccount__c(Name ='High Yield Savings',RecordTypeId=bankAccountRecordTypeId,
+                                                       FinServ__Balance__c=52500,FinServ__FinancialAccountNumber__c='5555554321',
+                                                       FinServ__FinancialAccountType__c='Savings',FinServ__JointOwner__c=jointOwnerId,
+                                                       FinServ__Household__c=householdId,FinServ__OwnerType__c=primaryOwnerId,
+                                                       FinServ__Ownership__c='Joint',FinServ__PrimaryOwner__c=primaryOwnerId,
+                                                       FinServ__Status__c='Open',FinServ__AccrualFrequency__c='Daily'));
+financialAccounts.add(new FinServ__FinancialAccount__c(Name ='The Singh Family Trust Account',RecordTypeId=investmentAccountRecordTypeId,
+                                                       FinServ__Balance__c=782388,
+                                                       FinServ__FinancialAccountType__c='Managed Account',FinServ__JointOwner__c=jointOwnerId,
+                                                       FinServ__Household__c=householdId,FinServ__OwnerType__c=primaryOwnerId,
+                                                       FinServ__Ownership__c='Trust',FinServ__PrimaryOwner__c=primaryOwnerId,
+                                                       FinServ__Status__c='Open',FinServ__AccrualFrequency__c='Daily'));
+financialAccounts.add(new FinServ__FinancialAccount__c(Name ='RESP - Vishal',RecordTypeId=investmentAccountRecordTypeId,
+                                                       FinServ__Balance__c=138902,
+                                                       FinServ__FinancialAccountType__c='Mutual Fund',
+                                                       FinServ__Household__c=householdId,FinServ__OwnerType__c=primaryOwnerId,
+                                                       FinServ__Ownership__c='Individual',FinServ__PrimaryOwner__c=primaryOwnerId,
+                                                       FinServ__Status__c='Open',FinServ__AccrualFrequency__c='Daily'));
+financialAccounts.add(new FinServ__FinancialAccount__c(Name ='RESP - Saira',RecordTypeId=investmentAccountRecordTypeId,
+                                                       FinServ__Balance__c=64265,
+                                                       FinServ__FinancialAccountType__c='Mutual Fund',
+                                                       FinServ__Household__c=householdId,FinServ__OwnerType__c=primaryOwnerId,
+                                                       FinServ__Ownership__c='Individual',FinServ__PrimaryOwner__c=primaryOwnerId,
+                                                       FinServ__Status__c='Open',FinServ__AccrualFrequency__c='Daily'));
+insert financialAccounts;

@@ -11,15 +11,14 @@ sleep 120
 
 sfdx shane:user:password:set -p salesforce1 -g User -l User
 # sfdx force:package:install --package=04t4W000003ChfP --wait 20 -r
-sfdx force:package:install --package=04tHn000001dvY4 --wait 30
-sfdx force:package:install --package=04t1E000001Iql5 --wait 2
-sfdx force:user:permset:assign -n FinancialServicesCloudStandard
-sfdx force:user:permset:assign -n FinancialServicesCloudExtension
+# sfdx force:package:install --package=04tHn000001dvY4 --wait 30
+# sfdx force:package:install --package=04t1E000001Iql5 --wait 2
+# sfdx force:user:permset:assign -n FinancialServicesCloudStandard
+# sfdx force:user:permset:assign -n FinancialServicesCloudExtension
 sfdx force:user:permset:assign -n EinsteinGPTPromptTemplateManager
 sf org assign permset -n CopilotSalesforceAdminPSG
 
 sfdx force:source:push -f
-
 
 sfdx force:user:permset:assign -n TDX_Demo_Build_Permissions
 

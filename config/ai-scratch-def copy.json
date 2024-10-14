@@ -1,0 +1,58 @@
+{
+  "orgName": "FSC GPT Workshop",
+  "edition": "Partner Developer",
+  "release": "preview",
+  "features": [
+    "EnableSetPasswordInApi",
+    "EINSTEIN1AIPLATFORM",
+    "AIAPPLICATIONLIMITOVERRIDE",
+    "CASECLASSIFICATION",
+    "CASEWRAPUP",
+    "CWUAIAPPLIMIT",
+    "EINSTEINKNOWLEDGECREATION",
+    "EMPLOYEESERVICEAGENT",
+    "EINSTEINAIAPPLICATIONLIMIT",
+    "EINSTEINSERVICEUSER",
+    "SUMMARIZATIONRECS",
+    "LiveAgent",
+    "AuthorApex",
+    "DebugApex",
+    "ServiceCloud",
+    "Communities",
+    "CUSTOMERDATAPLATFORM",
+    "DataComDnbAccounts",
+    "DATACOMDNBACCOUNTSENTERPRISE",
+    "ADDDATACOMCRMRECORDCREDIT:30",
+    "WavePlatform",
+    "AnalyticsAdminPerms",
+    "AnalyticsAppEmbedded",
+    "DevelopmentWave",
+    "EinsteinAnalyticsPlus",
+    "EMBEDDEDMESSAGINGCOPILOT",
+    "EMBEDDEDSERVICEMESSAGING",
+    "EMBEDDEDMESSAGINGTRANSCRIPT",
+    "LIVEMESSAGE",
+    "OMNICHANNELROUTINGOVERFLOW",
+    "SELFSERVICECOPILOT"
+  ],
+  "settings": {
+    "lightningExperienceSettings": {
+      "enableS1DesktopEnabled": true
+    },
+    "mobileSettings": {
+      "enableS1EncryptedStoragePref2": false
+    },
+    "communitiesSettings": {
+      "enableNetworksEnabled": true
+    },
+    "emailAdministrationSettings": {
+      "enableEnhancedEmailEnabled": true
+    },
+    "customerDataPlatformSettings": {
+      "enableCustomerDataPlatform": true
+    },
+    "EinsteinGptSettings": {
+      "enableEinsteinGptPlatform": true
+    }
+  }
+}
