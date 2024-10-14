@@ -24,6 +24,6 @@ sf automig load -d data
 
 # sleep 120
 # sf project deploy start -d flow-app
-sf project deploy start -p flow-app
+sf project deploy start -d flow-app
 
 sf org open
