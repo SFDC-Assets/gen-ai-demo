@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Location__c</fullName>
+    <description>Location specifies the exact place within the resort where the activity occurred, such as &apos;Main Pool&apos; or &apos;Ocean View Restaurant&apos;, enhancing data accuracy for guest activity tracking and operational analysis.</description>
+    <label>Location</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

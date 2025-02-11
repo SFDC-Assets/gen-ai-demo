@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Activity_Type__c</fullName>
+    <description>Activity Type identifies the specific service or facility utilized by the guest, such as Spa, Golf, or Restaurant, enabling targeted insights into guest preferences and resort operations.</description>
+    <label>Activity Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Beach Access</fullName>
+                <default>false</default>
+                <label>Beach Access</label>
+            </value>
+            <value>
+                <fullName>Concierge Service</fullName>
+                <default>false</default>
+                <label>Concierge Service</label>
+            </value>
+            <value>
+                <fullName>Event Attendance</fullName>
+                <default>false</default>
+                <label>Event Attendance</label>
+            </value>
+            <value>
+                <fullName>Fitness Center</fullName>
+                <default>false</default>
+                <label>Fitness Center</label>
+            </value>
+            <value>
+                <fullName>Golf</fullName>
+                <default>false</default>
+                <label>Golf</label>
+            </value>
+            <value>
+                <fullName>Guest Check-in</fullName>
+                <default>false</default>
+                <label>Guest Check-in</label>
+            </value>
+            <value>
+                <fullName>Guest Check-out</fullName>
+                <default>false</default>
+                <label>Guest Check-out</label>
+            </value>
+            <value>
+                <fullName>Housekeeping</fullName>
+                <default>false</default>
+                <label>Housekeeping</label>
+            </value>
+            <value>
+                <fullName>Pool</fullName>
+                <default>false</default>
+                <label>Pool</label>
+            </value>
+            <value>
+                <fullName>Reception</fullName>
+                <default>false</default>
+                <label>Reception</label>
+            </value>
+            <value>
+                <fullName>Restaurant</fullName>
+                <default>false</default>
+                <label>Restaurant</label>
+            </value>
+            <value>
+                <fullName>Room Service</fullName>
+                <default>false</default>
+                <label>Room Service</label>
+            </value>
+            <value>
+                <fullName>Shopping</fullName>
+                <default>false</default>
+                <label>Shopping</label>
+            </value>
+            <value>
+                <fullName>Spa</fullName>
+                <default>false</default>
+                <label>Spa</label>
+            </value>
+            <value>
+                <fullName>Experience</fullName>
+                <default>false</default>
+                <label>Experience</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

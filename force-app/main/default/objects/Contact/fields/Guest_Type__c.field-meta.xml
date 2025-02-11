@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Guest_Type__c</fullName>
+    <label>Guest Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Adventure Enthusiasts</fullName>
+                <default>false</default>
+                <label>Adventure Enthusiasts</label>
+            </value>
+            <value>
+                <fullName>Business and Pleasure Travelers</fullName>
+                <default>false</default>
+                <label>Business and Pleasure Travelers</label>
+            </value>
+            <value>
+                <fullName>Celebration Groups</fullName>
+                <default>false</default>
+                <label>Celebration Groups</label>
+            </value>
+            <value>
+                <fullName>Cultural Connoisseurs</fullName>
+                <default>false</default>
+                <label>Cultural Connoisseurs</label>
+            </value>
+            <value>
+                <fullName>Digital Detoxers</fullName>
+                <default>false</default>
+                <label>Digital Detoxers</label>
+            </value>
+            <value>
+                <fullName>Eco-Luxury Travelers</fullName>
+                <default>false</default>
+                <label>Eco-Luxury Travelers</label>
+            </value>
+            <value>
+                <fullName>Family Fun Seekers</fullName>
+                <default>false</default>
+                <label>Family Fun Seekers</label>
+            </value>
+            <value>
+                <fullName>Gourmet Globtrotters</fullName>
+                <default>false</default>
+                <label>Gourmet Globtrotters</label>
+            </value>
+            <value>
+                <fullName>Romance Retreaters</fullName>
+                <default>false</default>
+                <label>Romance Retreaters</label>
+            </value>
+            <value>
+                <fullName>Solitude Seekers</fullName>
+                <default>false</default>
+                <label>Solitude Seekers</label>
+            </value>
+            <value>
+                <fullName>Tech-Savvy Explorers</fullName>
+                <default>false</default>
+                <label>Tech-Savvy Explorers</label>
+            </value>
+            <value>
+                <fullName>Wellness Seekers</fullName>
+                <default>false</default>
+                <label>Wellness Seekers</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

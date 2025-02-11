@@ -1,0 +1,1624 @@
+<template>
+  <article class="slds-card">
+      <div class="slds-grid slds-einstein-header slds-card__header">
+        <header class="slds-media slds-media_center slds-has-flexi-truncate">
+          <div class="slds-grid slds-grid_vertical-align-center slds-size_3-of-4 slds-medium-size_2-of-3">
+            <div class="slds-media__figure">
+              <span class="slds-icon_container slds-icon-utility-salesforce1">
+                <lightning-icon icon-name="utility:salesforce1"></lightning-icon>
+              </span>
+            </div>
+            <div class="slds-media__body">
+              <h2 class="slds-truncate" title="Agent Assistant">
+                <div class="slds-card__header-link" title="Agent Assistant">
+                  <span class="slds-text-heading_small">Agentforce Workshop Guide</span>
+                </div>
+              </h2>
+            </div>
+          </div>
+          <div class="slds-einstein-header__figure slds-size_1-of-4 slds-medium-size_1-of-3"></div>
+        </header>
+      </div>
+      <div class="slds-card__body slds-card__body_inner">
+          <lightning-accordion allow-multiple-sections-open onsectiontoggle={handleSectionToggle} active-section-name={activeSections}>
+              
+              <lightning-accordion-section name="1" label="Module 1 - Prerequisites">
+                <ol class="slds-setup-assistant">
+                  <li class="slds-setup-assistant__item">
+                    <article class="slds-setup-assistant__step">
+                      <div class="slds-setup-assistant__step-summary">
+                        <div class="slds-media">
+                          <div
+                            class="slds-setup-assistant__step-summary-content slds-media__body"
+                          >
+                            <h3
+                              class="slds-setup-assistant__step-summary-title slds-text-heading_small"
+                            >
+                              <lightning-icon
+                                icon-name="standard:toggle"
+                                class="slds-var-m-right_small"
+                              ></lightning-icon>
+                              Setup Einstein Features and Permissions
+                            </h3>
+                            <div>
+                            </div>
+                            <div class="slds-progress slds-progress_vertical slds-progress_success">
+                              <ol class="slds-progress__list slds-progress__list-bordered">
+                                <li class="slds-progress__item">
+                                  <div class="slds-progress__marker"></div>
+                                  <div class="slds-progress__item_content slds-grid slds-grid_align-spread">
+                                    <div class="slds-size_3-of-4">
+                                      Enable Einstein Generative AI                            
+                                    </div>
+                                    <div class="slds-grid slds-grid_align-end slds-size_1-of-4">
+                                      <lightning-button-icon
+                                        tooltip="Einstein Setup"
+                                        icon-name="utility:einstein_alt"
+                                        variant="brand"
+                                        onclick={navToEinsteinSetup}
+                                      >
+                                      </lightning-button-icon>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="slds-progress__item">
+                                  <div class="slds-progress__marker"></div>
+                                  <div class="slds-progress__item_content slds-grid slds-grid_align-spread">
+                                    <div class="slds-size_3-of-4">
+                                      Enable Einstein Copilot for Salesforce
+                                    </div>
+                                    
+                                    <div class="slds-grid slds-grid_align-end slds-size_1-of-4">
+                                      <lightning-button-icon
+                                        tooltip="Agent Studio"
+                                        icon-name="utility:einstein_alt"
+                                        variant="brand"
+                                        onclick={navToCopilotSetup}
+                                      >
+                                      </lightning-button-icon>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="slds-progress__item">
+                                  <div class="slds-progress__marker"></div>
+                                  <div class="slds-progress__item_content slds-grid slds-grid_align-spread">
+                                    <div class="slds-size_3-of-4">
+                                      <p>Assign Permission Set Licenses</p>
+                                      Required Access:
+                                    <ul class="slds-list_dotted">
+                                      <li>Einstein GPT Copilot</li>
+                                      <li>Einstein Prompt Templates</li>
+                                    </ul>
+                                    </div>
+                                    <div class="slds-grid slds-grid_align-end slds-size_1-of-4">
+                                      <lightning-button-icon
+                                        tooltip="User Setup"
+                                        icon-name="utility:bundle_config"
+                                        variant="brand"
+                                        onclick={navToPermSetLicenses}
+                                      >
+                                      </lightning-button-icon>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="slds-progress__item">
+                                  <div class="slds-progress__marker"></div>
+                                  <div class="slds-progress__item_content slds-grid slds-grid_align-spread">
+                                    <div class="slds-size_3-of-4">
+                                      <p>Assign Permission Sets</p>
+                                      Required Access:
+                                      <ul class="slds-list_dotted">
+                                        <li>Einstein Copilot for Salesforce Admin</li>
+                                        <li>Einstein Copilot for Salesforce User</li>
+                                        <li>Prompt Template Manager</li>
+                                        <li>Prompt Template User</li>
+                                      </ul>
+                                    </div>
+                                    <div class="slds-grid slds-grid_align-end slds-size_1-of-4">
+                                      <lightning-button-icon
+                                        tooltip="User Setup"
+                                        icon-name="utility:bundle_config"
+                                        variant="brand"
+                                        onclick={navToPermSets}
+                                      >
+                                      </lightning-button-icon>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="slds-progress__item">
+                                  <div class="slds-progress__marker"></div>
+                                  <div class="slds-progress__item_content slds-grid slds-grid_align-spread">
+                                    <div class="slds-size_3-of-4">
+                                      <p>Assign Permission Set Groups</p>
+                                      Required Access:
+                                    <ul class="slds-list_dotted">
+                                      <li>CopilotSalesforceAdminPSG</li>
+                                      <li>CopilotSalesforceUserPSG</li>
+                                    </ul>
+                                    </div>
+                                    <div class="slds-grid slds-grid_align-end slds-size_1-of-4">
+                                      <lightning-button-icon
+                                        tooltip="User Setup"
+                                        icon-name="utility:bundle_config"
+                                        variant="brand"
+                                        onclick={navToPermSetGroups}
+                                      >
+                                      </lightning-button-icon>
+                                    </div>
+                                  </div>
+                                </li>
+                                <!--
+                                <li class="slds-progress__item">
+                                  <div class="slds-progress__marker"></div>
+                                  <div class="slds-progress__item_content slds-grid slds-grid_align-spread">
+                                    <div class="slds-size_3-of-4">
+                                      <p>Ensure Remote Site Settings is set to Active:</p>
+                                      <ul class="slds-list_dotted">
+                                        <li>OpenWeatherMap</li>
+                                      </ul>
+                                    </div>
+                                    <div class="slds-grid slds-grid_align-end slds-size_1-of-4">
+                                      <lightning-button-icon
+                                        icon-name="utility:bundle_config"
+                                        variant="brand"
+                                        onclick={navToRemoteSiteSettings}
+                                      >
+                                      </lightning-button-icon>
+                                    </div>
+                                  </div>
+                                </li>
+                                -->
+                                <li class="slds-progress__item">
+                                  <div class="slds-progress__marker"></div>
+                                  <div class="slds-progress__item_content slds-grid slds-grid_align-spread">
+                                    <div class="slds-size_3-of-4">
+                                      <p>Refresh the page after enabling all the features and settings. Einstein Agent <lightning-icon icon-name="utility:einstein" size="small"></lightning-icon>
+                                        &nbsp;should be activated on the global header</p>
+                                    </div>
+                                    <div class="slds-grid slds-grid_align-end slds-size_1-of-4">
+                                      <lightning-button-icon
+                                        icon-name="utility:refresh"
+                                        variant="brand"
+                                        onclick={refreshPage}
+                                      >
+                                      </lightning-button-icon>
+                                    </div>
+                                  </div>
+                                </li>
+                              </ol>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </li>
+                </ol>
+              </lightning-accordion-section>
+
+              <lightning-accordion-section name="2" label="Module 2 - Agent Topics">
+                <ol class="slds-setup-assistant">
+                  <li class="slds-setup-assistant__item">
+                    <article class="slds-setup-assistant__step">
+                      <div class="slds-setup-assistant__step-summary">
+                        <div class="slds-media">
+                          <div
+                            class="slds-setup-assistant__step-summary-content slds-media__body"
+                          >
+                            <h3
+                              class="slds-setup-assistant__step-summary-title slds-text-heading_small"
+                            >
+                              <lightning-icon
+                                icon-name="standard:topic2"
+                                class="slds-var-m-right_small"
+                              ></lightning-icon>
+                              Setup and Review Agent Topics
+                            </h3>
+                            <div>
+                              Topic instructions set guardrails for agent behavior and gives an agent the context it needs to do its job. Review <a href='https://help.salesforce.com/s/articleView?id=sf.copilot_topics_instructions.htm' target="_blank">best practices</a> for writing topic instructions to make sure your agents perform as expected
+                            </div>
+                            <div class="slds-progress slds-progress_vertical slds-progress_success">
+                              <ol class="slds-progress__list slds-progress__list-bordered">
+                                <li class="slds-progress__item">
+                                  <div class="slds-progress__marker"></div>
+                                  <div class="slds-progress__item_content slds-grid slds-grid_align-spread">
+                                    <div class="slds-size_3-of-4">
+                                      <p>Navigate to Agent Studio and follow the steps to review Topics:</p>
+                                      <ol class="slds-list_ordered">
+                                        <li>Choose Einstein Copilot</li>
+                                        <li>
+                                          Click on&nbsp;&nbsp;
+                                          <lightning-button label="Open in Builder"></lightning-button>
+                                        </li>
+                                        <li>
+                                          Ensure that you have chosen Topics&nbsp;&nbsp;
+                                          <lightning-icon
+                                            icon-name="utility:topic2"
+                                            size="x-small"
+                                          ></lightning-icon>
+                                          &nbsp;&nbsp;from the vertical navigation bar
+                                        </li>
+                                        <li>Click on the preconfigured <strong>Travel Management</strong> Topic to review its configuration and actions</li>
+                                      </ol>
+                                    </div>
+                                    <div class="slds-grid slds-grid_align-end slds-size_1-of-4">
+                                      <lightning-button-icon
+                                        tooltip="Agent Builder"
+                                        icon-name="utility:einstein_alt"
+                                        variant="brand"
+                                        onclick={navToEinsteinCopilotBuilderBotDef}
+                                      >
+                                      </lightning-button-icon>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="slds-progress__item">
+                                  <div class="slds-progress__marker"></div>
+                                  <div class="slds-progress__item_content slds-grid slds-grid_align-spread">
+                                    <div class="slds-size_3-of-4">
+                                      <p>Create your very own Topic</p>
+                                      <ol class="slds-list_ordered">
+                                        <li>
+                                          <lightning-button variant="brand-outline" label="Deactivate"></lightning-button>
+                                          &nbsp;&nbsp;Agent on the top right of the page, in order to edit Topics
+                                        </li>
+                                        <li>
+                                          Click on the quick action and choose New Topic&nbsp;&nbsp;
+                                          <lightning-button-menu alternative-text="Show menu" label="New">
+                                            <lightning-menu-item value="newTopic" label="New Topic" prefix-icon-name="utility:add"></lightning-menu-item>
+                                        </lightning-button-menu>
+                                        </li>
+                                        <li>Copy/Paste the following details to create your new Topic</li>
+                                        <div class="slds-grid slds-gutters slds-grid_vertical-align-center">
+                                          <div class="slds-col slds-size_11-of-12">
+                                            <lightning-input type="text" label="Topic Label" value="Travel Management Exercise" disabled required></lightning-input>
+                                          </div>
+                                          <div class="slds-col slds-size_1-of-12">
+                                            <lightning-button-icon
+                                              tooltip="Copy to Clipboard"
+                                              icon-name="utility:copy_to_clipboard"
+                                              variant="brand"
+                                              value="Travel Management Exercise"
+                                              onclick={copyValueToClipboard}
+                                            >
+                                            </lightning-button-icon>
+                                          </div>
+                                        </div>
+                                        <div class="slds-grid slds-gutters slds-grid_vertical-align-center">
+                                          <div class="slds-col slds-size_11-of-12">
+                                            <lightning-textarea
+                                              label="Classification Description" 
+                                              value="This topic is for all travel related questions. It can help the user plan trips, save trips and itineraries, find out activities for their trips, and book trips with the planned activities. Users might ask to plan a trip, save a trip, book a trip, or find weather appropriate activities."
+                                              disabled
+                                              required
+                                            ></lightning-textarea>
+                                          </div>
+                                          <div class="slds-col slds-size_1-of-12">
+                                            <lightning-button-icon
+                                              tooltip="Copy to Clipboard"
+                                              icon-name="utility:copy_to_clipboard"
+                                              variant="brand"
+                                              value="This topic is for all travel related questions. It can help the user plan trips, save trips and itineraries, find out activities for their trips, and book trips with the planned activities. Users might ask to plan a trip, save a trip, book a trip, or find weather appropriate activities."
+                                              onclick={copyValueToClipboard}
+                                            >
+                                            </lightning-button-icon>
+                                          </div>
+                                        </div>
+                                        <div class="slds-grid slds-gutters slds-grid_vertical-align-center">
+                                          <div class="slds-col slds-size_11-of-12">
+                                            <lightning-textarea
+                                              label="Scope" 
+                                              value="Your job is to plan an itinerary to a destination, save the itinerary, recommend weather appropriate activities, and book the reservation"
+                                              disabled
+                                              required
+                                              class="slds-p-bottom_x-small"
+                                            ></lightning-textarea>
+                                          </div>
+                                          <div class="slds-col slds-size_1-of-12">
+                                            <lightning-button-icon
+                                              tooltip="Copy to Clipboard"
+                                              icon-name="utility:copy_to_clipboard"
+                                              variant="brand"
+                                              value="Your job is to plan an itinerary to a destination, save the itinerary, recommend weather appropriate activities, and book the reservation"
+                                              onclick={copyValueToClipboard}
+                                            >
+                                            </lightning-button-icon>
+                                          </div>
+                                        </div>
+                                        Click on&nbsp;&nbsp;
+                                        <lightning-button variant="brand-outline" label="Add Instructions" class="slds-m-top_x-small"></lightning-button>
+                                        &nbsp;&nbsp;and add the following instructions for your topic
+                                        <div class="slds-grid slds-gutters slds-grid_vertical-align-center">
+                                          <div class="slds-col slds-size_11-of-12">
+                                            <lightning-textarea
+                                              label="Instruction" 
+                                              value="Always generate valid recordInfo JSON including the 'data' field"
+                                              disabled
+                                              required
+                                            ></lightning-textarea>
+                                          </div>
+                                          <div class="slds-col slds-size_1-of-12">
+                                            <lightning-button-icon
+                                              tooltip="Copy to Clipboard"
+                                              icon-name="utility:copy_to_clipboard"
+                                              variant="brand"
+                                              value="Always generate valid recordInfo JSON including the 'data' field"
+                                              onclick={copyValueToClipboard}
+                                            >
+                                            </lightning-button-icon>
+                                          </div>
+                                        </div>
+                                        <div class="slds-grid slds-gutters slds-grid_vertical-align-center">
+                                          <div class="slds-col slds-size_11-of-12">
+                                            <lightning-textarea
+                                              label="Instruction" 
+                                              value="Always start by calling the identify record action to find the correct contact record for the traveler"
+                                              disabled
+                                              required
+                                            ></lightning-textarea>
+                                          </div>
+                                          <div class="slds-col slds-size_1-of-12">
+                                            <lightning-button-icon
+                                              tooltip="Copy to Clipboard"
+                                              icon-name="utility:copy_to_clipboard"
+                                              variant="brand"
+                                              value="Always start by calling the identify record action to find the correct contact record for the traveler"
+                                              onclick={copyValueToClipboard}
+                                            >
+                                            </lightning-button-icon>
+                                          </div>
+                                        </div>
+                                        <div class="slds-grid slds-gutters slds-grid_vertical-align-center">
+                                          <div class="slds-col slds-size_11-of-12">
+                                            <lightning-textarea
+                                              label="Instruction" 
+                                              value="Do not ask the user unnecessary questions"
+                                              disabled
+                                              required
+                                            ></lightning-textarea>
+                                          </div>
+                                          <div class="slds-col slds-size_1-of-12">
+                                            <lightning-button-icon
+                                              tooltip="Copy to Clipboard"
+                                              icon-name="utility:copy_to_clipboard"
+                                              variant="brand"
+                                              value="Do not ask the user unnecessary questions"
+                                              onclick={copyValueToClipboard}
+                                            >
+                                            </lightning-button-icon>
+                                          </div>
+                                        </div>
+                                        <li>
+                                          Click on Next and choose any relevant standard or custom actions and assign to this Topic
+                                          <ul class="slds-list_dotted">
+                                            <li>Identify Object by Name</li>
+                                            <li>Identify Record by Name</li>
+                                            <li>Query Records (Beta)</li>
+                                          </ul>
+                                        </li>
+                                        <div class="slds-scoped-notification slds-media slds-media_center slds-theme_info" role="status">
+                                          <div class="slds-media__figure">
+                                            <lightning-icon
+                                              size="small"
+                                              icon-name="utility:info"
+                                              alternative-text="info"
+                                              title="info"
+                                              variant="inverse"
+                                            ></lightning-icon>
+                                          </div>
+                                          <div class="slds-media__body">
+                                            <p>
+                                              For the remainder of the modules, we will be using the preconfigured Travel Management Topic as the basis for our Einstein Agent use case. Click on the quick action for <strong>Travel Management Exercise</strong> and choose "Remove from Agent". Removing the Topic will also permanently delete it from the Agent
+                                            </p>
+                                          </div>
+                                        </div>
+                                      </ol>
+                                    </div>
+                                    <div class="slds-grid slds-grid_align-end slds-size_1-of-4">
+                                      <lightning-button-icon
+                                        tooltip="Agent Builder"
+                                        icon-name="utility:einstein_alt"
+                                        variant="brand"
+                                        onclick={navToEinsteinCopilotBuilderBotDef}
+                                      >
+                                      </lightning-button-icon>
+                                    </div>
+                                  </div>
+                                </li>
+                              </ol>
+                            </div>
+                          </div>
+                          <div class="slds-media__figure slds-media__figure_reverse">
+                            <lightning-button
+                              variant="brand-outline"
+                              label="Agent Studio"
+                              icon-name="utility:setup"
+                              icon-position="right"
+                              onclick={navToCopilotSetup}
+                            ></lightning-button>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </li>
+                </ol>
+              </lightning-accordion-section>
+
+              <lightning-accordion-section name="3" label="Module 3 - Agent Actions using Prompt Builder">
+                <ol class="slds-setup-assistant">
+                  <li class="slds-setup-assistant__item">
+                    <article class="slds-setup-assistant__step">
+                      <div class="slds-setup-assistant__step-summary">
+                        <div class="slds-media">
+                          <div
+                            class="slds-setup-assistant__step-summary-content slds-media__body"
+                          >
+                            <h3
+                              class="slds-setup-assistant__step-summary-title slds-text-heading_small"
+                            >
+                              <lightning-icon
+                                icon-name="standard:prompt_builder"
+                                class="slds-var-m-right_small"
+                              ></lightning-icon>
+                              Setup Prompt Template
+                            </h3>
+                            <div>
+                              <a href="https://help.salesforce.com/s/articleView?id=sf.prompt_builder_about.htm" target="_blank">Prompt Builder</a> is a low-code tool that enables businesses to design and customize AI-powered prompts for use in their CRM workflows. It allows users to create context-specific prompts that improve customer interactions by guiding sales, service, and marketing teams with relevant insights and recommendations. Follow the <a href="https://help.salesforce.com/s/articleView?id=sf.prompt_builder_best_practices.htm" target="_blank">best practices</a> for building effective prompt templates
+                            </div>
+                            <div class="slds-progress slds-progress_vertical slds-progress_success">
+                              <ol class="slds-progress__list slds-progress__list-bordered">
+                                <li class="slds-progress__item">
+                                  <div class="slds-progress__marker"></div>
+                                  <div class="slds-progress__item_content slds-grid slds-grid_align-spread">
+                                    <div class="slds-size_3-of-4">
+                                      Click on the prebuilt Prompt: <strong>"Travel Itinerary"</strong>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="slds-progress__item">
+                                  <div class="slds-progress__marker"></div>
+                                  <div class="slds-progress__item_content slds-grid slds-grid_align-spread">
+                                    <div class="slds-size_3-of-4">
+                                      Copy/Paste the text below into the workspace
+                                      <lightning-textarea
+                                        label="Prompt Template Workspace" 
+                                        value={promptValue}
+                                        disabled
+                                        required
+                                        class="text-area-style"
+                                      ></lightning-textarea>
+                                    </div>
+                                    <div class="slds-grid slds-grid_align-end slds-size_1-of-4">
+                                      <lightning-button-icon
+                                        tooltip="Copy to Clipboard"
+                                        icon-name="utility:copy_to_clipboard"
+                                        variant="brand"
+                                        onclick={copyToClipboard}
+                                      >
+                                      </lightning-button-icon>
+                                    </div>
+                                  </div>
+                                  </li>
+                                  <li class="slds-progress__item">
+                                    <div class="slds-progress__marker"></div>
+                                    <div class="slds-progress__item_content slds-grid slds-grid_align-spread">
+                                      <div class="slds-size_3-of-4">
+                                        <p>Follow the steps to configure and test Prompt Template</p>
+                                        <ol class="slds-list_ordered">
+                                          <li class="slds-m-bottom_xx-small">
+                                            <lightning-button label="Test Inputs"></lightning-button>
+                                            &nbsp;&nbsp;for Traveler and Destination Fields. For example, John Doe for Traveler and your desired destination around the world for Destination
+                                          </li>
+                                          <li class="slds-m-bottom_xx-small">
+                                            Click on <lightning-button label='Save &amp; Preview'></lightning-button>
+                                            &nbsp;&nbsp;to review Resolution and Response
+                                          </li>
+                                          <li class="slds-m-bottom_xx-small">
+                                            Then&nbsp;&nbsp;
+                                            <lightning-button label="Activate"></lightning-button>
+                                            &nbsp;&nbsp;to start leveraging your Prompt in the Agent
+                                          </li>
+                                        </ol>
+                                      </div>
+                                    </div>
+                                  </li>
+                                </ol>
+                              </div>
+                          </div>
+                          <div class="slds-media__figure slds-media__figure_reverse">
+                            <lightning-button
+                              variant="brand-outline"
+                              label="Prompt Builder"
+                              icon-name="utility:setup"
+                              icon-position="right"
+                              onclick={navigateToPromptBuilderSetup}
+                            ></lightning-button>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </li>
+                  <li class="slds-setup-assistant__item">
+                    <article class="slds-setup-assistant__step">
+                      <div class="slds-setup-assistant__step-summary">
+                        <div class="slds-media">
+                          <div
+                            class="slds-setup-assistant__step-summary-content slds-media__body"
+                          >
+                            <h3
+                              class="slds-setup-assistant__step-summary-title slds-text-heading_small"
+                            >
+                              <lightning-icon
+                                icon-name="standard:actions_and_buttons"
+                                class="slds-var-m-right_small"
+                              ></lightning-icon>
+                              Create Agent Action
+                            </h3>
+                            <p></p>
+                            <div class="slds-progress slds-progress_vertical slds-progress_success">
+                              <ol class="slds-progress__list slds-progress__list-bordered">
+                                  <li class="slds-progress__item">
+                                    <div class="slds-progress__marker"></div>
+                                    <div class="slds-progress__item_content slds-grid slds-grid_align-spread">
+                                      <div class="slds-size_3-of-4">
+                                        Go to Agent Actions Studio and click on <lightning-button label="+ New Agent Action"></lightning-button> and follow the steps below:
+                                        <lightning-input type="text" label="Reference Action Type" value="Prompt Template" disabled required></lightning-input>
+                                        <lightning-input type="text" label="Reference Action" value="Travel Itinerary" disabled required></lightning-input>
+                                        <strong>Ensure that you edit the Label and API Name</strong>
+                                        <div class="slds-grid slds-gutters">
+                                          <div class="slds-col">
+                                            <lightning-input type="text" label="Agent Action Label" value="Plan Trip" disabled required></lightning-input>
+                                          </div>
+                                          <div class="slds-col">
+                                            <lightning-input type="text" label="Agent Action API Name" value="Plan_Trip" disabled required></lightning-input>
+                                          </div>
+                                        </div>
+                                        <p class="slds-m-top_small"><strong>Click on Next. Follow and update the steps below for Agent Configuration:</strong></p>
+                                        <div class="slds-grid slds-gutters slds-grid_vertical-align-center">
+                                          <div class="slds-col slds-size_11-of-12">
+                                            <lightning-textarea
+                                              label="Agent Action Instructions"
+                                              value='Generate a travel itinerary based on user input. User will pass utterances such as "Generate Travel Itinerary for John Doe" or "Generate Trip plan"'
+                                              disabled
+                                            ></lightning-textarea>
+                                          </div>
+                                            <div class="slds-col slds-size_1-of-12">
+                                              <lightning-button-icon
+                                                tooltip="Copy to Clipboard"
+                                                icon-name="utility:copy_to_clipboard"
+                                                variant="brand"
+                                                value='Generate a travel itinerary based on user input. User will pass utterances such as "Generate Travel Itinerary for John Doe" or "Generate Trip plan"'
+                                                onclick={copyValueToClipboard}
+                                              >
+                                              </lightning-button-icon>
+                                            </div>
+                                        </div>
+                                        <p class="slds-m-top_small"><strong>Required Inputs for Traveler</strong></p>
+                                        <div class="slds-grid slds-gutters slds-grid_vertical-align-center">
+                                          <div class="slds-col slds-size_11-of-12">
+                                            <lightning-textarea
+                                              label="Instructions"
+                                              value="Always generate valid recordInfo for the contact including the 'data' field"
+                                              disabled
+                                            ></lightning-textarea>
+                                          </div>
+                                          <div class="slds-col slds-size_1-of-12">
+                                            <lightning-button-icon
+                                              tooltip="Copy to Clipboard"
+                                              icon-name="utility:copy_to_clipboard"
+                                              variant="brand"
+                                              value="Always generate valid recordInfo for the contact including the 'data' field"
+                                              onclick={copyValueToClipboard}
+                                            >
+                                            </lightning-button-icon>
+                                          </div>
+                                        </div>
+                                        <lightning-input type="checkbox" label="Collect data from user" name="collectDataFromUser" disabled></lightning-input>
+                                        <p class="slds-m-top_small"><strong>Required Inputs for Destination</strong></p>
+                                        <div class="slds-grid slds-gutters slds-grid_vertical-align-center">
+                                          <div class="slds-col slds-size_11-of-12">
+                                            <lightning-textarea
+                                              label="Instructions"
+                                              value="Destination"
+                                              disabled
+                                            ></lightning-textarea>
+                                          </div>
+                                            <div class="slds-col slds-size_1-of-12">
+                                              <lightning-button-icon
+                                                tooltip="Copy to Clipboard"
+                                                icon-name="utility:copy_to_clipboard"
+                                                variant="brand"
+                                                value="Destination"
+                                                onclick={copyValueToClipboard}
+                                              >
+                                              </lightning-button-icon>
+                                            </div>
+                                        </div>
+                                        <lightning-input type="checkbox" label="Collect data from user" name="collectDataFromUser" disabled></lightning-input>
+                                        <p class="slds-m-top_small"><strong>Required Output for Prompt Response</strong></p>
+                                        <div class="slds-grid slds-gutters slds-grid_vertical-align-center">
+                                          <div class="slds-col slds-size_11-of-12">
+                                            <lightning-textarea
+                                              label="Instructions"
+                                              value="Travel Itinerary"
+                                              disabled
+                                            ></lightning-textarea>
+                                          </div>
+                                            <div class="slds-col slds-size_1-of-12">
+                                              <lightning-button-icon
+                                                tooltip="Copy to Clipboard"
+                                                icon-name="utility:copy_to_clipboard"
+                                                variant="brand"
+                                                value="Travel Itinerary"
+                                                onclick={copyValueToClipboard}
+                                              >
+                                              </lightning-button-icon>
+                                            </div>
+                                        </div>
+                                        <lightning-input type="checkbox" label="Show in conversation" name="showInConversation" checked disabled></lightning-input>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li class="slds-progress__item">
+                                    <div class="slds-progress__marker"></div>
+                                    <div class="slds-progress__item_content slds-grid slds-grid_align-spread">
+                                      <div class="slds-size_3-of-4">
+                                        Navigate to Agent Studio and follow the steps below:
+                                        <ol class="slds-list_ordered">
+                                          <li>Choose Einstein Copilot</li>
+                                          <li>Open in Builder</li>
+                                          <li>Choose Travel Management from the list of Topics</li>
+                                          <li>Click on tab This Topic's Actions</li>
+                                          <li>
+                                            Click on&nbsp;&nbsp;
+                                            <lightning-button-menu alternative-text="Show menu" label="New">
+                                              <lightning-menu-item value="newTopic" label="Add from Asset Library" prefix-icon-name="utility:world"></lightning-menu-item>
+                                          </lightning-button-menu>&nbsp;&nbsp;and add <strong>Plan Trip</strong> as one of the actions
+                                          </li>
+                                          <li>Under Conversation Preview</li>
+                                            <ol class="slds-is-nested">
+                                              <li>Type Utterance: <strong>Generate an itinerary for Traveler John Doe</strong></li>
+                                              <li>Move on to the next module, once you are satisfied with test responses</li>
+                                            </ol>
+                                        </ol>
+                                      </div>
+                                      <div class="slds-grid slds-grid_align-end slds-size_1-of-4">
+                                        <lightning-button-icon
+                                          tooltip="Agent Builder"
+                                          icon-name="utility:einstein_alt"
+                                          variant="brand"
+                                          onclick={navToEinsteinCopilotBuilderBotDef}
+                                        >
+                                        </lightning-button-icon>
+                                      </div>
+                                    </div>
+                                  </li>
+                                </ol>
+                              </div>
+                          </div>
+                          <div class="slds-media__figure slds-media__figure_reverse">
+                            <lightning-button
+                              variant="brand-outline"
+                              label="Agent Actions Studio"
+                              icon-name="utility:setup"
+                              icon-position="right"
+                              onclick={navigateToCopilotActionsStudioSetup}
+                            ></lightning-button>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </li>
+                </ol>
+              </lightning-accordion-section>
+
+              <lightning-accordion-section name="4" label="Module 4 - Agent Actions using Models API and Apex">
+                <ol class="slds-setup-assistant">
+                  <li class="slds-setup-assistant__item">
+                    <article class="slds-setup-assistant__step">
+                      <div class="slds-setup-assistant__step-summary">
+                        <div class="slds-media">
+                          <div
+                            class="slds-setup-assistant__step-summary-content slds-media__body"
+                          >
+                            <h3
+                              class="slds-setup-assistant__step-summary-title slds-text-heading_small"
+                            >
+                            <lightning-icon
+                              icon-name="standard:actions_and_buttons"
+                              class="slds-var-m-right_small"
+                            ></lightning-icon>
+                            Create Agent Action
+                            </h3>
+                            <p></p>
+                            <div class="slds-progress slds-progress_vertical slds-progress_success">
+                              <ol class="slds-progress__list slds-progress__list-bordered">
+                                  <li class="slds-progress__item">
+                                    <div class="slds-progress__marker"></div>
+                                    <div class="slds-progress__item_content slds-grid slds-grid_align-spread">
+                                      <div class="slds-size_3-of-4">
+                                        Go to your Setup for Apex Classes
+                                        <ol class="slds-list_ordered">
+                                          <li>Choose Apex Class <strong>GenerateActivitiesViaSFAPInvocable</strong></li>
+                                          <li>Review the Invocable Method with label <strong>Generate Trip Itinerary</strong> responsible for the overall execution of the agent</li>
+                                          <li>Note the construction of the prompt in the method <strong>getJsonFromPrompt</strong></li>
+                                          <li>Review the method <strong>parseItinerary</strong> for deserializing JSON</li>
+                                          <li>To help visualize the structure of JSON output, review the commented out code for the String <strong>sampleActivity</strong></li>
+                                        </ol>
+                                      </div>
+                                      <div class="slds-grid slds-grid_align-end slds-size_1-of-4">
+                                        <lightning-button-icon
+                                          tooltip="Apex Classes Setup"
+                                          icon-name="utility:apex"
+                                          variant="brand"
+                                          onclick={navToCopilotApexOne}
+                                        >
+                                        </lightning-button-icon>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li class="slds-progress__item">
+                                    <div class="slds-progress__marker"></div>
+                                    <div class="slds-progress__item_content slds-grid slds-grid_align-spread">
+                                      <div class="slds-size_3-of-4">
+                                        Go to Agent Actions Studio and click on <lightning-button label="+ New Agent Action"></lightning-button> and follow the steps below:
+                                        <lightning-input type="text" label="Reference Action Type" value="Apex" disabled required></lightning-input>
+                                        <lightning-input type="text" label="Reference Action" value="Generate Trip Itinerary" disabled required></lightning-input>
+                                        <div class="slds-grid slds-gutters">
+                                          <div class="slds-col">
+                                            <lightning-input type="text" label="Agent Action Label" value="Save Trip" disabled required></lightning-input>
+                                          </div>
+                                          <div class="slds-col">
+                                            <lightning-input type="text" label="Agent Action API Name" value="Save_Trip" disabled required></lightning-input>
+                                          </div>
+                                        </div>
+                                        <p class="slds-m-top_small"><strong>Click on Next. Follow and update the steps below for Agent Configuration:</strong></p>
+                                        <div class="slds-grid slds-gutters slds-grid_vertical-align-center">
+                                          <div class="slds-col slds-size_11-of-12">
+                                            <lightning-textarea
+                                              label="Agent Action Instructions"
+                                              value='Saves the itinerary based on the destination. Utterances "save the itinerary" or "Reserve the itinerary"'
+                                              disabled
+                                            ></lightning-textarea>
+                                          </div>
+                                            <div class="slds-col slds-size_1-of-12">
+                                              <lightning-button-icon
+                                                tooltip="Copy to Clipboard"
+                                                icon-name="utility:copy_to_clipboard"
+                                                variant="brand"
+                                                value='Saves the itinerary based on the destination. Utterances "save the itinerary" or "Reserve the itinerary"'
+                                                onclick={copyValueToClipboard}
+                                              >
+                                              </lightning-button-icon>
+                                            </div>
+                                        </div>
+                                        <p class="slds-m-top_small"><strong>Required Inputs for Destination</strong></p>
+                                        <div class="slds-grid slds-gutters slds-grid_vertical-align-center">
+                                          <div class="slds-col slds-size_11-of-12">
+                                            <lightning-textarea
+                                              label="Instructions"
+                                              value="Destination"
+                                              disabled
+                                            ></lightning-textarea>
+                                          </div>
+                                          <div class="slds-col slds-size_1-of-12">
+                                            <lightning-button-icon
+                                              tooltip="Copy to Clipboard"
+                                              icon-name="utility:copy_to_clipboard"
+                                              variant="brand"
+                                              value="Destination"
+                                              onclick={copyValueToClipboard}
+                                            >
+                                            </lightning-button-icon>
+                                          </div>
+                                        </div>
+                                        <lightning-input type="checkbox" label="Require input" name="requireInput" checked disabled></lightning-input>
+                                        <lightning-input type="checkbox" label="Collect data from user" name="collectDataFromUser" disabled></lightning-input>
+                                        <p class="slds-m-top_small"><strong>Required Inputs for Traveler</strong></p>
+                                        <div class="slds-grid slds-gutters slds-grid_vertical-align-center">
+                                          <div class="slds-col slds-size_11-of-12">
+                                            <lightning-textarea
+                                              label="Instructions"
+                                              value='Always generate valid recordInfo for the contact including the "data" field'
+                                              disabled
+                                            ></lightning-textarea>
+                                          </div>
+                                            <div class="slds-col slds-size_1-of-12">
+                                              <lightning-button-icon
+                                                tooltip="Copy to Clipboard"
+                                                icon-name="utility:copy_to_clipboard"
+                                                variant="brand"
+                                                value='Always generate valid recordInfo for the contact including the "data" field'
+                                                onclick={copyValueToClipboard}
+                                              >
+                                              </lightning-button-icon>
+                                            </div>
+                                        </div>
+                                        <lightning-input type="checkbox" label="Require input" name="requireInput" checked disabled></lightning-input>
+                                        <lightning-input type="checkbox" label="Collect data from user" name="collectDataFromUser" disabled></lightning-input>
+                                        <p class="slds-m-top_small"><strong>Required Output for Output</strong></p>
+                                        <div class="slds-grid slds-gutters slds-grid_vertical-align-center">
+                                          <div class="slds-col slds-size_11-of-12">
+                                            <lightning-textarea
+                                              label="Instructions"
+                                              value="Generated Itinerary record"
+                                              disabled
+                                            ></lightning-textarea>
+                                          </div>
+                                            <div class="slds-col slds-size_1-of-12">
+                                              <lightning-button-icon
+                                                tooltip="Copy to Clipboard"
+                                                icon-name="utility:copy_to_clipboard"
+                                                variant="brand"
+                                                value="Generated Itinerary record"
+                                                onclick={copyValueToClipboard}
+                                              >
+                                              </lightning-button-icon>
+                                            </div>
+                                        </div>
+                                        <lightning-input type="checkbox" label="Show in conversation" name="showInConversation" checked disabled></lightning-input>
+                                      </div>
+                                      
+                                    </div>
+                                  </li>
+                                  <li class="slds-progress__item">
+                                    <div class="slds-progress__marker"></div>
+                                    <div class="slds-progress__item_content slds-grid slds-grid_align-spread">
+                                      <div class="slds-size_3-of-4">
+                                        Navigate to Agent Studio and follow the steps below:
+                                        <ol class="slds-list_ordered">
+                                          <li>Choose Einstein Copilot</li>
+                                          <li>Open in Builder</li>
+                                          <li>Choose Travel Management from the list of Topics</li>
+                                          <li>Click on tab This Topic's Actions</li>
+                                          <li>
+                                            Click on&nbsp;&nbsp;
+                                            <lightning-button-menu alternative-text="Show menu" label="New">
+                                              <lightning-menu-item value="newTopic" label="Add from Asset Library" prefix-icon-name="utility:world"></lightning-menu-item>
+                                          </lightning-button-menu>
+                                            &nbsp;&nbsp;and add <strong>Save Trip</strong> as one of the actions
+                                          </li>
+                                          <li>Under Conversation Preview</li>
+                                            <ol class="slds-is-nested">
+                                              <li>Type Utterance: <strong>Save the Itinerary</strong></li>
+                                              <li>Move on to the next module, once you have conversed with the Agent and are satisfied with test responses</li>
+                                            </ol>
+                                        </ol>
+                                      </div>
+                                      <div class="slds-grid slds-grid_align-end slds-size_1-of-4">
+                                        <lightning-button-icon
+                                          tooltip="Agent Builder"
+                                          icon-name="utility:einstein_alt"
+                                          variant="brand"
+                                          onclick={navToEinsteinCopilotBuilderBotDef}
+                                        >
+                                        </lightning-button-icon>
+                                      </div>
+                                    </div>
+                                  </li>
+                                </ol>
+                            </div>
+                          </div>
+                          <div class="slds-media__figure slds-media__figure_reverse">
+                            <lightning-button
+                              variant="brand-outline"
+                              label="Agent Actions Studio"
+                              icon-name="utility:setup"
+                              icon-position="right"
+                              onclick={navigateToCopilotActionsStudioSetup}
+                            ></lightning-button>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </li>
+                </ol>
+              </lightning-accordion-section>
+
+              <lightning-accordion-section name="5" label="Module 5 - Agent Actions using External Services and Apex">
+                <ol class="slds-setup-assistant">
+                  <li class="slds-setup-assistant__item">
+                    <article class="slds-setup-assistant__step">
+                      <div class="slds-setup-assistant__step-summary">
+                        <div class="slds-media">
+                          <div
+                            class="slds-setup-assistant__step-summary-content slds-media__body"
+                          >
+                            <h3
+                              class="slds-setup-assistant__step-summary-title slds-text-heading_small"
+                            >
+                            <lightning-icon
+                              icon-name="standard:actions_and_buttons"
+                              class="slds-var-m-right_small"
+                            ></lightning-icon>
+                              Create Agent Action
+                            </h3>
+                            <p></p>
+                            <div class="slds-progress slds-progress_vertical slds-progress_success">
+                              <ol class="slds-progress__list slds-progress__list-bordered">
+                                  <li class="slds-progress__item">
+                                    <div class="slds-progress__marker"></div>
+                                    <div class="slds-progress__item_content slds-grid slds-grid_align-spread">
+                                      <div class="slds-size_3-of-4">
+                                        Go to your Setup for Apex Classes
+                                        <ol class="slds-list_ordered">
+                                          <li>Choose Apex Class <strong>GenerateWeatherRelatedActivities</strong></li>
+                                          <li>Review the Invocable method with the label <strong>Recommend Activities for weather</strong> responsible for the overall execution of the agent</li>
+                                          <li>Understand how to call external API OpenWeather in the method <strong>getWeatherCondition_API</strong>. Include your API Key from <a href="https://openweathermap.org/api" target="_blank">OpenWeather</a> for dynamic weather responses</li>
+                                          <li>Select one of the hardcoded Strings for <strong>weatherCondition</strong> in <strong>getWeatherCondition_Mock</strong> method to include various weather scenarios, and assess how these changes affect LLM responses</li>
+                                        </ol>
+                                      </div>
+                                      <div class="slds-grid slds-grid_align-end slds-size_1-of-4">
+                                        <lightning-button-icon
+                                          icon-name="utility:apex"
+                                          variant="brand"
+                                          onclick={navToCopilotApexTwo}
+                                        >
+                                        </lightning-button-icon>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li class="slds-progress__item">
+                                    <div class="slds-progress__marker"></div>
+                                    <div class="slds-progress__item_content slds-grid slds-grid_align-spread">
+                                      <div class="slds-size_3-of-4">
+                                        Go to Agent Actions Studio and click on <lightning-button label="+ New Agent Action"></lightning-button> and follow the steps below:
+                                        <lightning-input type="text" label="Reference Action Type" value="Apex" disabled required></lightning-input>
+                                        <lightning-input type="text" label="Reference Action" value="Recommend Activities for weather" disabled required></lightning-input>
+                                        <lightning-input type="text" label="Agent Action Label" value="Recommend Activities for weather" disabled required></lightning-input>
+                                        <lightning-input type="text" label="Agent Action API Name" value="Recommend_Activities_for_weather" disabled required></lightning-input>
+                                          
+                                        <p class="slds-m-top_small"><strong>Click on Next. Follow and update the steps below for Agent Configuration:</strong></p>
+                                        <div class="slds-grid slds-gutters slds-grid_vertical-align-center">
+                                          <div class="slds-col slds-size_11-of-12">
+                                            <lightning-textarea
+                                              label="Agent Action Instructions"
+                                              value="Evaluate an itinerary for weather appropriateness and return recommended activities"
+                                              disabled
+                                            ></lightning-textarea>
+                                          </div>
+                                            <div class="slds-col slds-size_1-of-12">
+                                              <lightning-button-icon
+                                                tooltip="Copy to Clipboard"
+                                                icon-name="utility:copy_to_clipboard"
+                                                variant="brand"
+                                                value="Evaluate an itinerary for weather appropriateness and return recommended activities"
+                                                onclick={copyValueToClipboard}
+                                              >
+                                              </lightning-button-icon>
+                                            </div>
+                                        </div>
+                                        <p class="slds-m-top_small"><strong>Required Inputs for itineraryId</strong></p>
+                                        <div class="slds-grid slds-gutters slds-grid_vertical-align-center">
+                                          <div class="slds-col slds-size_11-of-12">
+                                            <lightning-textarea
+                                              label="Instructions"
+                                              value="Itinerary Id"
+                                              disabled
+                                            ></lightning-textarea>
+                                          </div>
+                                          <div class="slds-col slds-size_1-of-12">
+                                            <lightning-button-icon
+                                              tooltip="Copy to Clipboard"
+                                              icon-name="utility:copy_to_clipboard"
+                                              variant="brand"
+                                              value="Itinerary Id"
+                                              onclick={copyValueToClipboard}
+                                            >
+                                            </lightning-button-icon>
+                                          </div>
+                                        </div>
+                                        <lightning-input type="checkbox" label="Require Input" name="requireInput" checked disabled></lightning-input>
+                                        <p class="slds-m-top_small"><strong>Required Output for recommendedActivities</strong></p>
+                                        <div class="slds-grid slds-gutters slds-grid_vertical-align-center">
+                                          <div class="slds-col slds-size_11-of-12">
+                                            <lightning-textarea
+                                              label="Instructions"
+                                              value="Generates the text of weather appropriate activities"
+                                              disabled
+                                            ></lightning-textarea>
+                                          </div>
+                                            <div class="slds-col slds-size_1-of-12">
+                                              <lightning-button-icon
+                                                tooltip="Copy to Clipboard"
+                                                icon-name="utility:copy_to_clipboard"
+                                                variant="brand"
+                                                value="Generates the text of weather appropriate activities"
+                                                onclick={copyValueToClipboard}
+                                              >
+                                              </lightning-button-icon>
+                                            </div>
+                                        </div>
+                                        <lightning-input type="checkbox" label="Show in conversation" name="showInConversation" checked disabled></lightning-input>
+                                      </div>
+                                      
+                                    </div>
+                                  </li>
+                                  <li class="slds-progress__item">
+                                    <div class="slds-progress__marker"></div>
+                                    <div class="slds-progress__item_content slds-grid slds-grid_align-spread">
+                                      <div class="slds-size_3-of-4">
+                                        Navigate to Agent Studio and follow the steps below:
+                                        <ol class="slds-list_ordered">
+                                          <li>Choose Einstein Copilot</li>
+                                          <li>Open in Builder</li>
+                                          <li>Choose Travel Management from the list of Topics</li>
+                                          <li>Click on tab This Topic's Actions</li>
+                                          <li>
+                                            Click on&nbsp;&nbsp;
+                                            <lightning-button-menu alternative-text="Show menu" label="New">
+                                              <lightning-menu-item value="newTopic" label="Add from Asset Library" prefix-icon-name="utility:world"></lightning-menu-item>
+                                          </lightning-button-menu>
+                                            &nbsp;&nbsp;and add <strong>Recommend Activities for Weather</strong> as one of the actions
+                                          </li>
+                                          <li>Under Conversation Preview</li>
+                                            <ol class="slds-is-nested">
+                                              <li>Type Utterance: <strong>Generate travel appropriate activities for John Doe's trip to Italy</strong></li>
+                                              <li>Move on to the next module, once you are satisfied with test responses</li>
+                                            </ol>
+                                        </ol>
+                                      </div>
+                                      <div class="slds-grid slds-grid_align-end slds-size_1-of-4">
+                                        <lightning-button-icon
+                                          tooltip="Agent Builder"
+                                          icon-name="utility:einstein_alt"
+                                          variant="brand"
+                                          onclick={navToEinsteinCopilotBuilderBotDef}
+                                        >
+                                        </lightning-button-icon>
+                                      </div>
+                                    </div>
+                                  </li>
+                                </ol>
+                            </div>
+                          </div>
+                          <div class="slds-media__figure slds-media__figure_reverse">
+                            <lightning-button
+                              variant="brand-outline"
+                              label="Agent Actions Studio"
+                              icon-name="utility:setup"
+                              icon-position="right"
+                              onclick={navigateToCopilotActionsStudioSetup}
+                            ></lightning-button>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </li>
+                </ol>
+              </lightning-accordion-section>
+
+              <lightning-accordion-section name="6" label="Module 6 - Agent Actions using Flow">
+                <ol class="slds-setup-assistant">
+                  <li class="slds-setup-assistant__item">
+                    <article class="slds-setup-assistant__step">
+                      <div class="slds-setup-assistant__step-summary">
+                        <div class="slds-media">
+                          <div
+                            class="slds-setup-assistant__step-summary-content slds-media__body"
+                          >
+                            <h3
+                              class="slds-setup-assistant__step-summary-title slds-text-heading_small"
+                            >
+                            <lightning-icon
+                              icon-name="standard:actions_and_buttons"
+                              class="slds-var-m-right_small"
+                            ></lightning-icon>
+                            Create Agent Action
+                            </h3>
+                            <p></p>
+                            <div class="slds-progress slds-progress_vertical slds-progress_success">
+                              <ol class="slds-progress__list slds-progress__list-bordered">
+                                  <li class="slds-progress__item">
+                                    <div class="slds-progress__marker"></div>
+                                    <div class="slds-progress__item_content slds-grid slds-grid_align-spread">
+                                      <div class="slds-size_3-of-4">
+                                        Go to your Setup for Flows
+                                        <ol class="slds-list_ordered">
+                                          <li>Choose the Flow <strong>Book Itinerary and related Activities</strong></li>
+                                          <li>If Inactive, Activate the Flow</li>
+                                        </ol>
+                                      </div>
+                                      <div class="slds-grid slds-grid_align-end slds-size_1-of-4">
+                                        <lightning-button-icon
+                                          icon-name="utility:flow"
+                                          variant="brand"
+                                          onclick={navToFlows}
+                                        >
+                                        </lightning-button-icon>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li class="slds-progress__item">
+                                    <div class="slds-progress__marker"></div>
+                                    <div class="slds-progress__item_content slds-grid slds-grid_align-spread">
+                                      <div class="slds-size_3-of-4">
+                                        Go to Agent Actions Studio and click on <lightning-button label="+ New Agent Action"></lightning-button> and follow the steps below:
+                                        <lightning-input type="text" label="Reference Action Type" value="Flow" disabled required></lightning-input>
+                                        <lightning-input type="text" label="Reference Action" value="Book Itinerary and related Activities" disabled required></lightning-input>
+                                        <div class="slds-grid slds-gutters">
+                                          <div class="slds-col">
+                                            <lightning-input type="text" label="Agent Action Label" value="Book Trip" disabled required></lightning-input>
+                                          </div>
+                                          <div class="slds-col">
+                                            <lightning-input type="text" label="Agent Action API Name" value="Book_Trip" disabled required></lightning-input>
+                                          </div>
+                                        </div>
+                                        <p class="slds-m-top_small"><strong>Click on Next. Follow and update the steps below for Agent Configuration:</strong></p>
+                                        <div class="slds-grid slds-gutters slds-grid_vertical-align-center">
+                                          <div class="slds-col slds-size_11-of-12">
+                                            <lightning-textarea
+                                              label="Agent Action Instructions"
+                                              value="We will be using the string input Itinerary Name to find related Travel Activities and update those Travel Activities to Booked"
+                                              disabled
+                                            ></lightning-textarea>
+                                          </div>
+                                            <div class="slds-col slds-size_1-of-12">
+                                              <lightning-button-icon
+                                                tooltip="Copy to Clipboard"
+                                                icon-name="utility:copy_to_clipboard"
+                                                variant="brand"
+                                                value="We will be using the string input Itinerary Name to find related Travel Activities and update those Travel Activities to Booked"
+                                                onclick={copyValueToClipboard}
+                                              >
+                                              </lightning-button-icon>
+                                            </div>
+                                        </div>
+                                        <p class="slds-m-top_small"><strong>Required Inputs for txtItineraryName</strong></p>
+                                        <div class="slds-grid slds-gutters slds-grid_vertical-align-center">
+                                          <div class="slds-col slds-size_11-of-12">
+                                            <lightning-textarea
+                                              label="Instructions"
+                                              value="Search by Itinerary Name or Itinerary record ID to find and update related Travel Activities"
+                                              disabled
+                                            ></lightning-textarea>
+                                          </div>
+                                          <div class="slds-col slds-size_1-of-12">
+                                            <lightning-button-icon
+                                              tooltip="Copy to Clipboard"
+                                              icon-name="utility:copy_to_clipboard"
+                                              variant="brand"
+                                              value="Search by Itinerary Name or Itinerary record ID to find and update related Travel Activities"
+                                              onclick={copyValueToClipboard}
+                                            >
+                                            </lightning-button-icon>
+                                          </div>
+                                        </div>
+                                        <lightning-input type="checkbox" label="Require input" name="requireInput" checked disabled></lightning-input>
+                                        <lightning-input type="checkbox" label="Collect data from user" name="collectDataFromUser" checked disabled></lightning-input>
+                                        <p class="slds-m-top_small"><strong>Required Output for txtOutVar</strong></p>
+                                        <div class="slds-grid slds-gutters slds-grid_vertical-align-center">
+                                          <div class="slds-col slds-size_11-of-12">
+                                            <lightning-textarea
+                                              label="Instructions"
+                                              value="Show the response as an Itinerary Record details in the text"
+                                              disabled
+                                            ></lightning-textarea>
+                                          </div>
+                                            <div class="slds-col slds-size_1-of-12">
+                                              <lightning-button-icon
+                                                tooltip="Copy to Clipboard"
+                                                icon-name="utility:copy_to_clipboard"
+                                                variant="brand"
+                                                value="Show the response as an Itinerary Record details in the text"
+                                                onclick={copyValueToClipboard}
+                                              >
+                                              </lightning-button-icon>
+                                            </div>
+                                        </div>
+                                        <lightning-input type="checkbox" label="Show in conversation" name="showInConversation" checked disabled></lightning-input>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li class="slds-progress__item">
+                                    <div class="slds-progress__marker"></div>
+                                    <div class="slds-progress__item_content slds-grid slds-grid_align-spread">
+                                      <div class="slds-size_3-of-4">
+                                        Navigate to Agent Studio and follow the steps below:
+                                        <ol class="slds-list_ordered">
+                                          <li>Choose Einstein Copilot</li>
+                                          <li>Open in Builder</li>
+                                          <li>Choose Agent Action Library</li>
+                                          <li>Click on "Travel Management"</li>
+                                          <li>
+                                            Click on&nbsp;&nbsp;
+                                            <lightning-button-menu alternative-text="Show menu" label="New">
+                                              <lightning-menu-item value="newTopic" label="Add from Asset Library" prefix-icon-name="utility:world"></lightning-menu-item>
+                                          </lightning-button-menu>
+                                            &nbsp;&nbsp;and add <strong>Book Trip</strong> as one of the actions
+                                          </li>
+                                          <li>Under Conversation Preview</li>
+                                            <ol class="slds-is-nested">
+                                              <li>Type Utterance: <strong>Book Itinerary and related Activities for ITN-0003</strong> (use the Itinerary Name of an existing Itinerary record)</li>
+                                              <li>Once you are satisfied with test responses. Click on <lightning-button label="Activate"></lightning-button></li>
+                                            </ol>
+                                        </ol>
+                                      </div>
+                                      <div class="slds-grid slds-grid_align-end slds-size_1-of-4">
+                                        <lightning-button-icon
+                                          tooltip="Agent Builder"
+                                          icon-name="utility:einstein_alt"
+                                          variant="brand"
+                                          onclick={navToEinsteinCopilotBuilderBotDef}
+                                        >
+                                        </lightning-button-icon>
+                                      </div>
+                                    </div>
+                                  </li>
+                                </ol>
+                            </div>
+                          </div>
+                          <div class="slds-media__figure slds-media__figure_reverse">
+                            <lightning-button
+                              variant="brand-outline"
+                              label="Agent Actions Studio"
+                              icon-name="utility:setup"
+                              icon-position="right"
+                              onclick={navigateToCopilotActionsStudioSetup}
+                            ></lightning-button>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </li>
+                </ol>
+              </lightning-accordion-section>
+
+              <lightning-accordion-section name="7" label="Module 7 - Generate Custom Prompts and Responses via LWC and Models API">
+
+                <ol class="slds-setup-assistant">
+                  <li class="slds-setup-assistant__item">
+                    <article class="slds-setup-assistant__step">
+                      <div class="slds-setup-assistant__step-summary">
+                        <div class="slds-media">
+                          <div
+                            class="slds-setup-assistant__step-summary-content slds-media__body"
+                          >
+                            <p>
+                              Leverage Salesforce's pro-code development and tooling to take advantage of <a href="https://trailhead.salesforce.com/content/learn/modules/generative-ai-basics" target="_blank">Generative AI</a> and the <a href="https://developer.salesforce.com/docs/einstein/genai/guide/trust.html" target="_blank">Einstein Trust Layer</a> for your custom application
+                            </p>
+                            <div class="slds-progress slds-progress_vertical slds-progress_success">
+                              <ol class="slds-progress__list slds-progress__list-bordered">
+                                <li class="slds-progress__item">
+                                    <div class="slds-progress__marker"></div>
+                                    <div class="slds-progress__item_content slds-grid slds-grid_align-spread">
+                                      <div class="slds-size_3-of-4">
+                                        <ol class="slds-list_ordered">
+                                          <li>For example, type an utterance in the prompt input below: <strong>Create an email template for John Doe on a 5 day itinerary for San Francisco!</strong></li>
+                                          <li>Click on Generate</li>
+                                        </ol>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li class="slds-progress__item">
+                                    <div class="slds-progress__marker"></div>
+                                    <div class="slds-progress__item_content slds-grid slds-grid_align-spread">
+                                      <div class="slds-size_3-of-4 slds-card_boundary">
+                                        <c-models-api-lwc></c-models-api-lwc>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li class="slds-progress__item">
+                                    <div class="slds-progress__marker"></div>
+                                    <div class="slds-progress__item_content slds-grid slds-grid_align-spread">
+                                      <div class="slds-size_3-of-4">
+                                        To review sample code for the component above, retreive the following components from this org into your SFDX Project:
+                                        <ol class="slds-list_ordered">
+                                          <li>Lightning Web Component: <strong>modelsApiLwc</strong></li>
+                                          <li>Apex class: <strong>SetupAssistantController</strong> and method: <strong>createGeneration</strong></li>
+                                        </ol>
+                                      </div>
+                                      <div class="slds-grid slds-grid_align-end slds-size_1-of-4">
+                                        <lightning-button-icon
+                                          icon-name="utility:help_doc_ext"
+                                          variant="brand"
+                                          tooltip="Build Lightning Web Components and Flows with Models API"
+                                          onclick={navToModelsApiLwcFlow}
+                                        >
+                                        </lightning-button-icon>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li class="slds-progress__item">
+                                    <div class="slds-progress__marker"></div>
+                                    <div class="slds-progress__item_content slds-grid slds-grid_align-spread">
+                                      <div class="slds-size_3-of-4">
+                                        The possiblities are endless when using a combination of native platform tools like Lightning Web Components (LWC), Apex and Flows to help connect your application to Large Language Models (LLMs).
+                                      </div>
+                                      <div class="slds-grid slds-grid_align-end slds-size_1-of-4">
+                                        <lightning-button-icon
+                                          icon-name="utility:help_doc_ext"
+                                          tooltip="Models API Developer Guide"
+                                          variant="brand"
+                                          onclick={navToModelsApiHelpDoc}
+                                        >
+                                        </lightning-button-icon>
+                                      </div>
+                                    </div>
+                                  </li>
+                                </ol>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </li>
+                </ol>
+               
+              </lightning-accordion-section>
+
+              <lightning-accordion-section name="8" label="Module 8 - Agents">
+
+                <ol class="slds-setup-assistant">
+                  <li class="slds-setup-assistant__item">
+                    <article class="slds-setup-assistant__step">
+                      <div class="slds-setup-assistant__step-summary">
+                        <div class="slds-media">
+                          <div
+                            class="slds-setup-assistant__step-summary-content slds-media__body"
+                          >
+                            <h3
+                              class="slds-setup-assistant__step-summary-title slds-text-heading_small"
+                            >
+                              <lightning-icon
+                                icon-name="standard:story"
+                                class="slds-var-m-right_small"
+                              ></lightning-icon>
+                              Agent in Action
+                            </h3>
+                            <p>
+                              An <a href="https://www.salesforce.com/agentforce/" target="_blank">Agentforce Agent</a> is a proactive, autonomous application that provides specialized, always-on support to employees or customers. They're equipped with the necessary business knowledge to execute tasks according to their specific role
+                            </p>
+                            <div class="slds-progress slds-progress_vertical slds-progress_success">
+                              <ol class="slds-progress__list slds-progress__list-bordered">
+                                  <li class="slds-progress__item">
+                                    <div class="slds-progress__marker"></div>
+                                    <div class="slds-progress__item_content slds-grid slds-grid_align-spread">
+                                      <div class="slds-size_3-of-4">
+                                        On the top right of the page, click on&nbsp;&nbsp;
+                                        <lightning-icon icon-name="utility:einstein"></lightning-icon>
+                                        &nbsp;&nbsp;to launch Einstein
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li class="slds-progress__item">
+                                    <div class="slds-progress__marker"></div>
+                                    <div class="slds-progress__item_content slds-grid slds-grid_align-spread">
+                                      <div class="slds-size_3-of-4">
+                                        <ol class="slds-list_ordered">
+                                          <li>Type <strong>Hello</strong> to verify that the Agent is working</li>
+                                          <li>Type the utterance to plan a trip. For example, <strong>Plan a trip for John Doe to Japan</strong></li>
+                                          <li>Type the utterance <strong>Save the trip</strong></li>
+                                          <li>Type the utterance <strong>Recommend Weather Appropriate Activities</strong></li>
+                                          <li>Type the utterance <strong>Book the Trip</strong></li>
+                                          <li>Go to the generated Itinerary record and observe the booked itinerary and related activities</li>
+                                        </ol>
+                                      </div>
+                                    </div>
+                                  </li>
+                                </ol>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </li>
+                </ol>
+               
+              </lightning-accordion-section>
+
+              <lightning-accordion-section name="9" label="Module 9 - First-Generation (1GP) Packaging">
+                <ol class="slds-setup-assistant">
+                  <li class="slds-setup-assistant__item">
+                    <article class="slds-setup-assistant__step">
+                      <div class="slds-setup-assistant__step-summary">
+                        <div class="slds-media">
+                          <div
+                            class="slds-setup-assistant__step-summary-content slds-media__body"
+                          >
+                            <h3
+                              class="slds-setup-assistant__step-summary-title slds-text-heading_small"
+                            >
+                              <lightning-icon
+                                icon-name="standard:connected_apps"
+                                class="slds-var-m-right_small"
+                              ></lightning-icon>
+                              Package in First-Generation Packaging (1GP)
+                            </h3>
+                            <p>
+                              Every <a href="https://developer.salesforce.com/docs/metadata-coverage/60" target="_blank">metadata</a> component that you include in your package has certain rules that determine its behavior in a subscriber org. Before packaging, review the <a href="https://developer.salesforce.com/docs/atlas.en-us.pkg2_dev.meta/pkg2_dev/packaging_packageable_components.htm" target="_blank">manageability rules</a> determine whether you, or the subscriber, can edit or remove components after the package version is created and installed
+                            </p>
+                            <div class="slds-progress slds-progress_vertical slds-progress_success">
+                              <ol class="slds-progress__list slds-progress__list-bordered">
+                                  <li class="slds-progress__item">
+                                    <div class="slds-progress__marker"></div>
+                                    <div class="slds-progress__item_content slds-grid slds-grid_align-spread">
+                                      <div class="slds-size_3-of-4">
+                                        Navigate to Package Manager. In the Namespace Settings panel, click Edit and register your Namespace. Save your unique namespace for your actual package
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li class="slds-progress__item">
+                                    <div class="slds-progress__marker"></div>
+                                    <div class="slds-progress__item_content slds-grid slds-grid_align-spread">
+                                      <div class="slds-size_3-of-4">
+                                        <ol class="slds-list_ordered">
+                                          <li>Under the Packages Panel, Click New</li>
+                                          <li>Ensure your check the Managed checkbox</li>
+                                        </ol>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li class="slds-progress__item">
+                                    <div class="slds-progress__marker"></div>
+                                    <div class="slds-progress__item_content slds-grid slds-grid_align-spread">
+                                      <div class="slds-size_3-of-4">
+                                        Click on Add and choose <strong>Apex Class</strong> for Component Type. Then choose the following Apex Classes:
+                                        <ol class="slds-list_dotted">
+                                          <li>GenerateActivitiesviaModelsAPI</li>
+                                          <li>GenerateActivitiesViaSFAPInvocable</li>
+                                          <li>GenerateActivitiesViaSFAPInvocableTest</li>
+                                          <li>GenerateWeatherRelatedActivities</li>
+                                          <li>GenerateWeatherRelatedActivitiesTest</li>
+                                        </ol>
+                                      </div>
+                                      <div class="slds-grid slds-grid_align-end slds-size_1-of-4">
+                                        <lightning-button-icon
+                                          icon-name="utility:help_doc_ext"
+                                          variant="brand"
+                                          tooltip="Manageability Rules"
+                                          onclick={manageabilityRuleForApex}
+                                        >
+                                        </lightning-button-icon>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li class="slds-progress__item">
+                                    <div class="slds-progress__marker"></div>
+                                    <div class="slds-progress__item_content slds-grid slds-grid_align-spread">
+                                      <div class="slds-size_3-of-4">
+                                        Click on Add and choose <strong>Flow Definition</strong> for Component Type. Then choose the following Flows:
+                                        <ol class="slds-list_dotted">
+                                          <li>Book Itinerary and related Activities</li>
+                                        </ol>
+                                      </div>
+                                      <div class="slds-grid slds-grid_align-end slds-size_1-of-4">
+                                        <lightning-button-icon
+                                          icon-name="utility:help_doc_ext"
+                                          variant="brand"
+                                          tooltip="Manageability Rules"
+                                          onclick={manageabilityRuleForFlowDef}
+                                        >
+                                        </lightning-button-icon>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li class="slds-progress__item">
+                                    <div class="slds-progress__marker"></div>
+                                    <div class="slds-progress__item_content slds-grid slds-grid_align-spread">
+                                      <div class="slds-size_3-of-4">
+                                        Click on Add and choose <strong>Gen AI Function Definition</strong> for Component Type. Then choose the following Agentforce Custom Actions:
+                                        <ol class="slds-list_dotted">
+                                          <li>Recommend_Activities_for_weather</li>
+                                          <li>Book_Trip</li>
+                                          <li>Save_Trip</li>
+                                        </ol>
+                                      </div>
+                                      <div class="slds-grid slds-grid_align-end slds-size_1-of-4">
+                                        <lightning-button-icon
+                                          icon-name="utility:help_doc_ext"
+                                          variant="brand"
+                                          tooltip="Manageability Rules"
+                                          onclick={manageabilityRuleForGenAiFunc}
+                                        >
+                                        </lightning-button-icon>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li class="slds-progress__item">
+                                    <div class="slds-progress__marker"></div>
+                                    <div class="slds-progress__item_content slds-grid slds-grid_align-spread">
+                                      <div class="slds-size_3-of-4">
+                                        Click on Add and choose <strong>Permission Set</strong> for Component Type. Then choose the following Permission Set:
+                                        <ol class="slds-list_dotted">
+                                          <li>Agentforce_Workshop</li>
+                                        </ol>
+                                      </div>
+                                      <div class="slds-grid slds-grid_align-end slds-size_1-of-4">
+                                        <lightning-button-icon
+                                          icon-name="utility:help_doc_ext"
+                                          variant="brand"
+                                          tooltip="Manageability Rules"
+                                          onclick={manageabilityRuleForPermSet}
+                                        >
+                                        </lightning-button-icon>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li class="slds-progress__item">
+                                    <div class="slds-progress__marker"></div>
+                                    <div class="slds-progress__item_content slds-grid slds-grid_align-spread">
+                                      <div class="slds-size_3-of-4">
+                                        Click on Upload to create a new Package Version
+                                        <ol class="slds-list_dotted">
+                                          <li>Choose a relevant Version Name and Number</li>
+                                          <li>Choose a Release Type - Beta or Released to distribute your package version</li>
+                                        </ol>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li class="slds-progress__item">
+                                    <div class="slds-progress__marker"></div>
+                                    <div class="slds-progress__item_content slds-grid slds-grid_align-spread">
+                                      <div class="slds-size_3-of-4">
+                                        Once the package version has been successfully created, follow the next module on how to create scratch orgs against your Partner Business Org's (PBO) Dev Hub to test out your new package version
+                                      </div>
+                                    </div>
+                                  </li>
+                                </ol>
+                              </div>                   
+                          </div>
+                          <div class="slds-media__figure slds-media__figure_reverse">
+                            <lightning-button
+                              variant="brand-outline"
+                              label="Package Manager"
+                              icon-name="utility:setup"
+                              icon-position="right"
+                              onclick={navToPackageManager}
+                            ></lightning-button>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </li>
+                </ol>
+              </lightning-accordion-section>
+
+              <lightning-accordion-section name="10" label="Module 10 - Develop in Scratch Orgs">
+                <ol class="slds-setup-assistant">
+                  <li class="slds-setup-assistant__item">
+                    <article class="slds-setup-assistant__step">
+                      <div class="slds-setup-assistant__step-summary">
+                        <div class="slds-media">
+                          <div
+                            class="slds-setup-assistant__step-summary-content slds-media__body"
+                          >
+                            <p>
+                              <a href="https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_scratch_orgs.htm" target="_blank">Scratch Orgs</a> are temporary, configurable environments used primarily for development and testing, allowing developers to build and experiment with code changes in isolated, version-controlled setups. They enable quick setup and teardown of environments, making it easy to create, test, and deploy new features without impacting production data.
+                            </p>
+                            <div class="slds-progress slds-progress_vertical slds-progress_success">
+                              <ol class="slds-progress__list slds-progress__list-bordered">
+                                <li class="slds-progress__item">
+                                  <div class="slds-progress__marker"></div>
+                                  <div class="slds-progress__item_content slds-grid slds-grid_align-spread">
+                                    <div class="slds-size_3-of-4">
+                                      <ol class="slds-list_ordered">
+                                        <li>Use the component below to Build Your Own Scratch Org Definition File via your Partner Business Org’s (PBO) Dev Hub</li>
+                                        <li>Click on the&nbsp;&nbsp;<lightning-button-menu alternative-text="Show menu" menu-alignment="auto" icon-name="utility:insert_tag_field">
+                                            <lightning-menu-item prefix-icon-name="utility:einstein" label="Agentforce" value="Agentforce" ></lightning-menu-item> 
+                                        </lightning-button-menu>&nbsp;&nbsp;quick action on the top right of the component and choose Agentforce to add the sample features and metadata settings to your scratch org definition file</li>
+                                      </ol>
+                                    </div>
+                                  </div>
+                                </li>
+                                  <li class="slds-progress__item">
+                                    <div class="slds-progress__marker"></div>
+                                    <div class="slds-progress__item_content slds-grid">
+                                      <div class="slds-size_4-of-4 slds-card_boundary">
+                                        <c-scratch-def-file-build-card></c-scratch-def-file-build-card>
+                                      </div>
+                                    </div>
+                                  </li>
+                                </ol>
+                              </div>                   
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </li>
+                </ol>
+              </lightning-accordion-section>
+
+          </lightning-accordion>
+      </div>
+    </article>
+</template>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>External_Guest__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>External Guest</label>
+    <referenceTo>External_Guest__c</referenceTo>
+    <relationshipLabel>External Reservations</relationshipLabel>
+    <relationshipName>External_Reservations</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

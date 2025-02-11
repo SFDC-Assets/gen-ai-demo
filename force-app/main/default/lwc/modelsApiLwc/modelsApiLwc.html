@@ -1,0 +1,37 @@
+<template>
+    <lightning-card>
+        <h3 slot="title" class="slds-truncate">
+            <lightning-icon 
+                icon-name="standard:prompt"
+                alternative-text="Einstein"
+                size="medium"
+                class="slds-m-right_small"
+            ></lightning-icon>
+            Custom Prompt Generator
+        </h3>
+        <lightning-button-group slot="actions">
+        </lightning-button-group>
+        <div class="slds-card__body slds-card__body_inner">
+            <template if:true={displaySpinner}>
+                <lightning-spinner
+                  alternative-text="Loading"
+                  size="medium"
+                  variant="brand"
+                ></lightning-spinner>
+            </template>
+            <lightning-textarea name="prompt" label="Prompt" onchange={handlePromptChange} value={prompt}></lightning-textarea>
+            <template lwc:if={displayResult}>
+                <lightning-textarea label="Response" value={response} class="text-area-style"></lightning-textarea>
+            </template>
+        </div>
+        <div slot="footer" class="slds-clearfix">
+            <div class="slds-float_right">
+                <lightning-button label="Clear" onclick={handleClear} class="slds-m-left_x-small"></lightning-button>
+                <template lwc:if={displayResult}>
+                    <lightning-button label="Copy to Clipboard" onclick={handleCopyPaste} class="slds-m-left_x-small"></lightning-button>
+                </template>
+                <lightning-button variant="brand" label="Generate" onclick={handleGenerate} class="slds-m-left_x-small" disabled={enableGenerate}></lightning-button>
+            </div>
+        </div>
+    </lightning-card>
+</template>
