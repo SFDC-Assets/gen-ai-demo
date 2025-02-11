@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# https://hosted-scratch.herokuapp.com/launch?template=https://github.com/SFDC-Assets/gen-ai-demo/tree/main
+# hosted-scratch.herokuapp.com/launch?template=https://github.com/SFDC-Assets/gen-ai-demo/tree/dev-workshop
 # sfdx force:source:retrieve -m GenAiPromptTemplate,GenAiPromptTemplateActv,GenAiFunction,GenAiPlanner
 # sfdx automig:dump -d data -o Account,Contact,Case,Lead,Opportunity,FinServ__FinancialAccount__c,PersonLifeEvent,Claim,InsurancePolicy,InsurancePolicyCoverage,InsurancePolicyAsset
 sf demoutil org create scratch -f config/project-scratch-def.json -d 30 -s --wait 60 --userprefix dev -e agent.workshop
