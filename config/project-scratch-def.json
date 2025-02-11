@@ -1,16 +1,58 @@
 {
-  "orgName": "Generative AI Demo",
-  "edition": "Developer",
-  "features": ["EnableSetPasswordInApi", "EINSTEINGPT", "EINSTEINGPTPLATFORM", "EINSTEINGPTPROMPTBUILDER", "EINSTEINGENERATIVESERVICES", "EINSTEINLLMREQUESTSHOURLY"],
+  "orgName": "FD AgentForce",
+  "edition": "Partner Developer",
+  "language": "en_US",
+  "features": [
+    "AddCustomTabs:30",
+    "DebugApex",
+    "DataComDnbAccounts",
+    "CodeBuilder",
+    "Communities",
+    "Walkthroughs",
+    "MarketingCloud",
+    "EnableSetPasswordInApi",
+    "CustomerDataPlatform",
+    "CustomerDataPlatformLite",
+    "EinsteinGPTForDevelopers",
+    "Copilot",
+    "EINSTEIN1AIPLATFORM"
+  ],
   "settings": {
+    "communitiesSettings": {
+      "enableNetworksEnabled": true
+    },
+    "experienceBundleSettings": {
+      "enableExperienceBundleMetadata": true
+    },
+    "customerDataPlatformSettings": {
+      "enableCustomerDataPlatform": true
+    },
     "lightningExperienceSettings": {
-      "enableS1DesktopEnabled": true
+      "enableS1DesktopEnabled": true,
+      "enableUsersAreLightningOnly": true,
+      "enableLexEndUsersNoSwitching": true
     },
     "mobileSettings": {
       "enableS1EncryptedStoragePref2": false
     },
-    "EinsteinGptSettings" : {
-      "enableEinsteinGptPlatform" : true 
+    "CodeBuilderSettings": {
+      "enableCodeBuilder": true
+    },
+    "einsteinGptSettings": {
+      "enableEinsteinGptPlatform": true
+    },
+    "securitySettings": {
+      "enableAdminLoginAsAnyUser": true,
+      "passwordPolicies": {
+        "expiration": "Never",
+        "historyRestriction": "0"
+      },
+      "sessionSettings": {
+        "sessionTimeout": "TwelveHours"
+      }
+    },
+    "userEngagementSettings": {
+      "enableOrchestrationInSandbox": true
     }
   }
 }
