@@ -26,15 +26,7 @@
     "FinancialServicesUser:2",
     "FinancialServicesCommunityUser:1",
     "FinancialServicesInsuranceUser",
-    "CUSTOMERDATAPLATFORM",
-    "DataComDnbAccounts",
-    "DATACOMDNBACCOUNTSENTERPRISE",
-    "ADDDATACOMCRMRECORDCREDIT:30",
-    "WavePlatform",
-    "AnalyticsAdminPerms",
-    "AnalyticsAppEmbedded",
-    "DevelopmentWave",
-    "EinsteinAnalyticsPlus"
+    "CUSTOMERDATAPLATFORM"
   ],
   "settings": {
     "lightningExperienceSettings": {
